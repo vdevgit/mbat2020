@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "mbat2020": {
@@ -27,21 +27,21 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [              
+            "styles": [
               "./src/assets/css/bootstrap.min.css",
               "./src/assets/fonts/line-icons.css",
-              "./src/assets/css/slicknav.css", 
-              "./src/assets/css/nivo-lightbox.css", 
-              "./src/assets/css/animate.css", 
-              "./src/assets/css/main.css", 
-              "./src/assets/css/responsive.css", 
+              "./src/assets/css/slicknav.css",
+              "./src/assets/css/nivo-lightbox.css",
+              "./src/assets/css/animate.css",
+              "./src/assets/css/main.css",
+              "./src/assets/css/responsive.css",
               "./src/assets/css/colors/yellow.css",
-              "./src/assets/css/custom.css"                     
+              "./src/assets/css/custom.css"
             ],
             "scripts": [
               "./src/assets/js/jquery-min.js",
               "./src/assets/js/popper.min.js",
-              "./src/assets/js/bootstrap.min.js",              
+              "./src/assets/js/bootstrap.min.js",
               "./src/assets/js/jquery.countdown.min.js",
               "./src/assets/js/waypoints.min.js",
               "./src/assets/js/jquery.counterup.min.js",
@@ -147,6 +147,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mbat2020"
+    }
+  },
+  "defaultProject": "mbat2020",
+  "cli": {
+    "analytics": "9a50a7af-39e5-4399-9ebb-610c68286bfc"
+  }
 }
