@@ -8,9 +8,13 @@ import { AuthService } from '../auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public auth: AuthService) { }
-
-  ngOnInit(): void {
+  loggedIn: boolean;
+  constructor(public auth: AuthService) {
+    auth.loggedInObservable.subscribe(value => {
+      this.loggedIn = value;
+    });
   }
-
+  ngOnInit(): void {
+    this.loggedIn  = this.loggedIn || !!localStorage.getItem('idToken');
+  }
 }
