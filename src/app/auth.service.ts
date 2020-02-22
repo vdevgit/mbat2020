@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import createAuth0Client from '@auth0/auth0-spa-js';
 import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
-import { from, of, Observable, BehaviorSubject, combineLatest, throwError } from 'rxjs';
+import { from, of, Observable, Subject, BehaviorSubject, combineLatest, throwError } from 'rxjs';
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
@@ -41,6 +41,12 @@ export class AuthService {
   // Create a local property for login status
   loggedIn: boolean = null;
 
+  public loggedInObservable = new Subject<boolean>();
+
+  emitConfig(val) {
+    this.loggedInObservable.next(val);
+  }
+
   constructor(private router: Router) {
     // On initial load, check authentication state with authorization server
     // Set up local auth streams if user is already authenticated
@@ -62,8 +68,10 @@ export class AuthService {
   getTokenSilently$(): Observable<any> {
     return this.auth0Client$.pipe(
       concatMap((client: Auth0Client) => from(client.getTokenSilently())),
-      tap(idToken => 
-        localStorage.setItem('idToken', idToken)
+      tap(idToken => {
+          localStorage.setItem('idToken', idToken);
+          this.emitConfig(true);
+        }
       )
     );
   }

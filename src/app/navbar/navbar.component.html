@@ -85,8 +85,12 @@
           <li class="nav-item"><a class="nav-link" href="https://twitter.com/HECMBAT" target="_blank"><i class="lni-twitter-original"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/hecmbat/" target="_blank"><i class="lni-instagram-original"></i></a></li>  
           
-          <li class="nav-item"><a class="nav-link" href="#" (click)="auth.login()">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" (click)="auth.logout()">Logout</a></li>
+          <div *ngIf="loggedIn; else notLogged">
+            <li class="nav-item"><a class="nav-link" href="#" (click)="auth.logout()">Logout</a></li>
+          </div>
+          <ng-template #notLogged>
+            <li class="nav-item"><a class="nav-link" href="#" (click)="auth.login()">Login</a></li>
+          </ng-template>
           <li class="nav-item"><a class="nav-link" href="#" routerLink="/register">Register</a></li>
     
           <!-- <li class="nav-item">
