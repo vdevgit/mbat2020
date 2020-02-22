@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background: #f6f6f6;
+  background: #fff; /*#f6f6f6*/
   font-size: 15px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;

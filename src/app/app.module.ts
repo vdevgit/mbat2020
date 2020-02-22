@@ -41,6 +41,11 @@ import { UserInfoComponent } from './user-info/user-info.component';
 import { CreditCardPaymentComponent } from './credit-card-payment/credit-card-payment.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { CartComponent } from './product/cart/cart.component';
+import { SuccessComponent } from './product/success/success.component';
+
 
 @NgModule({
   declarations: [
@@ -78,7 +83,11 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ForgotPasswordComponent,
     UserInfoComponent,
     CreditCardPaymentComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
+    CartComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

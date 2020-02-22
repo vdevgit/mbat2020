@@ -28,6 +28,11 @@ import { InnerPageLayoutComponent } from './layout/inner-page-layout/inner-page-
 import { BlankLayoutComponent } from './layout/blank-layout/blank-layout.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { CartComponent } from './product/cart/cart.component';
+import { SuccessComponent } from './product/success/success.component';
+
 const routes = [
 
   // Home Page Layout
@@ -119,6 +124,13 @@ const routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'support', component: SupportComponent },
     { path: 'faqs', component: FaqsComponent },
+
+    { path: 'product-list', component: ProductListComponent },
+    { path: 'product-details', component: ProductDetailsComponent },
+    { path: 'cart', component: CartComponent },
+    { path: 'success', component: SuccessComponent },
+
+
     ],
   },
 
