@@ -14,7 +14,11 @@ export class AuthService {
     createAuth0Client({
       domain: "blr-mbat.auth0.com",
       client_id: "qqNdkcYcmvJQVkImasI89REx8vLM6XQC",
-      redirect_uri: `${window.location.origin}`
+      redirect_uri: `${window.location.origin}`,
+      audience: `https://blr-mbat.auth0.com/api/v2/`,
+      scope: 'read:current_user',
+      response_type: 'token id_token',
+      allow_sign_up: false
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
@@ -50,10 +54,28 @@ export class AuthService {
   getUser$(options?): Observable<any> {
     return this.auth0Client$.pipe(
       concatMap((client: Auth0Client) => from(client.getUser(options))),
-      tap(user => this.userProfileSubject$.next(user))
+      tap(user => {
+        console.log(user);
+        this.userProfileSubject$.next(user)})
     );
   }
-
+  getTokenSilently$(): Observable<any> {
+    return this.auth0Client$.pipe(
+      concatMap((client: Auth0Client) => from(client.getTokenSilently())),
+      tap(idToken => 
+        localStorage.setItem('idToken', idToken)
+      )
+    );
+  }
+    
+    getIdTokenClaims$(): Observable<any> {
+      return this.auth0Client$.pipe(
+        concatMap((client: Auth0Client) => from(client.getIdTokenClaims())),
+        tap( data => 
+          console.log(data)
+        )
+      );
+    }
   private localAuthSetup() {
     // This should only be called on app initialization
     // Set up local authentication streams
@@ -99,6 +121,8 @@ export class AuthService {
           // Redirect callback complete; get user and login status
           return combineLatest([
             this.getUser$(),
+            this.getTokenSilently$(),
+            this.getIdTokenClaims$(),
             this.isAuthenticated$
           ]);
         })
@@ -113,6 +137,7 @@ export class AuthService {
   }
 
   logout() {
+    localStorage.removeItem('idToken');
     // Ensure Auth0 client instance exists
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
