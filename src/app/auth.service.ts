@@ -18,7 +18,8 @@ export class AuthService {
       audience: `https://blr-mbat.auth0.com/api/v2/`,
       scope: 'read:current_user',
       response_type: 'token id_token',
-      allow_sign_up: false
+      allow_sign_up: false,
+      auto_login: false
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
