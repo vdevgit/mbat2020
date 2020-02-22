@@ -35,28 +35,9 @@
             <div class="row align-items-center mt-4">
               <div class="col">
                 <div class="form-group">
-                  <select class="form-control">
+                  <select class="form-control" #mySelect (change)='onOptionsSelected(mySelect.value)'>
                     <option value="" selected disabled hidden>Please Select School</option>
-                    <option value="">Cambridge</option>
-                    <option value="">Cranfield School of Management</option>
-                    <option value="">EDHEC Business School
-                    <option value="">ESSEC Business School</option>
-                    <option value="">Frankfurt School of Finance</option>
-                    <option value="">HEC Paris</option>
-                    <option value="">IE Business School</option>
-                    <option value="">IESE Business School</option>
-                    <option value="">Imperial College of London</option>
-                    <option value="">INSEAD</option>
-                    <option value="">International Institute for Management Developmen</option>t
-                    <option value="">London Business School</option>
-                    <option value="">Manchester University</option>
-                    <option value="">National University of Singapore</option>
-                    <option value="">Oxford</option>
-                    <option value="">Rotterdam School of Management</option>
-                    <option value="">SDABocconi</option>
-                    <option value="">TIAS School University of St Gallen</option>
-                    <option value="">University of St Gallen</option>
-                    <option value="">Warwick Business School</option>
+                    <option *ngFor='let option of dropDownData' [value]="option.id">{{option.name}}</option>
                   </select>
                 </div>
               </div>

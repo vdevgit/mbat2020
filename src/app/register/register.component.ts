@@ -4,6 +4,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 import { AuthService } from '../auth.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,10 @@ export class RegisterComponent implements OnInit {
   fullName: String;  
   phoneNumber: String;
   password: String;
+  selectedSchool: String;
+  dropDownData: [];
   ngOnInit(): void {
+    this.getSchools()
   }
   OnFullName(event: any) {
     this.fullName = event.target.value;
@@ -31,6 +35,19 @@ export class RegisterComponent implements OnInit {
   OnPassword(event: any) {
     this.password = event.target.value;
   }
+  onOptionsSelected(value:string) {
+    console.log("the selected value is " + value);
+    this.selectedSchool = value;
+  }
+  getSchools() {
+    const headers = {
+      "Content-Type": "application/json"
+    }
+    this.http.get<any>(environment.mbatServer + 'schools/', { headers }).subscribe(data => {
+      console.log(data);
+      this.dropDownData = data;
+    })
+  }
   register() {
     console.log("here in the ", this.fullName)
     const data = {
@@ -39,30 +56,13 @@ export class RegisterComponent implements OnInit {
       fullName: this.fullName,
       password: this.password,
       username: "niren",
-      schoolId: "qw12"
+      schoolId: this.selectedSchool
     };
     const headers = {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + localStorage.getItem('idToken')
+      "Content-Type": "application/json"
     }
-    this.http.post<any>('http://localhost:8080/user/', data, { headers }).subscribe(data => {
+    this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
       console.log(data);
     })
-    // .pipe(
-    //   catchError((error: HttpErrorResponse) => {
-    //     if (error.error instanceof ErrorEvent) {
-    //       // A client-side or network error occurred. Handle it accordingly.
-    //       console.error('An error occurred:', error.error.message);
-    //     } else {
-    //       // The backend returned an unsuccessful response code.
-    //       // The response body may contain clues as to what went wrong,
-    //       console.error(
-    //         `Backend returned code ${error.status}, ` +
-    //         `body was: ${error.error}`);
-    //     }
-    //     // return an observable with a user-facing error message
-    //     return throwError(
-    //       'Something bad happened; please try again later.');
-    //   }));
   }
 }

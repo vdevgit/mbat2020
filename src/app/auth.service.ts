@@ -4,6 +4,7 @@ import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
 import { from, of, Observable, Subject, BehaviorSubject, combineLatest, throwError } from 'rxjs';
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,10 @@ export class AuthService {
   // Create an observable of Auth0 instance of client
   auth0Client$ = (from(
     createAuth0Client({
-      domain: "blr-mbat.auth0.com",
-      client_id: "qqNdkcYcmvJQVkImasI89REx8vLM6XQC",
+      domain: environment.auth0.domain,
+      client_id: environment.auth0.clientId,
       redirect_uri: `${window.location.origin}`,
-      audience: `https://blr-mbat.auth0.com/api/v2/`,
+      audience: 'https://' + environment.auth0.domain + '/api/v2/',
       scope: 'read:current_user',
       response_type: 'token id_token',
       allow_sign_up: false,
@@ -151,7 +152,7 @@ export class AuthService {
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
-        client_id: "qqNdkcYcmvJQVkImasI89REx8vLM6XQC",
+        client_id: environment.auth0.clientId,
         returnTo: `${window.location.origin}`
       });
     });

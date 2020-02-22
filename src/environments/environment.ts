@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mbatServer: 'http://localhost:8080/',
+  auth0: {
+    domain: 'blr-mbat.auth0.com',
+    clientId: 'qqNdkcYcmvJQVkImasI89REx8vLM6XQC',
+    clientSecret: 'O56J1R58lLqsR8BMyhBWmP_h89QsqEJDTFjw3pqr6FPmz6Fg3hy9MaZ9NqEZha3E'
+  }
 };
 
 /*
