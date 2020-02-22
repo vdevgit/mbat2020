@@ -11,22 +11,22 @@
             </div>
             <div class="row align-items-center">
               <div class="col mt-4">
-                <input type="text" class="form-control" placeholder="Full Name">
+                <input type="text" class="form-control" (keyup)="OnFullName($event)" placeholder="Full Name">
               </div>
             </div>
             <div class="row align-items-center mt-4">
               <div class="col">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" (keyup)="OnEmail($event)" laceholder="Email">
               </div>
             </div>
             <div class="row align-items-center">
               <div class="col mt-4">
-                <input type="number" class="form-control" placeholder="Mobile Number">
+                <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Mobile Number">
               </div>
             </div>
             <div class="row align-items-center mt-4">
               <div class="col">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password">
               </div>
               <div class="col">
                 <input type="password" class="form-control" placeholder="Confirm Password">
@@ -87,7 +87,7 @@
             <div class="row align-items-center mt-4">
               <div class="col-sm-12 mt-2 text-center">
 
-                <button class="btn btn-primary mt-6 btn-sm">Register</button>
+                <button (click)="register()" class="btn btn-primary mt-6 btn-sm">Register</button>
                 <button class="btn btn-danger mt-6 btn-sm">Cancel</button>
                 <hr>                
 
@@ -97,7 +97,7 @@
              <div class="row align-items-center">
               <div class="col-sm-12 text-center">
                 <span class="font-weight-bold mr-2">Already Registered</span>
-                <button class="btn btn-primary mt-6  btn-sm">Login</button>
+                <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login()">Login</button>
                </div>
               </div>
 
