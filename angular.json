@@ -53,7 +53,8 @@
               "./src/assets/js/video.js",
               "./src/assets/js/main.js",
               "./src/assets/js/form-validator.min.js",
-              "./src/assets/js/contact-form-script.min.js"
+              "./src/assets/js/contact-form-script.min.js",
+              "./src/assets/js/custom.js"
             ]
           },
           "configurations": {
