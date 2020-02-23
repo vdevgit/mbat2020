@@ -7,6 +7,9 @@
         <div class="card-header">
           <h3 class="mb-0">User Information</h3>
         </div>
+        <pre *ngIf="auth.userProfile$ | async as profile">
+          <code>{{ profile | json }}</code>
+          </pre>
         <div class="card-body">
           <form autocomplete="off" class="form" role="form">
             <div class="form-group row">

@@ -25,7 +25,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.getSchools()
     this.isBuyTicketFlow = window.location.search.split('=')[1] === 'buyTicket';
-    this.auth.authenticateSilently();
   }
   OnFullName(event: any) {
     this.fullName = event.target.value;
@@ -66,7 +65,12 @@ export class RegisterComponent implements OnInit {
     }
     this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
       console.log(data);
-      this.router.navigate(['/checkout']);
+      if(data.error) {
+        console.log(data.message);
+      } else {
+        localStorage.setItem('idToken', data.access_token);
+        this.router.navigate(['/checkout']);
+      }
     })
   }
 }
