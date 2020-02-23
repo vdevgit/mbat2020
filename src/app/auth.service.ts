@@ -157,5 +157,34 @@ export class AuthService {
       });
     });
   }
+  authenticateSilently() {
+    const bodyParams = {
+      client_id: 'PCTTqLIlZIdN5PShWs7wi0y9cFHM2VoI',
+      grant_type: 'http://auth0.com/oauth/grant-type/password-realm',
+      username: 'thiru1921+2@gmail.com',
+      password: 'Niren12345',
+      realm: 'Username-Password-Authentication',
+      audience: 'https://' + environment.auth0.domain +'/',
+      scope: 'openid email update:email update:password'
+    };
+
+    fetch('https://' + environment.auth0.domain + '/oauth/token', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(bodyParams)
+    })
+      // .then(apiUtils.checkStatus)
+      .then((response) => response.json())
+      .then(responseJson => {
+        console.log('responseJson', responseJson);
+        if (responseJson.error) {
+          
+        }
+        const { id_token, access_token, expires_in } = responseJson;
+      });
+  }
 
 }

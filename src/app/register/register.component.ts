@@ -5,6 +5,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 import { AuthService } from '../auth.service';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,15 +14,18 @@ import { environment } from '../../environments/environment';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private http: HttpClient, public auth: AuthService) { }
+  constructor(private http: HttpClient, public auth: AuthService, public router: Router) { }
   email: String;
   fullName: String;  
   phoneNumber: String;
   password: String;
   selectedSchool: String;
   dropDownData: [];
+  isBuyTicketFlow: Boolean;
   ngOnInit(): void {
     this.getSchools()
+    this.isBuyTicketFlow = window.location.search.split('=')[1] === 'buyTicket';
+    this.auth.authenticateSilently();
   }
   OnFullName(event: any) {
     this.fullName = event.target.value;
@@ -55,7 +59,6 @@ export class RegisterComponent implements OnInit {
       phoneNumber: this.phoneNumber,
       fullName: this.fullName,
       password: this.password,
-      username: "niren",
       schoolId: this.selectedSchool
     };
     const headers = {
@@ -63,6 +66,7 @@ export class RegisterComponent implements OnInit {
     }
     this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/checkout']);
     })
   }
 }

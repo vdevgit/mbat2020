@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailsComponent implements OnInit {
 
+  loggedIn: boolean;
+  pathName: string;
   constructor() { }
 
   ngOnInit(): void {
+    this.loggedIn  = this.loggedIn || !!localStorage.getItem('idToken');
+    this.pathName = window.location.pathname === '/product-details' ? 'buyTicket' : '';
   }
 
 }
