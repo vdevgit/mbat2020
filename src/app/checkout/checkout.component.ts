@@ -15,11 +15,10 @@ export class CheckoutComponent implements AfterViewChecked {
   addScript = false;
   paypalLoad = true;
   finalAmount = 1;
-
+  data = 'thir';
 
 
   constructor(public auth: AuthService) {
-    
     auth.userProfile$.subscribe(value => {
       console.log(value)
     });
