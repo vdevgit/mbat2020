@@ -45,9 +45,15 @@ export class AuthService {
   loggedIn: boolean = null;
 
   public loggedInObservable = new Subject<boolean>();
+  public userInfo$ = new BehaviorSubject<any>(null);
+  userInfoDetails$ = this.userInfo$.asObservable();
 
   emitConfig(val) {
     this.loggedInObservable.next(val);
+  }
+  emitUserDetails(val) {
+    console.log(val);
+    this.userInfo$.next(val);
   }
 
   constructor(private router: Router, private http: HttpClient,) {
@@ -65,7 +71,9 @@ export class AuthService {
       concatMap((client: Auth0Client) => from(client.getUser(options))),
       tap(user => {
         console.log(user);
-        this.userProfileSubject$.next(user)})
+        this.userProfileSubject$.next(user);
+        // this.getUserInfo();
+      })
     );
   }
   getTokenSilently$(): Observable<any> {
@@ -157,6 +165,28 @@ export class AuthService {
         returnTo: `${window.location.origin}`
       });
     });
+  }
+  getUserInfo() {
+    return this.http.get<any>(environment.mbatServer + 'user', {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('idToken')
+      }
+    })
+      // .then(apiUtils.checkStatus)
+      .subscribe((response) => {
+        console.log(response)
+        this.emitUserDetails(response);
+        // return response;
+      });
+      // .then(responseJson => {
+      //   console.log('responseJson', responseJson);
+      //   if (responseJson.error) {
+          
+      //   }
+      //   const { id_token, access_token, expires_in } = responseJson;
+      // });
   }
 
 }
