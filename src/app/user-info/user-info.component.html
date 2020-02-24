@@ -1,106 +1,158 @@
-<div class="row justify-content-center">
-    <div class="col-md-6">
-      <span class="anchor" id="formUserEdit"></span>
-      <hr class="my-5">
-      <!-- form user info -->
-      <div class="card card-outline-secondary">
-        <div class="card-header">
-          <h3 class="mb-0">User Information</h3>
-        </div>
-        <pre *ngIf="auth.userProfile$ | async as profile">
-          <code>{{ profile | json }}</code>
-          </pre>
-        <div class="card-body">
-          <form autocomplete="off" class="form" role="form">
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">First name</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text" value="Vasanth">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Last name</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text" value="Kumar">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Email</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="email" value="email@gmail.com">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Company</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text" value="">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Website</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="url" value="">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Time Zone</label>
-              <div class="col-lg-9">
-                <select class="form-control" id="user_time_zone" size="0">
-                  <option value="Hawaii">
-                    (GMT-10:00) Hawaii
-                  </option>
-                  <option value="Alaska">
-                    (GMT-09:00) Alaska
-                  </option>
-                  <option value="Pacific Time (US &amp; Canada)">
-                    (GMT-08:00) Pacific Time (US &amp; Canada)
-                  </option>
-                  <option value="Arizona">
-                    (GMT-07:00) Arizona
-                  </option>
-                  <option value="Mountain Time (US &amp; Canada)">
-                    (GMT-07:00) Mountain Time (US &amp; Canada)
-                  </option>
-                  <option selected="selected" value="Central Time (US &amp; Canada)">
-                    (GMT-06:00) Central Time (US &amp; Canada)
-                  </option>
-                  <option value="Eastern Time (US &amp; Canada)">
-                    (GMT-05:00) Eastern Time (US &amp; Canada)
-                  </option>
-                  <option value="Indiana (East)">
-                    (GMT-05:00) Indiana (East)
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Username</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="text" value="janeuser">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Password</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="password" value="11111122333"> 
-                                          <small class="form-text text-muted" id="passwordHelpBlock">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</small>
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label">Confirm</label>
-              <div class="col-lg-9">
-                <input class="form-control" type="password" value="11111122333">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label class="col-lg-3 col-form-label form-control-label"></label>
-              <div class="col-lg-9">
-                <input class="btn btn-secondary" type="reset" value="Cancel"> 
-                                      <input class="btn btn-primary" type="button" value="Save Changes">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div><!-- /form user info -->
-    </div>
+<!-- Page Header Start -->
+<div class="page-header">      
+  <div class="container"> 
+      <div class="row">
+      <div class="col-12">
+          <div class="page-header-inner text-center">   
+          <h1 class="page-title">User Profile</h1>
+          <ul>
+              <li><a class="active" href="#" routerLink="/">Home</a></li>
+              <li>User Profile</li>
+          </ul>
+          </div>
+      </div>
+      </div>
   </div>
+</div>
+<!-- Page Header End-->
+
+<!-- User Profile Section Start -->
+<section id="FAQs" class="schedule section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">User Profile</h2>
+              <p class="wow fadeInDown" data-wow-delay="0.2s"></p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-8">
+
+            <div class="parent">
+              <div class="box-one">
+
+                <table class="table table-borderless">
+                  <tr>
+                    <th>Name:</th>
+                    <td>UserName</td>
+                  </tr>
+                  <tr>
+                    <th>Email:</th>
+                    <td>JohnDeo@abc.com</td>
+                  </tr>
+                  <tr>
+                    <th>Telephone:</th>
+                    <td>555 77 855</td>
+                  </tr>
+                  <tr>
+                    <th>School:</th>
+                    <td>HEC Paris</td>
+                  </tr>
+                </table>
+                
+
+                <div style="margin-top:50px;">
+                  <a class="contact-link" target="_blank" href="">Download Ticket</a> </div>
+              </div>
+              <div class="box-two">
+                <div class="image">
+                  <img src="./assets/img/blog/img-1.jpg" >
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-4">
+            <div class="ticket-card active">
+              <div class="cover">
+                <img src="./assets/img/mbat-logo-black.png" width="100px" alt="" />
+                <div class="info">
+                  <div class="going">
+                    <i class="fa fa-group"></i> Username
+                  </div>
+                  <div class="tickets-left">
+                    <i class="fa fa-ticket"></i> Email Id
+                  </div>
+                </div>
+              </div>
+              <div class="body">
+                <div class="artist">
+                  <h6 class="info">MBAT2020</h6>
+                  <h4 class="name">HEC Paris</h4>
+                </div>
+                <div class="price">
+                  <div class="from">Price</div>
+                  <div class="value">
+                    <b>&euro;</b>620
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="info">
+                  <p class="location">
+                    <i class="fa fa-map-marker"></i> Event Date
+                  </p>
+                  <p class="date">
+                    <i class="fa fa-calendar"></i> May 7-9  2020
+                  </p>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="collapse in">
+                <ul class="list-unstyled">
+                  <li>
+                    <div class="ticket">
+                      <h5>Event Ticket<br>
+                        <small>Username</small>
+                      </h5>
+                    </div>
+                    <div class="price">
+                      <div class="value"><b>&euro;</b>420</div>
+                    </div>                    
+                  </li>
+                  <li>
+                    <div class="ticket">
+                      <h5>Early Bird Ticket<br>
+                      <small>1 Purchase</small>
+                    </h5>
+                    </div>
+                    <div class="price">
+                      <div class="value"><b>&euro;</b>420</div>
+                    </div>  
+                  </li>
+                  <li>
+                    <div class="ticket">
+                      <h5>Bracelet<br>
+                        <small>1 Purchase</small>
+                    </h5>
+                    </div>
+                    <div class="price">
+                      <div class="value"><b>&euro;</b>150</div>
+                    </div>
+ 
+                  </li>
+                  <li>
+                    <div class="ticket">
+                      <h5>Bracelet Topup<br>
+                      <small>1 Purchase</small>
+                    </h5>
+                    </div>
+                    <div class="price">
+                      <div class="value"><b>&euro;</b>50</div>
+                    </div>
+
+                  </li>
+                </ul>
+              </div>
+              <div class="footer">
+                <button class="btn toggle-tickets">Hide Tickets Details</button>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- User Profile Section End -->
+
+

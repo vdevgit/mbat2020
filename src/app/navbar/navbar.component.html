@@ -70,9 +70,10 @@
             <div class="dropdown-menu">
               <li><a class="dropdown-item" href="#" routerLink="/participants/participating-schools">Participating Schools</a></li>
               <li><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>            
             </div>
           </li>
+          <li><a class="dropdown-item" href="#" routerLink="/cart"><i class="lni-cart"></i></a></li>
         </ul>
 
         <ul class="nav navbar-nav mt-1">
@@ -84,33 +85,23 @@
           <li class="nav-item"><a class="nav-link" href="https://twitter.com/HECMBAT" target="_blank"><i class="lni-twitter-original"></i></a></li>
           <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/hecmbat/" target="_blank"><i class="lni-instagram-original"></i></a></li>  
           
-          <ng-template #notLogged>
-            <li class="nav-item"><a class="nav-link" href="#" (click)="auth.login()">Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" routerLink="/register">Register</a></li>
+          <ng-template #notLogged>            
+            <li class="nav-item"><button type="button" class="btn btn-common btn-warning text-dark mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</button></li>
+            <li class="nav-item"><button type="button" class="btn btn-common btn-warning text-dark mt-2 font-weight-bold" routerLink="/register">Register</button></li>
           </ng-template>
 
-          <li class="nav-item dropdown" *ngIf="loggedIn; else notLogged">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown ml-auto" *ngIf="loggedIn; else notLogged">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                
               <img src="http://via.placeholder.com/100" width="40" height="40" class="rounded-circle">
-              <pre *ngIf="auth.userProfile$ | async as profile">profile.name</pre>
+              <span *ngIf="auth.userProfile$ | async as profile" class="ml-2">{{profile.name}}</span>
               <span [innerHTML]='userName'></span>
             </a>
             <div class="dropdown-menu">
-              <li class="nav-item"><a class="nav-link" href="#" routerLink="/user-info">Profile</a></li>
-              <li class="nav-item"><a class="nav-link" href="#" (click)="auth.logout()">Log Out</a></li>
+              <li><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li>
+              <li><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
             </div>
-          </li>          
-    
-          <!-- <li class="nav-item">
-            <form class="widget-search form-inline my-2 my-lg-0 pt-2">                    
-              <div class="input-group mb-3">
-                <input type="text" class="form-control form-control-sm search" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-warning btn-sm" type="submit" id="button-addon2">Search</button>
-                </div>
-              </div>
-            </form>
-          </li>                         -->
+          </li>
+
         </ul>
 
       </div>

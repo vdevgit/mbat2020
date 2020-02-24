@@ -144,83 +144,39 @@
 
 
 
-// Table
+// Place Order
 
-.table-wrapper {
-  width: 700px;
-  margin: 30px auto;
-      background: #fff;
-      padding: 20px;	
-      box-shadow: 0 1px 1px rgba(0,0,0,.05);
-  }
-  .table-title {
-      padding-bottom: 10px;
-      margin: 0 0 10px;
-  }
-  .table-title h2 {
-      margin: 6px 0 0;
-      font-size: 22px;
-  }
-  .table-title .add-new {
-      float: right;
-  height: 30px;
-  font-weight: bold;
-  font-size: 12px;
-  text-shadow: none;
-  min-width: 100px;
-  border-radius: 50px;
-  line-height: 13px;
-  }
-.table-title .add-new i {
-  margin-right: 4px;
+.summary{
+	border-top: 2px solid #FBC02D;
+    background-color: #fffef7;
+    height: 100%;
+    padding: 30px;
 }
-  table.table {
-      table-layout: fixed;
-  }
-  table.table tr th, table.table tr td {
-      border-color: #e9e9e9;
-  }
-  table.table th i {
-      font-size: 13px;
-      margin: 0 5px;
-      cursor: pointer;
-  }
-  table.table th:last-child {
-      width: 100px;
-  }
-  table.table td a {
-  cursor: pointer;
-      display: inline-block;
-      margin: 0 5px;
-  min-width: 24px;
-  }    
-table.table td a.add {
-      color: #27C46B;
-  }
-  table.table td a.edit {
-      color: #FFC107;
-  }
-  table.table td a.delete {
-      color: #E34724;
-  }
-  table.table td i {
-      font-size: 19px;
-  }
-table.table td a.add i {
-      font-size: 24px;
-    margin-right: -1px;
-      position: relative;
-      top: 3px;
-  }    
-  table.table .form-control {
-      height: 32px;
-      line-height: 32px;
-      box-shadow: none;
-      border-radius: 2px;
-  }
-table.table .form-control.error {
-  border-color: #f50000;
+
+.summary h3{
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: 600;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
-table.table td .add {
-  display: none;
+
+.summary .summary-item:not(:last-of-type){
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.summary .text{
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.summary .price{
+	font-size: 1em;
+	float: right;
+}
+
+.summary button{
+	margin-top: 20px;
 }

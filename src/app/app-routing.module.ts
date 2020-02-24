@@ -32,6 +32,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { CartComponent } from './product/cart/cart.component';
 import { SuccessComponent } from './product/success/success.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 const routes = [
 
@@ -128,8 +129,9 @@ const routes = [
     { path: 'product-list', component: ProductListComponent },
     { path: 'product-details', component: ProductDetailsComponent },
     { path: 'cart', component: CartComponent },
+    { path: 'checkout', component: CheckoutComponent },
     { path: 'success', component: SuccessComponent },
-
+    { path: 'user-info', component: UserInfoComponent },
 
     ],
   },
@@ -140,8 +142,7 @@ const routes = [
     component: BlankLayoutComponent,
     children: [
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },
-      { path: 'checkout', component: CheckoutComponent },
+      { path: 'register', component: RegisterComponent },      
       { path: '**', component: PagenotfoundComponent }
     ]
   }
