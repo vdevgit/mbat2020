@@ -33,22 +33,22 @@
             <div class="parent">
               <div class="box-one">
 
-                <table class="table table-borderless">
+                <table class="table table-borderless" *ngIf="auth.userInfoDetails$ | async as profile">
                   <tr>
                     <th>Name:</th>
-                    <td>UserName</td>
+                    <td>{{profile.fullName}}</td>
                   </tr>
                   <tr>
                     <th>Email:</th>
-                    <td>JohnDeo@abc.com</td>
+                    <td>{{profile.email}}</td>
                   </tr>
                   <tr>
                     <th>Telephone:</th>
-                    <td>555 77 855</td>
+                    <td>{{profile.phoneNumber}}</td>
                   </tr>
                   <tr>
                     <th>School:</th>
-                    <td>HEC Paris</td>
+                    <td>{{profile.schoolName}}</td>
                   </tr>
                 </table>
                 

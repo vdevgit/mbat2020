@@ -176,7 +176,7 @@ export class AuthService {
     })
       // .then(apiUtils.checkStatus)
       .subscribe((response) => {
-        console.log(response)
+        console.log(response);
         this.emitUserDetails(response);
         // return response;
       });

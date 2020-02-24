@@ -12,9 +12,9 @@ export class NavbarComponent implements OnInit {
   userName='niren here';
   constructor(public auth: AuthService) {
     auth.getUserInfo()
-    // auth.loggedInObservable.subscribe(value => {
-    //   this.loggedIn = value;
-    // });
+    auth.loggedInObservable.subscribe(value => {
+      this.loggedIn = value;
+    });
     // auth.userInfoDetails$.subscribe(value => {
     //   console.log(value);
     //   this.userName = value.name;
