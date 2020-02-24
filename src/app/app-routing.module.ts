@@ -158,8 +158,7 @@ const routes = [
       ]
     },
     { path: 'cart', component: CartComponent },
-    { path: '404', component: NotFoundComponent },
-    { path: '**', redirectTo: '/404' }
+    { path: '404', component: NotFoundComponent }
 
 
 
