@@ -23,9 +23,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   userName = 'niren here';
   constructor(public auth: AuthService, private router: Router, private cartService: CartService) {
     auth.getUserInfo();
-    // auth.loggedInObservable.subscribe(value => {
-    //   this.loggedIn = value;
-    // });
+    auth.loggedInObservable.subscribe(value => {
+      this.loggedIn = value;
+    });
     // auth.userInfoDetails$.subscribe(value => {
     //   console.log(value);
     //   this.userName = value.name;

@@ -72,7 +72,6 @@ export class AuthService {
       tap(user => {
         console.log(user);
         this.userProfileSubject$.next(user);
-        // this.getUserInfo();
       })
     );
   }
@@ -82,6 +81,7 @@ export class AuthService {
       tap(idToken => {
           localStorage.setItem('idToken', idToken);
           this.emitConfig(true);
+          this.getUserInfo();
         }
       )
     );
@@ -167,26 +167,17 @@ export class AuthService {
     });
   }
   getUserInfo() {
-    return this.http.get<any>(environment.mbatServer + 'user', {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + localStorage.getItem('idToken')
-      }
-    })
-      // .then(apiUtils.checkStatus)
-      .subscribe((response) => {
-        console.log(response)
-        this.emitUserDetails(response);
-        // return response;
-      });
-      // .then(responseJson => {
-      //   console.log('responseJson', responseJson);
-      //   if (responseJson.error) {
-          
-      //   }
-      //   const { id_token, access_token, expires_in } = responseJson;
-      // });
+    if(localStorage.getItem('idToken')) {
+      this.http.get<any>(environment.mbatServer + 'user', {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + localStorage.getItem('idToken')
+        }
+      }).subscribe((response) => {
+          console.log(response);
+          this.emitUserDetails(response);
+        });
+    }
   }
-
 }
