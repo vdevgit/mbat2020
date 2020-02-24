@@ -78,7 +78,12 @@
              <div class="row align-items-center">
               <div class="col-sm-12 text-center">
                 <span class="font-weight-bold mr-2">Already Registered</span>
-                <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login()">Login</button>
+                <div *ngIf="isBuyTicketFlow; else notTicketFlow">
+                  <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login('/checkout')">Login</button>
+                </div>
+                <ng-template #notTicketFlow>
+                  <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login()">Login</button>
+                </ng-template>
                </div>
               </div>
 

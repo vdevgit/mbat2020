@@ -9,10 +9,16 @@ import { AuthService } from '../auth.service';
 export class NavbarComponent implements OnInit {
 
   loggedIn: boolean;
+  userName: string;
   constructor(public auth: AuthService) {
     auth.loggedInObservable.subscribe(value => {
       this.loggedIn = value;
     });
+    auth.userProfile$.subscribe(value => {
+      console.log(value);
+      this.userName = value.name;
+    });
+    console.log(auth.userProfile$);
   }
   ngOnInit(): void {
     this.loggedIn  = this.loggedIn || !!localStorage.getItem('idToken');

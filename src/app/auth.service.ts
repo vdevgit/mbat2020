@@ -5,6 +5,7 @@ import { from, of, Observable, Subject, BehaviorSubject, combineLatest, throwErr
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from '../environments/environment';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -49,7 +50,7 @@ export class AuthService {
     this.loggedInObservable.next(val);
   }
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private http: HttpClient,) {
     // On initial load, check authentication state with authorization server
     // Set up local auth streams if user is already authenticated
     this.localAuthSetup();

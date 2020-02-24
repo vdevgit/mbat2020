@@ -1,4 +1,7 @@
 import { Component, AfterViewChecked } from '@angular/core';
+import { AuthService } from '../auth.service';
+import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
+import { tap } from 'rxjs/operators';
 
 declare let paypal: any;
 
@@ -15,7 +18,13 @@ export class CheckoutComponent implements AfterViewChecked {
 
 
 
-  constructor() { }
+  constructor(public auth: AuthService) {
+    
+    auth.userProfile$.subscribe(value => {
+      console.log(value)
+    });
+    console.log(auth.userProfile$)
+  }
 
   // ngOnInit(): void {
   // }

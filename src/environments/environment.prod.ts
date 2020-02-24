@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  mbatServer: 'http://ec2-35-180-25-112.eu-west-3.compute.amazonaws.com:8080/',
+  mbatServer: 'https://api.mbat.xyz/',
   auth0: {
     domain: 'blr-mbat.auth0.com',
     clientId: 'qqNdkcYcmvJQVkImasI89REx8vLM6XQC',

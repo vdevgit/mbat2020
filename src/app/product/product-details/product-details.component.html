@@ -220,7 +220,12 @@
                   <div class="summary-item"><span class="text">Subtotal</span><span class="price font-weight-bold">&euro; 620</span></div>
                   <div class="summary-item"><span class="text">Coupon Discount</span><span class="price">&euro; 0</span></div>
                   <div class="summary-item"><span class="text">Total</span><span class="price font-weight-bold">&euro; 620</span></div>
-                  <button type="button" class="btn btn-warning btn-lg btn-block font-weight-bold" routerLink="/checkout">Checkout</button>
+                  <div *ngIf="loggedIn; else notLogged">
+                    <button type="button" class="btn btn-warning btn-lg btn-block font-weight-bold" routerLink="/checkout">Checkout</button>
+                  </div>
+                  <ng-template #notLogged>
+                    <button type="button" class="btn btn-warning btn-lg btn-block font-weight-bold" [routerLink]="['/register']" [queryParams]="{path: pathName}">Checkout</button>
+                  </ng-template>
                 </div>
               </div>
 

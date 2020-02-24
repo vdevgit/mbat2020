@@ -91,7 +91,9 @@
 
           <li class="nav-item dropdown" *ngIf="loggedIn; else notLogged">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="http://via.placeholder.com/100" width="40" height="40" class="rounded-circle"> UserName
+              <img src="http://via.placeholder.com/100" width="40" height="40" class="rounded-circle">
+              <pre *ngIf="auth.userProfile$ | async as profile">profile.name</pre>
+              <span [innerHTML]='userName'></span>
             </a>
             <div class="dropdown-menu">
               <li class="nav-item"><a class="nav-link" href="#" routerLink="/user-info">Profile</a></li>
