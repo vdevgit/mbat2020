@@ -2,6 +2,11 @@
  * Custom CSS
  */
 
+ .list-group-item.active {
+  background-color: #fbc02d;
+  border-color: #fbc02d;
+}
+
  /* main  {
     position: relative;
     background-color: black;

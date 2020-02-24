@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { Mbat2020Component } from './about/mbat2020/mbat2020.component';
@@ -43,8 +43,14 @@ import { CheckoutComponent } from './checkout/checkout.component';
 
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
-import { CartComponent } from './product/cart/cart.component';
 import { SuccessComponent } from './product/success/success.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+import { ManageItemsBaseComponent } from './manage-items-base/manage-items-base.component';
+import { ManageItemsComponent } from './manage-items-base/manage-items/manage-items.component';
+import { NotFoundComponent } from './shared/not-found.component';
+import { ShopItemsService } from './shared/shop-items.service';
+import { LoadingAnimationComponent } from './loading-animation/loading-animation.component';
 
 
 @NgModule({
@@ -87,15 +93,22 @@ import { SuccessComponent } from './product/success/success.component';
     ProductListComponent,
     ProductDetailsComponent,
     CartComponent,
-    SuccessComponent
+    SuccessComponent,
+    ShopComponent,
+    CartComponent,
+    ManageItemsComponent,
+    NotFoundComponent,
+    LoadingAnimationComponent,
+    ManageItemsBaseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [ShopItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

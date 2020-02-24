@@ -1,0 +1,64 @@
+
+<!-- Page Header Start -->
+<div class="page-header">      
+  <div class="container"> 
+      <div class="row">
+      <div class="col-12">
+          <div class="page-header-inner text-center">   
+          <h1 class="page-title">Ticket Pricing</h1>
+          <ul>
+              <li><a class="active" href="#" routerLink="/">Home</a></li>
+              <li>Ticket Pricing</li>
+          </ul>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+<!-- Page Header End--> 
+
+<!-- Ticket Pricing Section Start -->
+<section id="FAQs" class="schedule section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-center">
+                <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Ticket Pricing</h2>
+                <p class="wow fadeInDown" data-wow-delay="0.2s"></p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+
+            <div class="shop-list mx-auto">
+              <div class="shop-card" *ngFor="let item of shopItems">
+                <div class="shop-card__img">
+                  <img [src]="item.image" class="img" [alt]="item.title" />
+                  <div class="shop-card__edit-btn" (click)="onEditItem(item.id)">
+                    <fa-icon [icon]="faCog"></fa-icon>
+                  </div>
+                </div>
+                <div class="shop-card__info">
+                  <div class="shop-card__label">
+                    <div class="shop-card__title">{{ item.title }}</div>
+                    <div class="shop-card__price">{{ item.price }}$</div>
+                  </div>
+                  <div class="shop-card__description">{{ item.description }}</div>
+                  <button class="shop-card__btn" (click)="onAddToCard(item)">
+                    <p>
+                      Add to Card
+                      <fa-icon [icon]="faCartPlus"></fa-icon>
+                    </p>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Ticket Pricing Section End -->
+
+<app-loading-animation *ngIf="loading"> </app-loading-animation>

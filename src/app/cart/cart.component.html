@@ -1,0 +1,75 @@
+<!-- Page Header Start -->
+<div class="page-header">      
+  <div class="container"> 
+      <div class="row">
+      <div class="col-12">
+          <div class="page-header-inner text-center">   
+          <h1 class="page-title">Cart List</h1>
+          <ul>
+              <li><a class="active" href="#" routerLink="/">Home</a></li>
+              <li>Cart List</li>
+          </ul>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+<!-- Page Header End--> 
+
+<!-- Cart Section Start -->
+<section class="schedule section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Cart List</h2>
+              <p class="wow fadeInDown" data-wow-delay="0.2s"></p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="cart-list col-md-10   mx-auto">
+          <div class="cart-card" *ngFor="let item of cartItems; let i = index">
+            <div class="cart-card__img">
+              <img [src]="item.image" [alt]="item.title + item.id" />
+            </div>
+      
+            <div class="cart-card__label">
+              <div class="cart-card__row">
+                <div class="title">{{ item.title }}</div>
+                <button class="cart-card__control close" (click)="remove(i)">
+                  <fa-icon [icon]="faWindowClose"></fa-icon>
+                </button>
+              </div>
+              <div class="cart-card__row">
+                <div class="cart-card__price">
+                  <div class="price">&euro; {{ item.price }}</div>
+                  <div class="count">
+                    {{ item.counter > 1 ? " x " + item.counter : "" }}
+                  </div>
+                </div>
+                <div class="cart-card__controls">
+                  <button class="cart-card__control" (click)="decrement(i)" [disabled]="item.counter < 2">
+                    <fa-icon [icon]="faMinusSquare"></fa-icon>
+                  </button>
+                  <button class="cart-card__control ml-1" (click)="increment(i)">
+                    <fa-icon [icon]="faPlusSquare"></fa-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-total">
+            <div class="cart-total-text">Total:</div>
+            <div class="cart-total-price">&euro; {{ totalPrice().toFixed(2) }} </div>
+          </div>
+          <button (click)="onBuy()" class="btn btn-common btn-sm btn-block mt-4 font-weight-bold">Buy Now</button>
+        </div>
+      </div>
+  </div>
+</section>
+<!-- Cart Section End -->
+
+
+
+

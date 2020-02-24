@@ -30,9 +30,15 @@ import { CheckoutComponent } from './checkout/checkout.component';
 
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
-import { CartComponent } from './product/cart/cart.component';
 import { SuccessComponent } from './product/success/success.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+import { ManageItemsComponent } from './manage-items-base/manage-items/manage-items.component';
+import { NotFoundComponent } from './shared/not-found.component';
+import { ManageItemsBaseComponent } from './manage-items-base/manage-items-base.component';
+import { ShopItemsResolverService } from './shared/shop-items-resolver.service';
 
 const routes = [
 
@@ -133,6 +139,30 @@ const routes = [
     { path: 'success', component: SuccessComponent },
     { path: 'user-info', component: UserInfoComponent },
 
+    {
+      path: 'shop', component: ShopComponent, resolve: [ShopItemsResolverService]
+    },
+    { path: 'manage-items', redirectTo: '/manage-items/new', pathMatch: 'full' },
+    {
+      path: 'manage-items',
+      component: ManageItemsBaseComponent,
+      children: [
+        {
+          path: 'new',
+          component: ManageItemsComponent
+        },
+        {
+          path: 'edit/:id',
+          component: ManageItemsComponent
+        }
+      ]
+    },
+    { path: 'cart', component: CartComponent },
+    { path: '404', component: NotFoundComponent },
+    { path: '**', redirectTo: '/404' }
+
+
+
     ],
   },
 
@@ -142,8 +172,7 @@ const routes = [
     component: BlankLayoutComponent,
     children: [
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },      
-      { path: '**', component: PagenotfoundComponent }
+      { path: 'register', component: RegisterComponent },
     ]
   }
 
