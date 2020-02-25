@@ -22,7 +22,9 @@ export class RegisterComponent implements OnInit {
   selectedSchool: String;
   dropDownData: [];
   isBuyTicketFlow: Boolean;
+  loading: Boolean;
   ngOnInit(): void {
+    this.loading = true;
     this.getSchools()
     this.isBuyTicketFlow = window.location.search.split('=')[1] === 'buyTicket';
   }
@@ -63,12 +65,14 @@ export class RegisterComponent implements OnInit {
     const headers = {
       "Content-Type": "application/json"
     }
+    this.loading = true;
     this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
       console.log(data);
       if(data.error) {
         console.log(data.message);
       } else {
         localStorage.setItem('idToken', data.access_token);
+        this.loading = false;
         this.router.navigate(['/checkout']);
       }
     })

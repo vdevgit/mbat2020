@@ -10,6 +10,8 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('.event-header').css('display', 'none');
+    $('.footer').css('display', 'none');
   }
 
 }
