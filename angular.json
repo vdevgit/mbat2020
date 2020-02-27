@@ -35,7 +35,7 @@
               "./src/assets/css/animate.css",
               "./src/assets/css/main.css",
               "./src/assets/css/responsive.css",
-              "./src/assets/css/colors/yellow.css",
+              "./src/assets/css/colors/orange-red-grad.css",
               "./src/assets/css/custom.css"
             ],
             "scripts": [

@@ -4,6 +4,7 @@ export class ShopItem {
   public description: string;
   public image: string;
   public id?: number;
+
   constructor(
     title: string,
     price: number,

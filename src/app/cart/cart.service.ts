@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { ShopItem } from "../shared/shop-item.model";
-import { Subject } from "rxjs";
-import { CartItem } from "./cart-item.model";
+import { Injectable } from '@angular/core';
+import { ShopItem } from '../shared/shop-item.model';
+import { Subject } from 'rxjs';
+import { CartItem } from './cart-item.model';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class CartService {
   cartChanged = new Subject<ShopItem[]>();
@@ -13,9 +13,9 @@ export class CartService {
   constructor() {}
 
   addToCart(shopItem: ShopItem) {
-    console.log("start cart items:", this.cartItems);
+    console.log('start cart items:', this.cartItems);
     let cartItemIndex;
-    let foundItem = this.cartItems.find((item, i) => {
+    const foundItem = this.cartItems.find((item, i) => {
       cartItemIndex = i;
       return item.id === shopItem.id;
     });

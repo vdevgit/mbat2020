@@ -14,19 +14,18 @@
     max-width: 900px;
   }
   @include lg-screen {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;
   }
 }
 
 .shop-card {
   position: relative;
-  border-radius: $border-radius;
   overflow: hidden;
   background: white;
   height: 380px;
 
-  box-shadow: 0 0.1em 0.3em rgba($black, 0.5);
+  box-shadow: 0 8px 24px #E2E8ED;
 
   &__img {
     overflow: hidden;
@@ -69,7 +68,7 @@
   &__btn {
     width: 100%;
     padding: 0.5em;
-    border-radius: $border-radius;
+    border-radius: 0;
     border: none;
     outline: none;
     cursor: pointer;
@@ -112,7 +111,7 @@
     height: 2em;
     .ng-fa-icon {
       font-size: 2em;
-      color: $eton-blue;
+      color: $orange;
       filter: drop-shadow(1px 1px 1px $black);
     }
     &:hover {

@@ -1,0 +1,37 @@
+  .event-schedule {
+    display: grid;
+    grid-template-rows: [tracks] auto [time-0800] 1fr [time-0830] 1fr [time-0900] 1fr [time-0930] 1fr [time-1000] 1fr [time-1030] 1fr [time-1100] 1fr [time-1130] 1fr [time-1200] 1fr;
+    grid-template-columns: [times] 4em [track-1-start] 1fr [track-1-end track-2-start] 1fr [track-2-end track-3-start] 1fr [track-3-end track-4-start] 1fr [track-4-end track-5-start] 1fr [track-5-end track-6-start] 1fr [track-6-end track-7-start] 1fr [track-7-end track-8-start] 1fr [track-8-end track-9-start] 1fr [track-9-end track-10-start] 1fr [track-10-end track-11-start]
+    
+    
+    1fr [track-11-end track-12-start] 1fr [track-12-end track-13-start] 1fr [track-13-end track-14-start] 1fr [track-14-end track-15-start] 1fr [track-15-end track-16-start] 1fr [track-16-end track-17-start] 1fr [track-17-end track-18-start] 1fr [track-18-end track-19-start] 1fr [track-19-end track-20-start]
+
+    1fr [track-21-end track-22-start] 1fr [track-22-end track-23-start] 1fr [track-23-end track-24-start] 1fr [track-24-end track-25-start] 1fr [track-25-end track-26-start] 1fr [track-26-end track-27-start]
+    
+    1fr [track-27-end];
+    grid-gap: 5px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+  }
+
+  .event-schedule .session {
+    background-color: rgba(0, 0, 92, 1);
+    padding: 5px;
+    color:#fff;
+  }
+
+  .event-schedule .track-slot {
+    display: block;
+    padding: 5px 5px 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+  }
+
+  .event-schedule h2, .event-schedule h3 {
+    font-size: 12px;
+  }

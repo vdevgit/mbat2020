@@ -10,103 +10,106 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link" href="#" routerLink="/">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/about">About</a>
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/">Home</a></li>
+          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" routerLink="/about/mbat2020">MBAT2020</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/about/our-history">Our History</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/about/core-team">Core Team</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/about/schedule">Schedule</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/about">About MBAT</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/about/mbat2020">MBAT2020</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/about/our-history">Our History</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/about/core-team">Core Team</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/about/schedule">Schedule</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/tournament">Tournament</a>
-            <div class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" routerLink="/tournament/watch-live">Watch Live</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/tournament/fixtures">Fixtures</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/tournament/score-cards">Score Cards</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/tournament/leader-board">Leader board</a></li>
-            </div>
+          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament</a>
+            <ul class="dropdown-menu">
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/watch-live">Watch Live</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/fixtures">Fixtures</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/score-cards">Score Cards</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/leader-board">Leader board</a></li>
+            </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/sports">Sports</a>
-            <div class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Babyfoot</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Badminton</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Basketball</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Beach Volleyball</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">8 Ball Pool</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Chess</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Cricket</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Cross Country</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Dodgeball</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Football</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Golf</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Petanque</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Poker</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Rock Climbing</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Rowing</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Touch Rugby</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Salsa</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Swimming</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Table Tennis</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Tennis</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/sports">Ultimate Frisbee</a></li>
-            </div>
+          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sports</a>
+            <ul class="dropdown-menu">
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Babyfoot</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Badminton</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Basketball</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Beach Volleyball</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">8 Ball Pool</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Chess</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Cricket</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Cross Country</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Dodgeball</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Football</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Golf</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Petanque</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Poker</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Rock Climbing</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Rowing</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Touch Rugby</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Salsa</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Swimming</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Table Tennis</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Tennis</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Ultimate Frisbee</a></li>
+            </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/events">Events</a>
-            <div class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" routerLink="/events">Forest Party</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/events">Dance Competition</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/events">Battle of the Bands</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/events">Fashion Show</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/events">Gala Night</a></li>
-            </div>
+          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+            <ul class="dropdown-menu">
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Forest Party</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Dance Competition</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Battle of the Bands</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Fashion Show</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Gala Night</a></li>
+            </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/participants">Participants</a>
-            <div class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" routerLink="/participants/participating-schools">Participating Schools</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li>
-              <li><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>            
-            </div>
+          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Participants</a>
+            <ul class="dropdown-menu">
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/participating-schools">Participating Schools</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>            
+            </ul>
           </li>
 
-          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/shop">Buy Tickets New</a></li>
+          <!-- <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/shop">Buy Tickets New</a></li>
+
           <li class="nav-item" routerLinkActive="active-cart" [class.disabled]="cartCounter === 0 ? true : null" *ngIf="!onCartPage">
             <a class="nav-link cart" routerLink="/cart">
-              <fa-icon [icon]="faShoppingCart"></fa-icon><div class="cart-counter" *ngIf="cartCounter > 0">
-              <span>{{ cartCounter }}</span>
-              </div>
+              <i class='lni lni-cart'>
+                <span class="badge badge-success" *ngIf="cartCounter > 0">{{ cartCounter }}</span>
+              </i> 
             </a>
-          </li>
+          </li> -->
+
         </ul>
 
         <ul class="nav navbar-nav mt-1">
-          <li class="nav-item"><a class="nav-link" href="#" routerLink="/contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" routerLink="/support">Support</a></li>
-          <li class="nav-item"><a class="nav-link" href="#" routerLink="/faqs">FAQs</a></li>
+          <li class="nav-item mobileFallback" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/contact">Contact</a></li>
+          <li class="nav-item mobileFallback" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/support">Support</a></li>
+          <li class="nav-item mobileFallback" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/faqs">FAQs</a></li>
     
-          <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/MBATournament/" target="_blank"><i class="lni-facebook-original"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://twitter.com/HECMBAT" target="_blank"><i class="lni-twitter-original"></i></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/hecmbat/" target="_blank"><i class="lni-instagram-original"></i></a></li>  
+          <li class="nav-item mobileFallback lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://www.facebook.com/MBATournament/" target="_blank"><i class="lni-facebook-original"></i></a></li>
+          <li class="nav-item mobileFallback lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://twitter.com/HECMBAT" target="_blank"><i class="lni-twitter-original"></i></a></li>
+          <li class="nav-item mobileFallback lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://www.instagram.com/hecmbat/" target="_blank"><i class="lni-instagram-original"></i></a></li>  
           
           <ng-template #notLogged>            
-            <li class="nav-item"><button type="button" class="btn btn-common btn-warning text-dark mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</button></li>
-            <li class="nav-item"><button type="button" class="btn btn-common btn-warning text-dark mt-2 font-weight-bold" routerLink="/register">Register</button></li>
+            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><button type="button" class="btn btn-common mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</button></li>
+            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><button type="button" class="btn btn-common mt-2 font-weight-bold" routerLink="/register">Register</button></li>
           </ng-template>
 
-            <li class="nav-item dropdown" *ngIf="loggedIn; else notLogged">
+            <li class="nav-item dropdown" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="lni-user"></i>
                 <span class="ml-2" *ngIf="auth.userInfoDetails$ | async as profile"><span>{{profile.fullName}}</span></span>
               </a>
-              <div class="dropdown-menu">
-                <li><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li>
-                <li><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
-              </div>
+              <ul class="dropdown-menu">
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
+              </ul>
             </li>    
         </ul>
 
