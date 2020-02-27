@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { Mbat2020Component } from './about/mbat2020/mbat2020.component';
@@ -51,7 +52,6 @@ import { ManageItemsComponent } from './manage-items-base/manage-items/manage-it
 import { NotFoundComponent } from './shared/not-found.component';
 import { ShopItemsService } from './shared/shop-items.service';
 import { LoadingAnimationComponent } from './loading-animation/loading-animation.component';
-
 
 @NgModule({
   declarations: [

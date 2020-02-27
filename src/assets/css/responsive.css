@@ -156,7 +156,7 @@
     font-size: 22px;
     margin-top: 20px;
   }
-
+.testimonial .carousel { width: 100% !important;}
 .lineIcon {font-size: 24px; position:relative; top:5px; margin-left:5px;}
 
   .about-content ul li {
