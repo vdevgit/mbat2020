@@ -73,7 +73,7 @@ export class RegisterComponent implements OnInit {
       } else {
         localStorage.setItem('idToken', data.access_token);
         this.loading = false;
-        this.router.navigate(['/checkout']);
+        this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
       }
     })
   }

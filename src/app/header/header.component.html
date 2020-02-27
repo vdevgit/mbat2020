@@ -17,7 +17,12 @@
           <h4>Join us on <span class="text-orange-red">May 7-9 2020</span></h4>
           <p class="banner-desc">You are one step from getting your tickets to the journey into sports, networking, fun and finding your vibe at MBAT2020.</p>
           <div class="banner-btn">
-            <a href="#" class="btn btn-common btn-lg font-weight-bold" routerLink="/product-list">BUY TICKETS</a>
+            <div *ngIf="loggedIn; else notLogged"> 
+              <a href="#" class="btn btn-common btn-lg font-weight-bold" routerLink="/product-list">BUY TICKETS</a>
+            </div>
+            <ng-template #notLogged>
+              <a href="#" class="btn btn-common btn-lg font-weight-bold" [routerLink]="['/register']" [queryParams]="{path: queryParm}">BUY TICKETS</a>
+            </ng-template>
           </div>          
         </div>
       </div>

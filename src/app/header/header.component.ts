@@ -9,7 +9,15 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  loggedIn: boolean;
+  pathName: String;
+  queryParm: String;
 
+  ngOnInit(): void {
+    this.loggedIn  = this.loggedIn || !!localStorage.getItem('idToken');
+    if (!this.loggedIn) {
+      this.pathName = '/register';
+      this.queryParm = 'buyTicket';
+    };
+  }
 }

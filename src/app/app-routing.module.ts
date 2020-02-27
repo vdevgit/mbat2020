@@ -40,6 +40,8 @@ import { NotFoundComponent } from './shared/not-found.component';
 import { ManageItemsBaseComponent } from './manage-items-base/manage-items-base.component';
 import { ShopItemsResolverService } from './shared/shop-items-resolver.service';
 
+import { AuthGuard } from './auth.guard';
+
 const routes = [
 
   // Home Page Layout
@@ -132,12 +134,12 @@ const routes = [
     { path: 'support', component: SupportComponent },
     { path: 'faqs', component: FaqsComponent },
 
-    { path: 'product-list', component: ProductListComponent },
+    { path: 'product-list', component: ProductListComponent, canActivate: [AuthGuard] },
     { path: 'product-details', component: ProductDetailsComponent },
     { path: 'cart', component: CartComponent },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'success', component: SuccessComponent },
-    { path: 'user-info', component: UserInfoComponent },
+    { path: 'user-info', component: UserInfoComponent, canActivate: [AuthGuard] },
 
     {
       path: 'shop', component: ShopComponent, resolve: [ShopItemsResolverService]
