@@ -1,97 +1,171 @@
-
-    <section class="bg-white">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-6">
-            <div class="row">
-              <div class="col text-center">
-                <h2>Participant Registration</h2>
-                <p class="text-h3">Please provide your information as accurate as possible.</p>
-              </div>
-            </div>
-            <div class="row align-items-center">
-              <div class="col mt-4">
-                <input type="text" class="form-control" (keyup)="OnFullName($event)" placeholder="Full Name">
-              </div>
-            </div>
-            <div class="row align-items-center mt-4">
-              <div class="col">
-                <input type="email" class="form-control" (keyup)="OnEmail($event)" laceholder="Email">
-              </div>
-            </div>
-            <div class="row align-items-center">
-              <div class="col mt-4">
-                <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Mobile Number">
-              </div>
-            </div>
-            <div class="row align-items-center mt-4">
-              <div class="col">
-                <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password">
-              </div>
-              <div class="col">
-                <input type="password" class="form-control" placeholder="Confirm Password">
-              </div>
-            </div>
-            <div class="row align-items-center mt-4">
-              <div class="col">
-                <div class="form-group">
-                  <select class="form-control" #mySelect (change)='onOptionsSelected(mySelect.value)'>
-                    <option value="" selected disabled hidden>Please Select School</option>
-                    <option *ngFor='let option of dropDownData' [value]="option.id">{{option.name}}</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row justify-content-start mt-4">
-              <div class="col">
-
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
-                    I confirm that all the information provided here is correct.
-                  </label>
-                </div>
-
-                <br>
-
-                <a href="#" class="font-weight-bold">Show privacy policy</a>
-
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
-                    Please confirm that you agree to our privacy policy
-                  </label>
-                </div>
-
-              </div>
-            </div>
-            <div class="row align-items-center mt-4">
-              <div class="col-sm-12 mt-2 text-center">
-
-                <button (click)="register()" class="btn btn-primary mt-6 btn-sm">Register</button>
-                <button class="btn btn-danger mt-6 btn-sm" onclick="history.back()">Cancel</button>
-                <hr>                
-
-              </div>
-             </div>
-
-             <div class="row align-items-center">
-              <div class="col-sm-12 text-center">
-                <span class="font-weight-bold mr-2">Already Registered</span>
-                <div *ngIf="isBuyTicketFlow; else notTicketFlow">
-                  <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login('/checkout')">Login</button>
-                </div>
-                <ng-template #notTicketFlow>
-                  <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login()">Login</button>
-                </ng-template>
-               </div>
-              </div>
-
+<!-- Page Header Start -->
+<div class="page-header">      
+  <div class="container"> 
+      <div class="row">
+      <div class="col-12">
+          <div class="page-header-inner text-center">   
+          <h1 class="page-title">Register</h1>
+          <ul>
+              <li><a class="active" href="#" routerLink="/">Home</a></li>
+              <li>Register</li>
+          </ul>
           </div>
-        </div>
       </div>
-    </section>
-    <app-loading-animation *ngIf="loading"> </app-loading-animation>
+      </div>
+  </div>
+</div>
+<!-- Page Header End--> 
+
+<!-- FAQs Section Start -->
+<section id="FAQs" class="schedule section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Participant Registration</h2>
+              <p class="wow fadeInDown" data-wow-delay="0.2s">Please provide your information as accurate as possible.</p>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
+                  <div class="schedule-tab-content col-12 clearfix">
+
+                    <section class="bg-white">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+
+                            <form class="needs-validation" novalidate>
+                              <div class="row align-items-center">
+                                <div class="col mt-4">
+                                  <input type="text" class="form-control" (keyup)="OnFullName($event)" placeholder="Full Name" name="i1" id="inputSuccess1" required>
+                                  <div class="valid-feedback">Success! You've done it.</div>
+                                  <div class="invalid-feedback">No, you missed this one.</div>
+                                </div>
+                              </div>
+                              <div class="row align-items-center mt-4">
+                                <div class="col">
+                                  <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" required>
+                                </div>
+                              </div>
+                              <div class="row align-items-center">
+                                <div class="col mt-4">
+                                  <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Mobile Number" required>
+                                </div>
+                              </div>
+                              <div class="row align-items-center mt-4">
+                                <div class="col">
+                                  <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password" required>
+                                </div>
+                                <div class="col">
+                                  <input type="password" class="form-control" placeholder="Confirm Password" required>
+                                </div>
+                              </div>
+                              <div class="row align-items-center mt-4">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <select class="form-control" #mySelect (change)='onOptionsSelected(mySelect.value)' required>
+                                      <option value="" selected disabled hidden>Please Select School</option>
+                                      <option *ngFor='let option of dropDownData' [value]="option.id">{{option.name}}</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row justify-content-start mt-4">
+                                <div class="col">
+                                  <div class="form-group">
+                                    <div class="form-check">                                    
+                                        <input type="checkbox" class="form-check-input" value="" id="invalidCheck1" required> 
+                                        <label class="form-check-label" for="invalidCheck1">I confirm that all the information provided here is correct.</label>
+                                    </div>
+                                  </div>
+                  
+                                  <br>
+                  
+                                  <a href="#" class="font-weight-bold">Show privacy policy</a>
+                                  <div class="form-group">
+                                    <div class="form-check">                                    
+                                        <input type="checkbox" class="form-check-input"value="" id="invalidCheck2" required>
+                                        <label class="form-check-label" for="invalidCheck2">Please confirm that you agree to our privacy policy</label>
+                                    </div>
+                                  </div>
+                  
+                                </div>
+                              </div>
+                              <div class="row align-items-center mt-4">
+                                <div class="col-sm-12 mt-2 text-center">
+                  
+                                  <button type="submit" (click)="register()" class="btn btn-primary mt-6 btn-sm" id="btnSubmit" >Register</button>
+                                  <button class="btn btn-danger mt-6 btn-sm" onclick="history.back()">Cancel</button>
+                                  <hr>                
+                  
+                                </div>
+                              </div>
+                  
+                              <div class="row align-items-center">
+                                <div class="col-sm-12 text-center">
+                                  <span class="font-weight-bold mr-2">Already Registered</span>
+                                  <div *ngIf="isBuyTicketFlow; else notTicketFlow">
+                                    <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login('/checkout')">Login</button>
+                                  </div>
+                                  <ng-template #notTicketFlow>
+                                    <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login()">Login</button>
+                                  </ng-template>
+                                </div>
+                              </div>
+                            </form>
+                
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- Register Section End -->
+
+<!-- overlaySpinner -->
+
+<div id="overlaySpinner" *ngIf="!visible">
+  <div class="spinner"></div>
+  <br/><p>Loading...</p>
+</div>
+
+<!-- JavaScript for disabling form submissions if there are invalid fields -->
+<script>
+  // Self-executing function
+  (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+              }, false);
+          });
+      }, false);
+  })();
+</script> 
+
+
+
+
+
+
+
+
 
 
 

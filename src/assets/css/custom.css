@@ -8,6 +8,53 @@
 }
 
 
+/* OverlaySpinner */
+
+#overlaySpinner {
+  background: rgba(0,0,92,0.5);
+  color: #666666;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 25%;
+}
+#overlaySpinner .spinner {
+    margin: 0 auto;
+    height: 64px;
+    width: 64px;
+    animation: rotate 0.8s infinite linear;
+    border: 5px solid red;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+#overlaySpinner p {color:#fff;}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 
+input:required:invalid, input:focus:invalid {
+  background-image: url(../img/form/invalid1.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+} 
+input:required:valid {
+  background-image: url(../img/form/valid.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+*/
+
 /* Testimonial */
 
 .testimonial .carousel {

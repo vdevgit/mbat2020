@@ -131,6 +131,8 @@ const routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'support', component: SupportComponent },
     { path: 'faqs', component: FaqsComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
 
     { path: 'product-list', component: ProductListComponent },
     { path: 'product-details', component: ProductDetailsComponent },
@@ -160,8 +162,6 @@ const routes = [
     { path: 'cart', component: CartComponent },
     { path: '404', component: NotFoundComponent }
 
-
-
     ],
   },
 
@@ -170,8 +170,7 @@ const routes = [
     path: '',
     component: BlankLayoutComponent,
     children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent },
+
     ]
   }
 

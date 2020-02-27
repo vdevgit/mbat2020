@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
   hasRoute(route: string) {
     return this.router.url.includes(route);
   }

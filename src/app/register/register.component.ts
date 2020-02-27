@@ -15,8 +15,11 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   constructor(private http: HttpClient, public auth: AuthService, public router: Router) { }
+
+  visible = false;
+
   email: String;
-  fullName: String;  
+  fullName: String;
   phoneNumber: String;
   password: String;
   selectedSchool: String;
