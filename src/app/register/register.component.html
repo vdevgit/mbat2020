@@ -117,6 +117,7 @@
                               </div>
                             </form>
                 
+                            <span id="">{{errorMessage}}</span>
                           </div>
                         </div>
                       </div>
@@ -132,7 +133,7 @@
 
 <!-- overlaySpinner -->
 
-<div id="overlaySpinner" *ngIf="!visible">
+<div id="overlaySpinner" *ngIf="visible">
   <div class="spinner"></div>
   <br/><p>Loading...</p>
 </div>
