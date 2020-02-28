@@ -19,7 +19,8 @@ export class RegisterComponent implements OnInit {
   visible = false;
 
   email: String;
-  fullName: String;
+  firstName: String;
+  lastName: String;
   phoneNumber: String;
   errorMessage: String;
   password: String;
@@ -31,8 +32,11 @@ export class RegisterComponent implements OnInit {
     this.getSchools()
     this.isBuyTicketFlow = window.location.search.split('=')[1] === 'buyTicket';
   }
-  OnFullName(event: any) {
-    this.fullName = event.target.value;
+  OnFirstName(event: any) {
+    this.firstName = event.target.value;
+  }
+  OnLastName(event: any) {
+    this.lastName = event.target.value;
   }
   OnEmail(event: any) {
     this.email = event.target.value;
@@ -67,11 +71,12 @@ export class RegisterComponent implements OnInit {
    return !!validDomain.length;
   }
   register() {
-    console.log("here in the ", this.fullName)
+    console.log("here in the ", this.firstName)
     const data = {
       email: this.email,
       phoneNumber: this.phoneNumber,
-      fullName: this.fullName,
+      firstName: this.firstName,
+      lastName: this.lastName,
       password: this.password,
       schoolId: this.selectedSchool
     };

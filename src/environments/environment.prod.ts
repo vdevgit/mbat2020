@@ -2,8 +2,8 @@ export const environment = {
   production: true,
   mbatServer: 'https://api.mbat.xyz/',
   auth0: {
-    domain: 'blr-mbat.auth0.com',
-    clientId: 'qqNdkcYcmvJQVkImasI89REx8vLM6XQC',
-    clientSecret: 'O56J1R58lLqsR8BMyhBWmP_h89QsqEJDTFjw3pqr6FPmz6Fg3hy9MaZ9NqEZha3E'
+    domain: 'mbat.eu.auth0.com',
+    clientId: '9c37O59Yv6w0j9MtmpW4yJg62SqmTdk6',
+    clientSecret: 'fIJxGMNYO3s4wC0HKS8LWM9qfvfFYr43oGPJL4Gp7S4sebP8UmiXJkvMv-zuviZn'
   }
 };

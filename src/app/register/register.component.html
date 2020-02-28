@@ -40,7 +40,14 @@
                             <form class="needs-validation" novalidate>
                               <div class="row align-items-center">
                                 <div class="col mt-4">
-                                  <input type="text" class="form-control" (keyup)="OnFullName($event)" placeholder="Full Name" name="i1" id="inputSuccess1" required>
+                                  <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="inputSuccess1" required>
+                                  <div class="valid-feedback">Success! You've done it.</div>
+                                  <div class="invalid-feedback">No, you missed this one.</div>
+                                </div>
+                              </div>
+                              <div class="row align-items-center">
+                                <div class="col mt-4">
+                                  <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="inputSuccess1" required>
                                   <div class="valid-feedback">Success! You've done it.</div>
                                   <div class="invalid-feedback">No, you missed this one.</div>
                                 </div>
