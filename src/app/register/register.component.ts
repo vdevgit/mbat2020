@@ -23,6 +23,7 @@ export class RegisterComponent implements OnInit {
   phoneNumber: String;
   errorMessage: String;
   password: String;
+  confirmPassword: String;
   selectedSchool: String;
   dropDownData: [];
   isBuyTicketFlow: Boolean;
@@ -42,6 +43,9 @@ export class RegisterComponent implements OnInit {
   OnPassword(event: any) {
     this.password = event.target.value;
   }
+  OnConfirmPassword(event: any) {
+    this.confirmPassword = event.target.value;
+  }
   onOptionsSelected(value:string) {
     console.log("the selected value is " + value);
     this.selectedSchool = value;
@@ -55,6 +59,13 @@ export class RegisterComponent implements OnInit {
       this.dropDownData = data;
     })
   }
+  validatePassword() {
+    return this.confirmPassword === this.password;
+  }
+  validateEmail() {
+   let validDomain = environment.validEmailDomain.filter(domain => this.email.indexOf(domain) !== -1);
+   return !!validDomain.length;
+  }
   register() {
     console.log("here in the ", this.fullName)
     const data = {
@@ -64,21 +75,29 @@ export class RegisterComponent implements OnInit {
       password: this.password,
       schoolId: this.selectedSchool
     };
-    const headers = {
-      "Content-Type": "application/json"
+    if (!this.validatePassword()) {
+      this.errorMessage = 'Password does not match!'
+      return;
     }
-    this.errorMessage = '';
-    this.visible = true;
-    this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
-      console.log(data);
-      this.visible = false;
-      if(data.error) {
-        this.errorMessage = data.message;
-        console.log(data.message);
-      } else {
-        localStorage.setItem('idToken', data.access_token);
-        this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
+    if (this.validateEmail()) {
+      const headers = {
+        "Content-Type": "application/json"
       }
-    })
+      this.errorMessage = '';
+      this.visible = true;
+      this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
+        console.log(data);
+        this.visible = false;
+        if(data.error) {
+          this.errorMessage = data.message;
+          console.log(data.message);
+        } else {
+          localStorage.setItem('idToken', data.access_token);
+          this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
+        }
+      })
+    } else {
+      this.errorMessage = 'Invalid domain name!'
+    }
   }
 }
