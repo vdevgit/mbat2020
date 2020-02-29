@@ -20,6 +20,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
   cartCounter = 0;
 
   loggedIn: boolean;
+  pathName: String;
+  queryParm: String;
+
   userName = 'niren here';
   constructor(public auth: AuthService, private router: Router, private cartService: CartService) {
     auth.getUserInfo();
@@ -33,7 +36,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     // console.log(auth.userInfoDetails$);
   }
   ngOnInit(): void {
+
     this.loggedIn  = this.loggedIn || !!localStorage.getItem('idToken');
+    if (!this.loggedIn) {
+      this.pathName = '/register';
+      this.queryParm = 'buyTicket';
+    }
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

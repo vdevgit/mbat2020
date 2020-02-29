@@ -64,9 +64,11 @@
 
   .slicknav_nav li.mobileLink {display: inline-table; margin: 10px 10px 0 10px;width:25%;}
 
-  .slicknav_nav li.mobileIcon {display: inline-table; margin: 10px;}
+  .slicknav_nav li.mobileIcon {display: inline-table; margin: 0 5px 0 10px;}
 
   .dropdown-toggle:after {display:none !important;}
+
+  .navbarLastBtn{display: inline-table; margin: 0 0 5px 10px;}
 
  .slicknav_nav .slicknav_arrow {
     /* background: #ededed none repeat scroll 0 0; */
