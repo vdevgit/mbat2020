@@ -60,12 +60,16 @@
     line-height: 30px;
   }
 
-  .slicknav_nav li.mobileLink {display: inline-table;margin:10px; width:30%;}
+  .slicknav_nav li.homeLink {margin: 10px;}
 
-  .slicknav_nav li.mobileLink {display: inline-table;}
+  .slicknav_nav li.mobileLink {display: inline-table; margin: 10px 10px 0 10px;width:25%;}
+
+  .slicknav_nav li.mobileIcon {display: inline-table; margin: 10px;}
+
+  .dropdown-toggle:after {display:none !important;}
 
  .slicknav_nav .slicknav_arrow {
-    background: #ededed none repeat scroll 0 0;
+    /* background: #ededed none repeat scroll 0 0; */
     float: right;
     text-align: center;
     width: 35px;
