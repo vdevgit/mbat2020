@@ -30,8 +30,8 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/leader-board">Leader board</a></li> -->
             </ul>
           </li>
-          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sports</a>
+          <li class="nav-item dropdown navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/sports">Sports</a>
             <!-- <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Babyfoot</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Badminton</a></li>
@@ -56,8 +56,8 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Ultimate Frisbee</a></li>
             </ul> -->
           </li>
-          <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+          <li class="nav-item dropdown navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/events">Events</a>
             <!-- <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Forest Party</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Dance Competition</a></li>
@@ -70,8 +70,8 @@
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Participants</a>
             <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/participating-schools">Participating Schools</a></li>
-              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li> -->
-              -->
+              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>             -->
             </ul>
           </li>
 
@@ -89,7 +89,7 @@
 
         <ul class="nav navbar-nav mt-1">
           <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/contact">Contact</a></li>
-          <!-- <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/support">Support</a></li> -->
+          <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/support">Support</a></li>
           <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/faqs">FAQs</a></li>
     
           <li class="nav-item mobileIcon lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://www.facebook.com/MBATournament/" target="_blank"><i class="lni-facebook-original"></i></a></li>
