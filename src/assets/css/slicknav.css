@@ -23,7 +23,11 @@
     line-height: 1.188em;
     float: left; }
   .slicknav_menu .slicknav_icon {
-    margin: 0.188em 0 0 0.438em; }
+    margin: 0.188em 0 0 0.438em; 
+    position: relative;
+    top: -5px;
+    left: 30%;  
+  }
   .slicknav_menu .slicknav_no-text {
     margin: 0; }
   .slicknav_menu .slicknav_icon-bar {
@@ -56,7 +60,9 @@
     line-height: 30px;
   }
 
-  .slicknav_nav li.mobileFallback {display: inline-table;}
+  .slicknav_nav li.mobileLink {display: inline-table;margin:10px; width:30%;}
+
+  .slicknav_nav li.mobileLink {display: inline-table;}
 
  .slicknav_nav .slicknav_arrow {
     background: #ededed none repeat scroll 0 0;
@@ -115,7 +121,7 @@
     list-style: none;
     overflow: hidden;
     padding: 0;
-    margin: 0 0 0 20px; }
+    margin: 0 0 0 0; }
   .slicknav_nav .slicknav_row {
     padding: 5px 10px;
     margin: 2px 5px; }
