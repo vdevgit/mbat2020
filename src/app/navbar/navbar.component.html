@@ -104,7 +104,7 @@
             <li class="nav-item dropdown" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="lni-user"></i>
-                <span class="ml-2" *ngIf="auth.userInfoDetails$ | async as profile"><span>{{profile.fullName}}</span></span>
+                <span class="ml-2" *ngIf="fullName"><span>{{fullName}}</span></span>
               </a>
               <ul class="dropdown-menu">
                 <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li>

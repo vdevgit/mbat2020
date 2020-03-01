@@ -136,12 +136,12 @@ const routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
 
-    { path: 'product-list', component: ProductListComponent, canActivate: [AuthGuard] },
+    { path: 'product-list', component: ProductListComponent},
     { path: 'product-details', component: ProductDetailsComponent },
     { path: 'cart', component: CartComponent },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'success', component: SuccessComponent },
-    { path: 'user-info', component: UserInfoComponent, canActivate: [AuthGuard] },
+    { path: 'user-info', component: UserInfoComponent},
 
     {
       path: 'shop', component: ShopComponent, resolve: [ShopItemsResolverService]

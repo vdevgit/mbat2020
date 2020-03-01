@@ -23,17 +23,19 @@ export class NavbarComponent implements OnInit, OnDestroy {
   pathName: String;
   queryParm: String;
 
-  userName = 'niren here';
+  fullName = '';
   constructor(public auth: AuthService, private router: Router, private cartService: CartService) {
     auth.getUserInfo();
     auth.loggedInObservable.subscribe(value => {
       this.loggedIn = value;
+      if (!this.loggedIn) {
+        this.pathName = '/register';
+        this.queryParm = 'buyTicket';
+      }
     });
-    // auth.userInfoDetails$.subscribe(value => {
-    //   console.log(value);
-    //   this.userName = value.name;
-    // });
-    // console.log(auth.userInfoDetails$);
+    auth.userInfo$.subscribe(value => {
+      this.fullName = value['fullName'];
+    });
   }
   ngOnInit(): void {
 
@@ -42,6 +44,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
       this.pathName = '/register';
       this.queryParm = 'buyTicket';
     }
+    let tempUser = JSON.parse(sessionStorage.getItem('user'));
+        
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
