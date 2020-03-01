@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-user-info',
@@ -15,7 +17,8 @@ export class UserInfoComponent implements OnInit {
     phoneNumber: '',
     schoolName: ''
   };
-  constructor(public router: Router, public auth: AuthService) { }
+  orders = {};
+  constructor(public router: Router, public auth: AuthService, private http: HttpClient) { }
 
   ngOnInit(): void {
     if (this.auth.userLoggedIn()) {
@@ -26,7 +29,18 @@ export class UserInfoComponent implements OnInit {
         phoneNumber: tempUser['phoneNumber'],
         schoolName: tempUser['schoolName']
       };
+      this.getOrderDetails();
     }
+  }
+  getOrderDetails() {
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + localStorage.getItem('idToken')
+    };
+    this.http.get<any>(environment.mbatServer + 'orders/', { headers }).subscribe(data => {
+      this.orders = data;
+      console.log(data);
+    })
   }
 
 }
