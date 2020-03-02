@@ -97,8 +97,12 @@
           <li class="nav-item mobileIcon lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://www.instagram.com/hecmbat/" target="_blank"><i class="lni-instagram-original"></i></a></li>  
           
           <ng-template #notLogged>            
-            <li class="nav-item navbarLastBtn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><button type="button" class="btn btn-common mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</button></li>
-            <li class="nav-item navbarLastBtn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><button type="button" class="btn btn-common mt-2 font-weight-bold" routerLink="/register">Register</button></li>
+            <li class="nav-item navbarLastBtn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+              <a href="#" type="button" class="btn btn-common mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</a>
+            </li>
+            <li class="nav-item navbarLastBtn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+              <a href="#" type="button" class="btn btn-common mt-2 font-weight-bold" routerLink="/register">Register</a>
+            </li>
           </ng-template>
 
             <li class="nav-item dropdown" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
