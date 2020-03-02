@@ -57,8 +57,10 @@
     display: block; }
   .slicknav_nav li {
     display: block; 
-    line-height: 30px;
+    line-height: 30px;   
   }
+
+  .slicknav_nav li a.btn.focus, .slicknav_nav li a.btn:focus {box-shadow: none;}
 
   .slicknav_nav li.homeLink {margin: 10px;}
 
@@ -137,7 +139,7 @@
     padding: 5px 10px;
     margin: 2px 5px;
     text-decoration: none;
-    color: #666; }
+    color: #fff; }
   .slicknav_nav .slicknav_txtnode {
     margin-left: 15px; }
   .slicknav_nav .slicknav_item a {

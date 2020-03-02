@@ -245,7 +245,7 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 320px) {
   .modal-dialog {
       margin: 150px auto;
   }

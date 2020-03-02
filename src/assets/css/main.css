@@ -24,12 +24,12 @@ h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1 {font-size: 36px;}
-h2 {font-size: 32px;}
-h3 {font-size: 28px;}
-h4 {font-size: 24px;}
-h5 {font-size: 20px;}
-h6 {font-size: 16px;}
+h1 {font-size: 24px !important;}
+h2 {font-size: 20px !important;}
+h3 {font-size: 18px !important;}
+h4 {font-size: 16px !important;}
+h5 {font-size: 14px !important;}
+h6 {font-size: 12px !important;}
 
 a {
   -webkit-transition: all 0.2s linear;
@@ -625,7 +625,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 }
 
 .section-padding {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .no-padding {
@@ -774,8 +774,9 @@ a.back-to-top:hover, a.back-to-top:focus {
 .navbar-expand-lg .navbar-nav li a:hover,
 .navbar-expand-lg .navbar-nav li .active > a,
 .navbar-expand-lg .navbar-nav li a:focus {
-  color: #ff4a67;
+  color: #fff;
   outline: none;
+  box-shadow: none;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:focus,
