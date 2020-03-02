@@ -59,25 +59,25 @@
                                         <div class="row align-items-center">
                                           <div class="col mt-4">
                                             <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="inputSuccess1" required>
-                                            <div class="text-danger"><small>{{firstNameError}}</small></div>           
+                                            <div class="text-danger"><small>{{firstNameError}}</small></div>
                                           </div>
                                         </div>
                                         <div class="row align-items-center">
                                           <div class="col mt-4">
                                             <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="inputSuccess1" required>
-                                            <div class="text-danger"><small>{{lastNameError}}</small></div> 
+                                            <div class="text-danger"><small>{{lastNameError}}</small></div>
                                           </div>
                                         </div>
                                         <div class="row align-items-center mt-4">
                                           <div class="col">
                                             <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" required>
-                                            <div class="text-danger"><small>{{emailError}}</small></div> 
+                                            <div class="text-danger"><small>{{emailError}}</small></div>
                                           </div>
                                         </div>
                                         <div class="row align-items-center">
                                           <div class="col mt-4">
                                             <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Mobile Number" required>
-                                            <div class="text-danger"><small>{{phoneNumberError}}</small></div> 
+                                            <div class="text-danger"><small>{{phoneNumberError}}</small></div>
                                           </div>
                                         </div>
                                         <div class="row align-items-center mt-4">
@@ -87,7 +87,7 @@
                                           <div class="col">
                                             <input type="password" class="form-control" (keyup)="OnConfirmPassword($event)" placeholder="Confirm Password" required>
                                           </div>
-                                          <div class="text-danger"><small>{{passwordError}}</small></div> 
+                                          <div class="text-danger"><small>{{passwordError}}</small></div>
                                         </div>
                                         <div class="row align-items-center mt-4">
                                           <div class="col">
@@ -103,14 +103,14 @@
                                           <div class="col">
                                             <div class="form-group">
                                               <div class="form-check">                                    
-                                                  <input type="checkbox" class="form-check-input" value="" id="invalidCheck1" required> 
+                                                  <input type="checkbox" class="form-check-input" value="" id="invalidCheck1" (change)="validateInfoConfirm($event)" required> 
                                                   <label class="form-check-label" for="invalidCheck1">I confirm that all the information provided here is correct.</label>
                                               </div>
                                             </div>
                                              <button type="button" class="btn btn-link font-weight-bold text-primary pl-0" (click)="open(mymodal)">Show privacy policy</button>
                                             <div class="form-group">
                                               <div class="form-check">                                    
-                                                  <input type="checkbox" class="form-check-input"value="" id="invalidCheck2" required>
+                                                  <input type="checkbox" class="form-check-input"value="" id="invalidCheck2" (change)="validatePolicyConfirm($event)" required>
                                                   <label class="form-check-label" for="invalidCheck2">Please confirm that you agree to our privacy policy</label>
                                               </div>
                                             </div>
