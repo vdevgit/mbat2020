@@ -38,8 +38,9 @@ export class RegisterComponent implements OnInit {
   emailError: string;
   phoneNumberError: string;
   passwordError: string;
-  informationConfirmError: string;
-  policyConfirmError: string;
+  informationConfirm: boolean;
+  policyConfirm: boolean;
+  schoolError: string;
 
   ngOnInit(): void {
 
@@ -99,6 +100,12 @@ export class RegisterComponent implements OnInit {
   validatePassword() {
     return this.confirmPassword === this.password;
   }
+  validateInfoConfirm(event) {
+    this.informationConfirm = event.target.checked;
+  }
+  validatePolicyConfirm(event) {
+    this.policyConfirm = event.target.checked;
+  }
   validateEmail() {
    const validDomain = environment.validEmailDomain.filter(domain => this.email.indexOf(domain) !== -1);
    return !!validDomain.length;
@@ -113,6 +120,13 @@ export class RegisterComponent implements OnInit {
       password: this.password,
       schoolId: this.selectedSchool
     };
+    this.errorMessage = '';
+    this.firstNameError = '';
+    this.lastNameError = '';
+    this.phoneNumberError = '';
+    this.emailError = '';
+    this.passwordError = '';
+    this.schoolError = '';
     if (!this.firstName) {
       this.firstNameError = 'First name is empty!';
       return;
@@ -121,20 +135,34 @@ export class RegisterComponent implements OnInit {
       this.lastNameError = 'Last name is empty!';
       return;
     }
+    if (!this.email) {
+      this.emailError = 'Email is empty!';
+      return;
+    }
     if (!this.phoneNumber) {
-      this.phoneNumberError = 'Phonenumber is not empty!';
+      this.phoneNumberError = 'Phonenumber is empty!';
+      return;
+    }
+    if (!this.password || !this.confirmPassword) {
+      this.passwordError = 'Password is empty!';
       return;
     }
     if (!this.validatePassword()) {
-      this.errorMessage = 'Password does not match!';
+      this.passwordError = 'Password does not match!';
+      return;
+    }
+    if (!this.selectedSchool) {
+      this.errorMessage = 'Select school!';
       return;
     }
     // if (this.validateEmail()) {
-    if (true) {
+    //   this.emailError = 'Invalid domain name!';
+    //   return;
+    // }
+    if (this.informationConfirm && this.policyConfirm) {
       const headers = {
         'Content-Type': 'application/json'
       };
-      this.errorMessage = '';
       this.visible = true;
       // tslint:disable-next-line:no-shadowed-variable
       this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
@@ -150,7 +178,7 @@ export class RegisterComponent implements OnInit {
         }
       });
     } else {
-      this.emailError = 'Invalid domain name!';
+      this.errorMessage = "Please Confirm!"
     }
   }
 }
