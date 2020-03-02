@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,9 +10,12 @@ import { environment } from '../../../environments/environment';
 export class ProductListComponent implements OnInit {
   ticketIframeURL: String;
   loggedIn: boolean;
-  constructor() {environment: environment }
+  constructor(public auth: AuthService) {
+    auth.getUserInfo();
+  }
 
   ngOnInit(): void {
+    this.auth.userLoggedIn()
     this.loggedIn  = !!localStorage.getItem('idToken');
     this.ticketIframeURL = environment.ticketIframe;
     // $('.event-header').css('display', 'none');

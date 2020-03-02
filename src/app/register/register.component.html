@@ -41,25 +41,25 @@
                               <div class="row align-items-center">
                                 <div class="col mt-4">
                                   <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="inputSuccess1" required>
-                                  <div class="valid-feedback">Success! You've done it.</div>
-                                  <div class="invalid-feedback">No, you missed this one.</div>
+                                  <div class="invalid-feedback">{{firstNameError}}</div>
                                 </div>
                               </div>
                               <div class="row align-items-center">
                                 <div class="col mt-4">
                                   <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="inputSuccess1" required>
-                                  <div class="valid-feedback">Success! You've done it.</div>
-                                  <div class="invalid-feedback">No, you missed this one.</div>
+                                  <div class="invalid-feedback">{{lastNameError}}</div>
                                 </div>
                               </div>
                               <div class="row align-items-center mt-4">
                                 <div class="col">
                                   <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" required>
+                                  <div class="invalid-feedback">{{emailError}}</div>
                                 </div>
                               </div>
                               <div class="row align-items-center">
                                 <div class="col mt-4">
                                   <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Mobile Number" required>
+                                  <div class="invalid-feedback">{{phoneNumberError}}</div>
                                 </div>
                               </div>
                               <div class="row align-items-center mt-4">
@@ -69,6 +69,7 @@
                                 <div class="col">
                                   <input type="password" class="form-control" (keyup)="OnConfirmPassword($event)" placeholder="Confirm Password" required>
                                 </div>
+                                <div class="invalid-feedback">{{passwordError}}</div>
                               </div>
                               <div class="row align-items-center mt-4">
                                 <div class="col">

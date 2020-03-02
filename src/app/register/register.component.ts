@@ -28,6 +28,13 @@ export class RegisterComponent implements OnInit {
   selectedSchool: String;
   dropDownData: [];
   isBuyTicketFlow: Boolean;
+  firstNameError: string;
+  lastNameError: string;
+  emailError: string;
+  phoneNumberError: string;
+  passwordError: string;
+  informationConfirmError: string;
+  policyConfirmError: string;
   ngOnInit(): void {
     this.getSchools()
     this.isBuyTicketFlow = window.location.search.split('=')[1] === 'buyTicket';
@@ -80,11 +87,24 @@ export class RegisterComponent implements OnInit {
       password: this.password,
       schoolId: this.selectedSchool
     };
+    if (!this.firstName) {
+      this.firstNameError = 'First name is empty!'
+      return;
+    }
+    if (!this.lastName) {
+      this.lastNameError = 'Last name is empty!'
+      return;
+    }
+    if (!this.phoneNumber) {
+      this.phoneNumberError = 'Phonenumber is not empty!'
+      return;
+    }
     if (!this.validatePassword()) {
       this.errorMessage = 'Password does not match!'
       return;
     }
-    if (this.validateEmail()) {
+    // if (this.validateEmail()) {
+    if (true) {
       const headers = {
         "Content-Type": "application/json"
       }
@@ -98,11 +118,12 @@ export class RegisterComponent implements OnInit {
           console.log(data.message);
         } else {
           localStorage.setItem('idToken', data.access_token);
+          sessionStorage.setItem('user', JSON.stringify(data));
           this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
         }
       })
     } else {
-      this.errorMessage = 'Invalid domain name!'
+      this.emailError = 'Invalid domain name!'
     }
   }
 }

@@ -33,7 +33,7 @@
             <div class="parent">
               <div class="box-one">
 
-                <table class="table table-borderless" *ngIf="auth.userInfoDetails$ | async as profile">
+                <table class="table table-borderless" *ngIf="profile">
                   <tr>
                     <th>Name:</th>
                     <td>{{profile.fullName}}</td>
@@ -54,7 +54,8 @@
                 
 
                 <div style="margin-top:50px;">
-                  <a class="contact-link" target="_blank" href="">Download Ticket</a> </div>
+                  <a class="contact-link" target="_blank" href="">Download Ticket</a>
+                </div>
               </div>
               <div class="box-two">
                 <div class="image">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth: AuthService) {
+    auth.loggedInObservable.subscribe(value => {
+      this.loggedIn = value;
+      if (!this.loggedIn) {
+        this.pathName = '/register';
+        this.queryParm = 'buyTicket';
+      }
+    });
+   }
 
   loggedIn: boolean;
   pathName: String;

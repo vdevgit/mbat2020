@@ -45,8 +45,8 @@ export class AuthService {
   loggedIn: boolean = null;
 
   public loggedInObservable = new Subject<boolean>();
-  public userInfo$ = new BehaviorSubject<any>(null);
-  userInfoDetails$ = this.userInfo$.asObservable();
+  public userInfo$ = new Subject<any>();
+  // userInfoDetails$ = this.userInfo$.asObservable();
 
   emitConfig(val) {
     this.loggedInObservable.next(val);
@@ -157,6 +157,7 @@ export class AuthService {
 
   logout() {
     localStorage.removeItem('idToken');
+    sessionStorage.removeItem('user');
     // Ensure Auth0 client instance exists
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
@@ -176,8 +177,17 @@ export class AuthService {
         }
       }).subscribe((response) => {
           console.log(response);
+          sessionStorage.setItem('user',JSON.stringify(response));
+          this.emitConfig(true);
           this.emitUserDetails(response);
         });
+    }
+  }
+  userLoggedIn() {
+    if (sessionStorage.getItem('user')){
+      return true
+    } else {
+      this.router.navigate(['/']);
     }
   }
 }
