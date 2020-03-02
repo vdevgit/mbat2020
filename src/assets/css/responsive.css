@@ -245,6 +245,12 @@
   }
 }
 
+@media (min-width: 576px) {
+  .modal-dialog {
+      margin: 150px auto;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .btn {
     padding: 5px 7px;

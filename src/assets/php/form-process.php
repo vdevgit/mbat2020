@@ -9,6 +9,13 @@ if (empty($_POST["name"])) {
     $name = $_POST["name"];
 }
 
+// NAME
+if (empty($_POST["surname"])) {
+    $errorMSG = "Surname is required ";
+} else {
+    $name = $_POST["surname"];
+}
+
 // SCHOOL NAME
 if (empty($_POST["school_name"])) {
     $errorMSG = "School Name is required ";
@@ -40,12 +47,16 @@ if (empty($_POST["message"])) {
 
 
 $EmailTo = "vasanthedu@gmail.com";
-$Subject = "New Message Received";
+$Subject = "New Message Received From MBAT2020 Website";
 
 // prepare email body text
 $Body = "";
 $Body .= "Name: ";
 $Body .= $name;
+$Body .= "\n";
+$Body .= "Surname: ";
+$Body .= $surname;
+$Body .= "\n";
 $Body .= "School Name: ";
 $Body .= $school_name;
 $Body .= "\n";

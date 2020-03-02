@@ -57,9 +57,9 @@
       });
 
     // one page navigation 
-    $('.navbar-nav').onePageNav({
-            currentClass: 'active'
-    }); 
+    // $('.navbar-nav').onePageNav({
+    //         currentClass: 'active'
+    // }); 
 
     /* Counter
     ========================================================*/
