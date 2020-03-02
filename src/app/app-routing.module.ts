@@ -32,6 +32,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { SuccessComponent } from './product/success/success.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
@@ -135,6 +136,7 @@ const routes = [
     { path: 'faqs', component: FaqsComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
     { path: 'product-list', component: ProductListComponent},
     { path: 'product-details', component: ProductDetailsComponent },

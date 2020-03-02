@@ -1,19 +1,19 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
-import { CartService } from "./cart.service";
-import { Subscription } from "rxjs";
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CartService } from './cart.service';
+import { Subscription } from 'rxjs';
 import {
   faWindowClose,
   faPlusSquare,
   faMinusSquare
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import { CartItem } from "./cart-item.model";
-import { Router } from "@angular/router";
+import { CartItem } from './cart-item.model';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: "app-cart",
-  templateUrl: "./cart.component.html",
-  styleUrls: ["./cart.component.scss"]
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit, OnDestroy {
   faWindowClose = faWindowClose;
@@ -54,7 +54,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   onBuy() {
-    this.router.navigate(["/shop"]);
+    this.router.navigate(['/shop']);
     this.cartService.emptyCart();
   }
 

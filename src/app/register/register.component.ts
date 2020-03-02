@@ -7,6 +7,8 @@ import { AuthService } from '../auth.service';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,20 +16,23 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private http: HttpClient, public auth: AuthService, public router: Router) { }
+  title = 'appBootstrap';
+  closeResult: string;
+
+  constructor(private http: HttpClient, public auth: AuthService, public router: Router, private modalService: NgbModal) { }
 
   visible = false;
 
-  email: String;
-  firstName: String;
-  lastName: String;
-  phoneNumber: String;
-  errorMessage: String;
-  password: String;
-  confirmPassword: String;
-  selectedSchool: String;
+  email: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  errorMessage: string;
+  password: string;
+  confirmPassword: string;
+  selectedSchool: string;
   dropDownData: [];
-  isBuyTicketFlow: Boolean;
+  isBuyTicketFlow: boolean;
   firstNameError: string;
   lastNameError: string;
   emailError: string;
@@ -35,10 +40,31 @@ export class RegisterComponent implements OnInit {
   passwordError: string;
   informationConfirmError: string;
   policyConfirmError: string;
+
   ngOnInit(): void {
-    this.getSchools()
+
+    this.getSchools();
     this.isBuyTicketFlow = window.location.search.split('=')[1] === 'buyTicket';
   }
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title', size: 'lg', backdrop: true}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
+
   OnFirstName(event: any) {
     this.firstName = event.target.value;
   }
@@ -57,28 +83,28 @@ export class RegisterComponent implements OnInit {
   OnConfirmPassword(event: any) {
     this.confirmPassword = event.target.value;
   }
-  onOptionsSelected(value:string) {
-    console.log("the selected value is " + value);
+  onOptionsSelected(value: string) {
+    console.log('the selected value is ' + value);
     this.selectedSchool = value;
   }
   getSchools() {
     const headers = {
-      "Content-Type": "application/json"
-    }
+      'Content-Type': 'application/json'
+    };
     this.http.get<any>(environment.mbatServer + 'schools/', { headers }).subscribe(data => {
       console.log(data);
       this.dropDownData = data;
-    })
+    });
   }
   validatePassword() {
     return this.confirmPassword === this.password;
   }
   validateEmail() {
-   let validDomain = environment.validEmailDomain.filter(domain => this.email.indexOf(domain) !== -1);
+   const validDomain = environment.validEmailDomain.filter(domain => this.email.indexOf(domain) !== -1);
    return !!validDomain.length;
   }
   register() {
-    console.log("here in the ", this.firstName)
+    console.log('here in the ', this.firstName);
     const data = {
       email: this.email,
       phoneNumber: this.phoneNumber,
@@ -88,32 +114,33 @@ export class RegisterComponent implements OnInit {
       schoolId: this.selectedSchool
     };
     if (!this.firstName) {
-      this.firstNameError = 'First name is empty!'
+      this.firstNameError = 'First name is empty!';
       return;
     }
     if (!this.lastName) {
-      this.lastNameError = 'Last name is empty!'
+      this.lastNameError = 'Last name is empty!';
       return;
     }
     if (!this.phoneNumber) {
-      this.phoneNumberError = 'Phonenumber is not empty!'
+      this.phoneNumberError = 'Phonenumber is not empty!';
       return;
     }
     if (!this.validatePassword()) {
-      this.errorMessage = 'Password does not match!'
+      this.errorMessage = 'Password does not match!';
       return;
     }
     // if (this.validateEmail()) {
     if (true) {
       const headers = {
-        "Content-Type": "application/json"
-      }
+        'Content-Type': 'application/json'
+      };
       this.errorMessage = '';
       this.visible = true;
+      // tslint:disable-next-line:no-shadowed-variable
       this.http.post<any>(environment.mbatServer + 'user/', data, { headers }).subscribe(data => {
         console.log(data);
         this.visible = false;
-        if(data.error) {
+        if (data.error) {
           this.errorMessage = data.message;
           console.log(data.message);
         } else {
@@ -121,9 +148,9 @@ export class RegisterComponent implements OnInit {
           sessionStorage.setItem('user', JSON.stringify(data));
           this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
         }
-      })
+      });
     } else {
-      this.emailError = 'Invalid domain name!'
+      this.emailError = 'Invalid domain name!';
     }
   }
 }
