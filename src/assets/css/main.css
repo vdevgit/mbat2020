@@ -881,7 +881,7 @@ a.nav-link i{font-size: 20px;
 .slicknav_menu {
   display: none;
   background: rgba(2, 39, 90, 1);
-  padding: 0px 20px;
+  padding: 0 20px 0 20px;
   text-align: left;
 }
 

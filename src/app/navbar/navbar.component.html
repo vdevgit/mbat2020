@@ -30,8 +30,8 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/leader-board">Leader board</a></li> -->
             </ul>
           </li>
-          <li class="nav-item dropdown navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/sports">Sports</a>
+          <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" href="#" routerLink="/sports">Sports</a>
             <!-- <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Babyfoot</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Badminton</a></li>
@@ -56,8 +56,8 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Ultimate Frisbee</a></li>
             </ul> -->
           </li>
-          <li class="nav-item dropdown navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="/events">Events</a>
+          <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" href="#" routerLink="/events">Events</a>
             <!-- <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Forest Party</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Dance Competition</a></li>
@@ -88,9 +88,9 @@
         </ul>
 
         <ul class="nav navbar-nav mt-1">
-          <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/contact">Contact</a></li>
-          <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/support">Support</a></li>
-          <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/faqs">FAQs</a></li>
+          <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/contact">Contact</a></li>
+          <!-- <li class="nav-item mobileLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/support">Support</a></li> -->
+          <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="#" routerLink="/faqs">FAQs</a></li>
     
           <li class="nav-item mobileIcon lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://www.facebook.com/MBATournament/" target="_blank"><i class="lni-facebook-original"></i></a></li>
           <li class="nav-item mobileIcon lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://twitter.com/HECMBAT" target="_blank"><i class="lni-twitter-original"></i></a></li>
@@ -108,7 +108,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li>
-                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" (click)="auth.logout()">Log Out</a></li>
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
               </ul>
             </li>    
         </ul>
