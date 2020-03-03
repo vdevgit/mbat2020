@@ -67,6 +67,20 @@ ul li, ol li {
 input, select, textarea {background: #fff; color:rgba(0, 0, 92, 1)}
 .modal-open {padding-right:0 !important;}
 
+.form-valid  {
+  opacity:0.5;
+}
+
+.form-control-label abbr {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.form-group .text-danger {
+  margin-top:2px;
+}
+
+
 .text-orange {color: #f08718 !important;}
 .overflowScroll {overflow: scroll;}
 .text-orange-red{background: -webkit-linear-gradient(#f08718, #f20c3a);

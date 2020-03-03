@@ -52,61 +52,97 @@
                                         <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Register</h2>     
                                       </div>  
                                       
-                                      <form class="needs-validation" novalidate>
-          
-                                        <div class="row align-items-center">
-                                          <div class="col mt-4">
-                                            <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="inputSuccess1" required>
-                                            <div class="text-danger"><small>{{firstNameError}}</small></div>
-                                          </div>
+                                      <form class="needs-validation" novalidate id="bootstrapForm">
+
+                                        <div class="form-group">
+                                          <label class="form-control-label" for="reg_firstName">First Name <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="reg_firstName" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
+                                          <div class="valid-feedback">First Name looks good</div>
+                                          <div class="invalid-feedback">Please enter your First Name.</div>
+                                        </div>     
+                                        
+                                        <div class="form-group">
+                                          <label class="form-control-label" for="reg_lastName">Last Name <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="reg_lastName" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{lastNameError}}</small></div> -->
+                                          <div class="valid-feedback">Last Name looks good</div>
+                                          <div class="invalid-feedback">Please enter your Last Name.</div>
+                                        </div> 
+
+                                        <div class="form-group">
+                                          <label class="form-control-label" for="reg_email">Email Id <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" id="reg_email" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{emailError}}</small></div> -->
+                                          <div class="valid-feedback">Email Id looks good</div>
+                                          <div class="invalid-feedback">Please enter your Email Id.</div>
                                         </div>
-                                        <div class="row align-items-center">
-                                          <div class="col mt-4">
-                                            <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="inputSuccess1" required>
-                                            <div class="text-danger"><small>{{lastNameError}}</small></div>
-                                          </div>
-                                        </div>
-                                        <div class="row align-items-center mt-4">
-                                          <div class="col">
-                                            <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" required>
-                                            <div class="text-danger"><small>{{emailError}}</small></div>
-                                          </div>
-                                        </div>
-                                        <div class="row align-items-center">
-                                          <div class="col mt-4">
-                                            <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Mobile Number" required>
-                                            <div class="text-danger"><small>{{phoneNumberError}}</small></div>
-                                          </div>
-                                        </div>
-                                        <div class="row align-items-center mt-4">
-                                          <div class="col">
-                                            <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password" required>
-                                          </div>
-                                          <div class="col">
-                                            <input type="password" class="form-control" (keyup)="OnConfirmPassword($event)" placeholder="Confirm Password" required>
-                                          </div>
-                                          <div class="text-danger"><small>{{passwordError}}</small></div>
-                                        </div>
-                                        <div class="row align-items-center mt-4">
-                                          <div class="col">
-                                            <div class="form-group">
-                                              <select class="form-control" #mySelect (change)='onOptionsSelected(mySelect.value)' required>
-                                                <option value="" selected disabled hidden>Please Select School</option>
-                                                <option *ngFor='let option of dropDownData' [value]="option.id">{{option.name}}</option>
-                                              </select>
+
+                                        <div class="form-group">
+                                          <label class="form-control-label" for="reg_phoneNumber">Phone Number <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="reg_phoneNumber" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{phoneNumberError}}</small></div> -->
+                                          <div class="valid-feedback">Phone Number looks good</div>
+                                          <div class="invalid-feedback">Please enter your Phone Number.</div>
+                                        </div>  
+
+                                        <div class="form-group">
+                                          <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                              <label class="form-control-label" for="reg_password">Password <abbr class="text-danger" title="This is required">*</abbr></label>
+                                              <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password" id="reg_password" required>
+                                              <div class="valid-feedback">Password looks good</div>
+                                              <div class="invalid-feedback">Please enter your Password.</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                              <label class="form-control-label" for="reg_confirmPassword">Confirm Password <abbr class="text-danger" title="This is required">*</abbr></label>
+                                              <input type="password" class="form-control" (keyup)="OnConfirmPassword($event)" placeholder="Confirm Password" id="reg_confirmPassword" required>
+                                              <div class="valid-feedback">Password looks good</div>
+                                              <div class="invalid-feedback">Please enter your Password.</div>
                                             </div>
                                           </div>
+                                          <!-- <div class="text-danger"><small>{{passwordError}}</small></div>                                           -->
+                                        </div>  
+
+                                        <div class="form-group">
+                                          <label class="form-control-label" for="reg_school">School <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <select class="form-control" #mySelect (change)='onOptionsSelected(mySelect.value)' id="reg_school" required>
+                                            <option value="" selected disabled hidden>Please Select School</option>
+                                            <option *ngFor='let option of dropDownData' [value]="option.id">{{option.name}}</option>
+                                          </select>
+
+                                          <!-- <div class="text-danger"><small>{{schoolError}}</small></div> -->
+                                          <div class="valid-feedback">School looks good</div>
+                                          <div class="invalid-feedback">Select your School.</div>
                                         </div>
-                                        <div class="text-danger"><small>{{schoolError}}</small></div>
-                                        <div class="row justify-content-start mt-4">
+
+                                        <div class="form-group">  
+                                     
+                                          <div class="form-check">
+                                            
+                                              <input type="checkbox" class="form-check-input"  (change)="validateInfoConfirm($event)" id="invalidCheck1" required> 
+                                              <label class="form-check-label" for="invalidCheck1">I confirm that all the information provided here is correct.</label>
+
+                                              <!-- <div class="text-danger"><small>{{errorMessage}}</small></div> -->
+                                              <div class="valid-feedback">Confirmed</div>
+                                              <div class="invalid-feedback">Please confirm by clicking Checkbox above.</div>                    
+
+                                          </div>  
+                                                                                                                               
+                                        </div>
+
+                                        <!-- <div class="row justify-content-start mt-4">
                                           <div class="col">
                                             <div class="form-group">
-                                              <div class="form-check">                                    
-                                                  <input type="checkbox" class="form-check-input" value="" id="invalidCheck1" (change)="validateInfoConfirm($event)" required> 
-                                                  <label class="form-check-label" for="invalidCheck1">I confirm that all the information provided here is correct.</label>
-                                              </div>
+                                              
                                             </div>
+
                                              <button type="button" class="btn btn-link font-weight-bold text-primary pl-0" (click)="open(mymodal)">Show privacy policy</button>
+
                                             <div class="form-group">
                                               <div class="form-check">                                    
                                                   <input type="checkbox" class="form-check-input"value="" id="invalidCheck2" (change)="validatePolicyConfirm($event)" required>
@@ -115,11 +151,11 @@
                                             </div>
                             
                                           </div>
-                                        </div>
-                                        <div class="text-danger"><small>{{errorMessage}}</small></div>
+                                        </div> -->
+                                        
                                         <div class="row align-items-center mt-4">
                                           <div class="col-sm-12 mt-2 text-center">                            
-                                            <button type="submit" (click)="register()" class="btn btn-primary mt-6 btn-sm" id="btnSubmit" >Register</button>
+                                            <button type="submit" (click)="register()" class="btn btn-primary mt-6 btn-sm" id="btnSubmit">Register</button>
                                             <button class="btn btn-danger mt-6 btn-sm ml-2" onclick="history.back()">Cancel</button>  
                                           </div>
                                         </div>                 
@@ -165,36 +201,3 @@
   <div class="spinner"></div>
   <br/><p>Loading...</p>
 </div>
-
-<!-- JavaScript for disabling form submissions if there are invalid fields -->
-<script>
-  // Self-executing function
-  (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
-                  if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                  }
-                  form.classList.add('was-validated');
-              }, false);
-          });
-      }, false);
-  })();
-</script> 
-
-
-
-
-
-
-
-
-
-
-

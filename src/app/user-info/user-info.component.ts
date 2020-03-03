@@ -15,7 +15,10 @@ export class UserInfoComponent implements OnInit {
     fullName: '',
     email: '',
     phoneNumber: '',
-    schoolName: ''
+    schoolName: '',
+    address: '',
+    state: '',
+    country: ''
   };
   orders = {};
   constructor(public router: Router, public auth: AuthService, private http: HttpClient) { }

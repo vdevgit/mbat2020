@@ -4,6 +4,28 @@
 
   $(window).on('load', function() {
 
+
+
+
+        $("#bootstrapForm").submit(function(event) {
+
+
+          var vForm = $(this);
+
+          if (vForm[0].checkValidity() === false) {
+            event.preventDefault()
+            event.stopPropagation()
+          } else {        
+
+            alert("your form is valid and ready to send");           
+          }         
+
+          vForm.addClass('was-validated');          
+
+        });
+
+
+
   /* Ticket
     ========================================================*/
 
@@ -25,8 +47,6 @@
     //     });
 
     // });
-
-
 
 
     $(document).ready(function(){
@@ -62,3 +82,5 @@
   });      
 
 }(jQuery));
+
+
