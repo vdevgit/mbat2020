@@ -61,52 +61,45 @@
                           <hr />
 
                           <div class="form-group row">
-                              <label for="ID" class="col-2 col-form-label">ID:</label>
-                              <div class="col-7">
-                                  <label>1123</label>
-                              </div>
-                          </div>
-
-                          <div class="form-group row">
                               <label for="firstName" class="col-2 col-form-label">Name:</label>
                               <div class="col-7">
-                                  <label>Jonathan Chew</label>
+                                  <label>{{profile.fullName}}</label>
                               </div>
                           </div>
 
                           <div class="form-group row">
                               <label for="school" class="col-2 col-form-label">School:</label>
                               <div class="col-7">
-                                  <label>HEC, Paris</label>
+                                  <label>{{profile.schoolName}}</label>
                               </div>
                           </div>
 
                           <div class="form-group row">
                               <label for="street" class="col-2 col-form-label">Address:</label>
                               <div class="col-7">
-                                  <label>9000 Any Street Way 9000 Any Street Way</label>
+                                  <label>{{profile.address}}</label>
                               </div>
                           </div>
 
                           <div class="form-group row">
                               <label for="State" class="col-2 col-form-label">State:</label>
                               <div class="col-4">
-                                  <label>Paris</label>
+                                  <label>{{profile.state}}</label>
                               </div>
                               <label for="country" class="col-2 col-form-label">Country:</label>
                               <div class="col-4">
-                                  <label>France</label>
+                                  <label>{{profile.country}}</label>
                               </div>
                           </div>
 
                           <div class="form-group row">
                               <label for="email" class="col-2 col-form-label">Email:</label>
                               <div class="col-4">
-                                  <label>johanathan@hec.in</label>
+                                  <label>{{profile.email}}</label>
                               </div>
                               <label for="phone" class="col-2 col-form-label">Phone:</label>
                               <div class="col-4">
-                                  <label>(098) 786-908-876</label>
+                                  <label>{{profile.phoneNumber}}</label>
                               </div>
                           </div>
                       
@@ -217,98 +210,100 @@
                 </div>
 
                 <div role="tabpanel" class="tab-pane" id="orderSummary"> 
-
-                  <div class="card">
-                      <div class="card-body p-0">
-                          <div class="row p-5">
-                              <div class="col-md-6">
-                                  <img src="http://via.placeholder.com/400x90?text=logo">
-                              </div>
-      
-                              <div class="col-md-6 text-right">
-                                  <p class="font-weight-bold mb-1">Event Ticket #550</p>
-                                  <p class="text-muted">Date Booked: 3 Mar, 2020</p>
-                              </div>
-                          </div>
-      
-                          <hr class="my-5">
-      
-                          <div class="row pb-5 p-5">
-                              <div class="col-md-6">
-                                  <p class="font-weight-bold mb-4">Attendees Information</p>
-                                  <p class="mb-1">John Doe</p>
-                                  <p>ABC School of Management</p>
-                                  <p class="mb-1">Paris, France</p>
-                                  <p class="mb-1">2345, Dp90</p>
-                              </div>
-      
-                              <div class="col-md-6 text-right">
-                                  <p class="font-weight-bold mb-4">Payment Details</p>
-                                  <p class="mb-1"><span class="text-muted">Payment Type: </span> Paypal</p>
-                                  <p class="mb-1"><span class="text-muted">Name: </span> John Doe</p>
-                              </div>
-                          </div>
-      
-                          <div class="row p-5">
-                              <div class="col-md-12">
-                                  <table class="table">
-                                      <thead>
-                                          <tr>
-                                              <th class="border-0 text-uppercase small font-weight-bold">ID</th>
-                                              <th class="border-0 text-uppercase small font-weight-bold">Item</th>
-                                              <th class="border-0 text-uppercase small font-weight-bold">Description</th>
-                                              <th class="border-0 text-uppercase small font-weight-bold">Quantity</th>
-                                              <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th>
-                                              <th class="border-0 text-uppercase small font-weight-bold">Total</th>
-                                          </tr>
-                                      </thead>
-                                      <tbody>
-                                          <tr>
-                                              <td>01</td>
-                                              <td>Early Bird</td>
-                                              <td>Some content</td>
-                                              <td>2</td>
-                                              <td>&euro; 425</td>
-                                              <td>&euro; 850</td>
-                                          </tr>
-                                          <tr>
-                                              <td>02</td>
-                                              <td>Bracelet</td>
-                                              <td>For Attend Event</td>
-                                              <td>1</td>
-                                              <td>&euro; 150</td>
-                                              <td>&euro; 150</td>
-                                          </tr>
-                                          <tr>
-                                              <td>03</td>
-                                              <td>Bracelet Topup</td>
-                                              <td>To Join More Event</td>
-                                              <td>1</td>
-                                              <td>&euro; 50</td>
-                                              <td>&euro; 50</td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                              </div>
-                          </div>
-      
-                          <div class="d-flex flex-row-reverse bg-dark text-white p-4">
-                              <div class="py-3 px-5 text-right">
-                                  <div class="mb-2">Grand Total</div>
-                                  <div class="h2 font-weight-light">&euro; 1,050</div>
-                              </div>
-      
-                              <div class="py-3 px-5 text-right">
-                                  <div class="mb-2">Discount</div>
-                                  <div class="h2 font-weight-light">10%</div>
-                              </div>
-      
-                              <div class="py-3 px-5 text-right">
-                                  <div class="mb-2">Sub - Total amount</div>
-                                  <div class="h2 font-weight-light">&euro; 9,45</div>
-                              </div>
-                          </div>
-                      </div>
+                  <div *ngFor="let order of orders">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="row p-5">
+                                <div class="col-md-6">
+                                    <img src="http://via.placeholder.com/400x90?text=logo">
+                                </div>
+        
+                                <div class="col-md-6 text-right">
+                                    <p class="font-weight-bold mb-1">Order Number {{order.orderNo}}</p>
+                                    <p class="text-muted">Date Booked: {{order.purchaseDate.date}}</p>
+                                </div>
+                            </div>
+        
+                            <hr class="my-5">
+        
+                            <div class="row pb-5 p-5">
+                                <div class="col-md-6">
+                                    <p class="font-weight-bold mb-4">Order By</p>
+                                    <p class="mb-1">{{order.name}}</p>
+                                    <p>{{order.email}}</p>
+                                    <p class="mb-1">Paris, France</p>
+                                    <p class="mb-1">2345, Dp90</p>
+                                </div>
+        
+                                <div class="col-md-6 text-right">
+                                    <p class="font-weight-bold mb-4">Payment Details</p>
+                                    <p class="mb-1"><span class="text-muted">Payment Type: </span> {{order.paidBy}}</p>
+                                    <p class="mb-1"><span class="text-muted">Name: </span> {{order.name}}</p>
+                                    <p class="mb-1"><span class="text-muted">Cost: </span> {{order.orderCost}}</p>
+                                </div>
+                            </div>
+        
+                            <div class="row p-5">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-0 text-uppercase small font-weight-bold">ID</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">Item</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">Description</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">Quantity</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th>
+                                                <th class="border-0 text-uppercase small font-weight-bold">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Early Bird</td>
+                                                <td>Some content</td>
+                                                <td>2</td>
+                                                <td>&euro; 425</td>
+                                                <td>&euro; 850</td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Bracelet</td>
+                                                <td>For Attend Event</td>
+                                                <td>1</td>
+                                                <td>&euro; 150</td>
+                                                <td>&euro; 150</td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Bracelet Topup</td>
+                                                <td>To Join More Event</td>
+                                                <td>1</td>
+                                                <td>&euro; 50</td>
+                                                <td>&euro; 50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+        
+                            <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                                <div class="py-3 px-5 text-right">
+                                    <div class="mb-2">Grand Total</div>
+                                    <div class="h2 font-weight-light">&euro; 1,050</div>
+                                </div>
+        
+                                <div class="py-3 px-5 text-right">
+                                    <div class="mb-2">Discount</div>
+                                    <div class="h2 font-weight-light">10%</div>
+                                </div>
+        
+                                <div class="py-3 px-5 text-right">
+                                    <div class="mb-2">Sub - Total amount</div>
+                                    <div class="h2 font-weight-light">&euro; 9,45</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                   </div>
 
                 </div>
