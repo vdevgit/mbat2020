@@ -22,13 +22,7 @@ export class UserInfoComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.auth.userLoggedIn()) {
-      let tempUser = JSON.parse(sessionStorage.getItem('user'));
-      this.profile = {
-        fullName: tempUser['fullName'],
-        email: tempUser['email'],
-        phoneNumber: tempUser['phoneNumber'],
-        schoolName: tempUser['schoolName']
-      };
+      this.profile = JSON.parse(sessionStorage.getItem('user'));
       this.getOrderDetails();
     }
   }

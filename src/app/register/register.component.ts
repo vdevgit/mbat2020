@@ -112,6 +112,7 @@ export class RegisterComponent implements OnInit {
   }
   register() {
     console.log('here in the ', this.firstName);
+    let isFormValid = true;
     const data = {
       email: this.email,
       phoneNumber: this.phoneNumber,
@@ -129,37 +130,45 @@ export class RegisterComponent implements OnInit {
     this.schoolError = '';
     if (!this.firstName) {
       this.firstNameError = 'First name is empty!';
-      return;
+      isFormValid = false;
     }
     if (!this.lastName) {
       this.lastNameError = 'Last name is empty!';
-      return;
+      isFormValid = false;
     }
     if (!this.email) {
       this.emailError = 'Email is empty!';
-      return;
+      isFormValid = false;
     }
     if (!this.phoneNumber) {
       this.phoneNumberError = 'Phone Number is empty!';
-      return;
+      isFormValid = false;
     }
     if (!this.password || !this.confirmPassword) {
       this.passwordError = 'Password is empty!';
-      return;
+      isFormValid = false;
     }
     if (!this.validatePassword()) {
       this.passwordError = 'Password does not match!';
-      return;
+      isFormValid = false;
     }
     if (!this.selectedSchool) {
-      this.errorMessage = 'Select School!';
-      return;
+      this.schoolError = 'Select School!';
+      isFormValid = false;
+    }
+    if (!this.informationConfirm) {
+      this.errorMessage = 'Please Confirm!';
+      isFormValid = false;
+    }
+    if (!this.policyConfirm) {
+      this.errorMessage = 'Please Confirm!';
+      isFormValid = false;
     }
     // if (this.validateEmail()) {
     //   this.emailError = 'Invalid domain name!';
     //   return;
     // }
-    if (this.informationConfirm && this.policyConfirm) {
+    if (isFormValid) {
       const headers = {
         'Content-Type': 'application/json'
       };
@@ -177,8 +186,6 @@ export class RegisterComponent implements OnInit {
           this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
         }
       });
-    } else {
-      this.errorMessage = 'Please Confirm!';
     }
   }
 }
