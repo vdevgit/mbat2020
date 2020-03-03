@@ -17,7 +17,7 @@
             event.stopPropagation()
           } else {        
 
-            alert("your form is valid and ready to send");           
+            console.log("your form is valid and ready to send");           
           }         
 
           vForm.addClass('was-validated');          

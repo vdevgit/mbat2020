@@ -145,7 +145,7 @@ export class RegisterComponent implements OnInit {
       isFormValid = false;
     }
     if (!this.password || !this.confirmPassword) {
-      this.passwordError = 'Password is empty!';
+      // this.passwordError = 'Password is empty!';
       isFormValid = false;
     }
     if (!this.validatePassword()) {
@@ -157,13 +157,13 @@ export class RegisterComponent implements OnInit {
       isFormValid = false;
     }
     if (!this.informationConfirm) {
-      this.errorMessage = 'Please Confirm!';
+      // this.errorMessage = 'Please Confirm!';
       isFormValid = false;
     }
-    if (!this.policyConfirm) {
-      this.errorMessage = 'Please Confirm!';
-      isFormValid = false;
-    }
+    // if (!this.policyConfirm) {
+    //   this.errorMessage = 'Please Confirm!';
+    //   isFormValid = false;
+    // }
     // if (this.validateEmail()) {
     //   this.emailError = 'Invalid domain name!';
     //   return;
