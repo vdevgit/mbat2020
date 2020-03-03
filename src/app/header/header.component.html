@@ -17,7 +17,14 @@
           <p class="banner-desc">Celebrate MBAT 30th anniversary at the most famous MBA Olympics with 1500 participants from top business schools in the world.</p>
           <h4>Join us on <span class="text-orange-red">May 7-9 2020</span></h4>
           <p class="banner-desc">You are one step from getting your tickets to the journey into sports, networking, fun and finding your vibe at MBAT2020.</p>
-          <div class="banner-btn">
+
+          <div class="hidden-md-up">
+            <div class="banner-btn hidden-lg-up">
+                <a href="#" class="btn btn-warning btn-lg font-weight-bold">To Buy Tickets, <br>Visit the website from your Desktop/Laptop</a> 
+            </div> 
+          </div>
+
+          <div class="banner-btn hidden-md-down">
             <div *ngIf="loggedIn; else notLogged"> 
               <a href="#" class="btn btn-common btn-lg font-weight-bold" routerLink="/product-list">BUY TICKETS</a>
             </div>

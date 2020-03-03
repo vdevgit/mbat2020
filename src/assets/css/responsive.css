@@ -257,3 +257,12 @@
     font-size: 13px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 991px) {
+  .hidden-md-down {display:none !important;}
+  .hidden-lg-up {display:block !important;}
+  
+}
+@media (min-width: 992px) {
+.hidden-md-up {display:none !important;}
+}
