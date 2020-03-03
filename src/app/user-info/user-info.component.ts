@@ -15,14 +15,26 @@ export class UserInfoComponent implements OnInit {
     fullName: '',
     email: '',
     phoneNumber: '',
-    schoolName: ''
+    schoolName: '',
+    address: '',
+    state: '',
+    country: ''
   };
   orders = {};
   constructor(public router: Router, public auth: AuthService, private http: HttpClient) { }
 
   ngOnInit(): void {
     if (this.auth.userLoggedIn()) {
-      this.profile = JSON.parse(sessionStorage.getItem('user'));
+      let tempUser = JSON.parse(sessionStorage.getItem('user'));
+      this.profile = {
+        fullName: tempUser['fullName'],
+        email: tempUser['email'],
+        phoneNumber: tempUser['phoneNumber'],
+        schoolName: tempUser['schoolName'],
+        address: '',
+        state: '',
+        country: ''
+      };
       this.getOrderDetails();
     }
   }
