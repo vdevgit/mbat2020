@@ -24,12 +24,12 @@ h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
-h1 {font-size: 24px !important;}
-h2 {font-size: 20px !important;}
-h3 {font-size: 18px !important;}
-h4 {font-size: 16px !important;}
-h5 {font-size: 14px !important;}
-h6 {font-size: 12px !important;}
+h1 {font-size: 28px !important;}
+h2 {font-size: 24px !important;}
+h3 {font-size: 20px !important;}
+h4 {font-size: 18px !important;}
+h5 {font-size: 16px !important;}
+h6 {font-size: 14px !important;}
 
 a {
   -webkit-transition: all 0.2s linear;
@@ -2839,13 +2839,47 @@ blockquote .quote-text {
 #contact-text .contact-wrapper {
   background: #fff;
   margin-bottom: -35px;
-  margin-top: -20px;
-  padding: 30px 0;
+  margin-top: 0px;
+  padding: 20px 0;
   border-radius: 4px;
   position: relative;
-  top: -40px;
+  top: -30px;
   z-index: 999;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
 }
+
+/* .gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
 
 #contact-text ul {
   text-align: center;
