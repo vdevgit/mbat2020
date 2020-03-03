@@ -36,10 +36,10 @@
                                   </div>                                  
 
                                   <div *ngIf="isBuyTicketFlow; else notTicketFlow">
-                                    <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login('/product-list')">Login</button>
+                                    <button class="btn btn-primary btn-block mt-6 btn-sm" (click)="auth.login('/product-list')">Login</button>
                                   </div>
                                   <ng-template #notTicketFlow>
-                                    <button class="btn btn-primary mt-6 btn-sm" (click)="auth.login()">Login</button>
+                                    <button class="btn btn-primary btn-block mt-6 btn-sm" (click)="auth.login()">Login</button>
                                   </ng-template>              
 
                                 </div>

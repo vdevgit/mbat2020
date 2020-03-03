@@ -140,7 +140,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
     if (!this.phoneNumber) {
-      this.phoneNumberError = 'Phonenumber is empty!';
+      this.phoneNumberError = 'Phone Number is empty!';
       return;
     }
     if (!this.password || !this.confirmPassword) {
@@ -152,7 +152,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
     if (!this.selectedSchool) {
-      this.errorMessage = 'Select school!';
+      this.errorMessage = 'Select School!';
       return;
     }
     // if (this.validateEmail()) {
@@ -178,7 +178,7 @@ export class RegisterComponent implements OnInit {
         }
       });
     } else {
-      this.errorMessage = "Please Confirm!"
+      this.errorMessage = 'Please Confirm!';
     }
   }
 }

@@ -7,6 +7,11 @@
   border-color: #f20c3a;
 }
 
+/* update password */
+.pass_show{position: relative} 
+.pass_show .ptxt { position:absolute; top:50%; right:10px; z-index:1; color:#ff4a67; margin-top:5px; cursor:pointer; transition:.3s ease all;} 
+.pass_show .ptxt:hover{color: #333333;} 
+
 
 /* OverlaySpinner */
 
@@ -40,6 +45,219 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* User profile Tab Page */
+
+.tabs-page {
+  position: relative;
+}
+.tabs-page > .nav-tabs {
+  position: relative;
+  min-height: 50px;
+  margin: 0;
+  padding-left: 15px;
+  text-align: left;
+  cursor: auto;
+  border: none;
+  z-index: 1;
+}
+.tabs-page > .nav-tabs li[role="presentation"] {
+  display: inline-block;
+  height: 50px;
+  border: none;
+}
+.tabs-page > .nav-tabs li[role="presentation"]:not(:last-child) {
+  padding-right: 22px;
+}
+.tabs-page > .nav-tabs li[role="presentation"] a[role="tab"] {
+  font-size:16px;
+  height: 50px;
+  margin: 0;
+  padding: 0px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 92, 1);
+  background: none;
+  border: none;
+  line-height: 50px;
+  transition: color 0.3s ease, box-shadow 0.2s ease;
+}
+.tabs-page > .nav-tabs li[role="presentation"] a[role="tab"]:hover {
+  color: #ff4a67;
+}
+.tabs-page > .nav-tabs li[role="presentation"].active a {
+  color: #ff4a67;
+  box-shadow: inset 0 -2px 0 #ff4a67;
+  background: none;
+}
+.tabs-page > .nav-tabs li[role="presentation"].active a:hover, .tabs-page > .nav-tabs li[role="presentation"].active a:focus {
+  background: none;
+  border: none;
+}
+.tabs-page > .tab-content {
+  position: relative;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border-top: 1px solid #edeef4;
+  border-bottom: 1px solid #edeef4;
+}
+
+.tabs-secondary {
+  position: relative;
+  text-align: center;
+}
+.tabs-secondary > .nav-tabs {
+  display: inline-block;
+  margin: 0 auto 15px;
+  border-bottom: 1px solid #edeef4;
+}
+.tabs-secondary > .nav-tabs li[role="presentation"]:not(:last-child) {
+  margin-right: 20px;
+}
+.tabs-secondary > .nav-tabs li[role="presentation"] a[role="tab"] {
+  padding: 12px 0;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  color: rgba(0, 0, 92, 1);
+  border: none !important;
+  background: none !important;
+}
+.tabs-secondary > .nav-tabs li[role="presentation"] a[role="tab"]:hover {
+  color: #ff4a67;
+}
+.tabs-secondary > .nav-tabs li.active a[role="tab"] {
+  color: #ff4a67;
+  background: none;
+  box-shadow: inset 0 -2px 0 0 #ff4a67;
+}
+
+/* 
+Event Ticket */
+
+
+
+
+.eventTicket .tile{
+	width: 100%;
+	background:#fff;
+	border-radius:5px;
+	box-shadow:0px 2px 3px -1px rgba(151, 171, 187, 0.7);
+	float:left;
+  	transform-style: preserve-3d;
+  	margin: 10px 5px;
+
+}
+
+.eventTicket .header{
+	border-bottom:1px solid #ebeff2;
+	padding:19px 0;
+	text-align:center;
+	color:#59687f;
+	font-size:600;
+	font-size:19px;	
+	position:relative;
+}
+
+.eventTicket .banner-img {
+	padding: 5px 5px 0;
+}
+
+.eventTicket .banner-img img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.eventTicket .dates{
+	border:1px solid #ebeff2;
+	border-radius:5px;
+	padding:20px 0px;
+	margin:10px 20px;
+	font-size:16px;
+	color:#5aadef;
+	font-weight:600;	
+	overflow:auto;
+}
+.eventTicket .dates div{
+	float:left;
+	width:50%;
+	text-align:center;
+	position:relative;
+}
+.eventTicket .dates strong,
+.eventTicket .stats strong{
+	display:block;
+	color:#adb8c2;
+	font-size:11px;
+	font-weight:700;
+}
+.eventTicket .dates span{
+	width:1px;
+	height:40px;
+	position:absolute;
+	right:0;
+	top:0;	
+	background:#ebeff2;
+}
+.eventTicket .stats{
+	border-top:1px solid #ebeff2;
+	background:#f7f8fa;
+	overflow:auto;
+	padding:15px 0;
+	font-size:16px;
+	color:#59687f;
+	font-weight:600;
+	border-radius: 0 0 5px 5px;
+}
+.eventTicket .stats div{
+	border-right:1px solid #ebeff2;
+	width: 33.33333%;
+	float:left;
+	text-align:center
+}
+
+.eventTicket .stats div:nth-of-type(3){border:none;}
+
+.eventTicket div.footer {
+	text-align: right;
+	position: relative;
+	margin: 20px 5px;
+}
+
+.eventTicket div.footer a.Cbtn{
+	padding: 10px 25px;
+	background-color: #DADADA;
+	color: #666;
+	margin: 10px 2px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+.eventTicket div.footer a.Cbtn-primary{
+	background-color: #5AADF2;
+	color: #FFF;
+}
+
+.eventTicket div.footer a.Cbtn-primary:hover{
+	background-color: #7dbef5;
+}
+
+.eventTicket div.footer a.Cbtn-danger{
+	background-color: #fc5a5a;
+	color: #FFF;
+}
+
+.eventTicket div.footer a.Cbtn-danger:hover{
+	background-color: #fd7676;
 }
 
 /* 

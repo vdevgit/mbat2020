@@ -28,133 +28,334 @@
           </div>
       </div>
       <div class="row">
-          <div class="col-8">
+        
+        <div class="col-lg-12 col-md-12 col-xs-12 text-center" >  
 
-            <div class="parent">
-              <div class="box-one">
+          <!-- Tabs - Page -->
+          <div class="tabs-page">
+              <!-- Nav Tabs -->
+              <ul class="nav nav-tabs justify-content-center" role="tablist">
+              <li role="presentation"><a href="#userProfile" aria-controls="userProfile" role="tab" data-toggle="tab">User Profile</a></li>
+              <li role="presentation"><a href="#editProfile" aria-controls="editProfile" role="tab" data-toggle="tab">Edit Profile</a></li>
+              <li role="presentation"><a href="#changePassword" aria-controls="changePassword" role="tab" data-toggle="tab">Change Password</a></li>
+              <li role="presentation"><a href="#orderSummary" aria-controls="orderSummary" role="tab" data-toggle="tab">Order Summary</a></li>
+              <li role="presentation"><a href="#eventTicket" aria-controls="Event Ticket" role="tab" data-toggle="tab">Download Event Ticket</a></li>
+              </ul>
+              <!-- ./ nav tabs -->	
+          </div>
+          <!-- ./ tabs page -->
 
-                <table class="table table-borderless" *ngIf="profile">
-                  <tr>
-                    <th>Name:</th>
-                    <td>{{profile.fullName}}</td>
-                  </tr>
-                  <tr>
-                    <th>Email:</th>
-                    <td>{{profile.email}}</td>
-                  </tr>
-                  <tr>
-                    <th>Telephone:</th>
-                    <td>{{profile.phoneNumber}}</td>
-                  </tr>
-                  <tr>
-                    <th>School:</th>
-                    <td>{{profile.schoolName}}</td>
-                  </tr>
-                </table>
-                
+          <div class="tabs-page">
 
-                <div style="margin-top:50px;">
-                  <a class="contact-link" target="_blank" href="">Download Ticket</a>
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div role="tabpanel" class="tab-pane active" id="userProfile">
+
+                  <div class="container">
+                      <div class="well p-4">
+                          <form class="form-horizontal text-left">
+
+                          <h3 class="text-center">User Profile</h3>
+
+                          <hr />
+
+                          <div class="form-group row">
+                              <label for="ID" class="col-2 col-form-label">ID:</label>
+                              <div class="col-7">
+                                  <label>1123</label>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="firstName" class="col-2 col-form-label">Name:</label>
+                              <div class="col-7">
+                                  <label>Jonathan Chew</label>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="school" class="col-2 col-form-label">School:</label>
+                              <div class="col-7">
+                                  <label>HEC, Paris</label>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="street" class="col-2 col-form-label">Address:</label>
+                              <div class="col-7">
+                                  <label>9000 Any Street Way 9000 Any Street Way</label>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="State" class="col-2 col-form-label">State:</label>
+                              <div class="col-4">
+                                  <label>Paris</label>
+                              </div>
+                              <label for="country" class="col-2 col-form-label">Country:</label>
+                              <div class="col-4">
+                                  <label>France</label>
+                              </div>
+                          </div>
+
+                          <div class="form-group row">
+                              <label for="email" class="col-2 col-form-label">Email:</label>
+                              <div class="col-4">
+                                  <label>johanathan@hec.in</label>
+                              </div>
+                              <label for="phone" class="col-2 col-form-label">Phone:</label>
+                              <div class="col-4">
+                                  <label>(098) 786-908-876</label>
+                              </div>
+                          </div>
+                      
+                          </form>
+                      </div>
+                    </div>
+
                 </div>
-              </div>
-              <div class="box-two">
-                <div class="image">
-                  <img src="./assets/img/blog/img-1.jpg" >
+
+                <div role="tabpanel" class="tab-pane" id="editProfile">                     
+
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                              <div class="card">
+                                  <div class="card-body">
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <h4>Your Profile</h4>
+                                              <hr>
+                                          </div>
+                                      </div>
+                                      <!-- Start form -->
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <form>     
+                                                  <div class="form-group row">
+                                                      <label for="firstName" class="col-4 col-form-label">First Name *</label> 
+                                                      <div class="col-8">
+                                                          <input id="firstName" name="firstName" placeholder="First Name" class="form-control here" type="text" required="required">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                  <label for="lastName" class="col-4 col-form-label">Last Name *</label> 
+                                                  <div class="col-8">
+                                                      <input id="lastName" name="lastName" placeholder="Last Name" class="form-control here" type="text" required="required">
+                                                  </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                  <label for="surName" class="col-4 col-form-label">SurName *</label> 
+                                                  <div class="col-8">
+                                                      <input id="surName" name="surName" placeholder="SurName" class="form-control here" type="text" required="required">
+                                                  </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                  <label for="email" class="col-4 col-form-label">Email *</label> 
+                                                  <div class="col-8">
+                                                      <input id="email" name="email" placeholder="Email" class="form-control here" type="text" required="required">
+                                                  </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                  <label for="phone" class="col-4 col-form-label">Phone *</label> 
+                                                  <div class="col-8">
+                                                      <input id="phone" name="phone" placeholder="phone" class="form-control here" type="text" required="required">
+                                                  </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                  <label for="userInfo" class="col-4 col-form-label">User Info</label> 
+                                                  <div class="col-8">
+                                                      <textarea id="userInfo" name="userInfo" cols="40" rows="4" class="form-control"></textarea>
+                                                  </div>
+                                                  </div>
+                                                  <div class="form-group row">
+                                                  <div class="offset-4 col-8">
+                                                      <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                                                  </div>
+                                                  </div>
+                                              </form>
+                                          </div>
+                                      </div>
+                                      <!-- End form -->
+                                  </div>
+                              </div>
+                          </div>  
+                      </div>
+                  </div>
+
                 </div>
-              </div>
-            </div>
+
+                <div role="tabpanel" class="tab-pane" id="changePassword">
+                    
+                  <div class="container">
+                      <div class="row align-self-center">
+                          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 p-4">
+                              <!-- Start form -->
+                              <form>
+                                  <div class="form-group pass_show"> 
+                                      <label for="currentPassword">Current Password</label>
+                                      <input type="password" value="oldPassword@123" class="form-control" placeholder="Current Password"> 
+                                  </div>
+                                  <div class="form-group pass_show">
+                                      <label for="newPassword">New Password</label>
+                                      <input type="password" value="newPassword@123" class="form-control" placeholder="New Password">
+                                  </div>
+                                      <div class="form-group pass_show">
+                                      <label for="exampleInputPassword1">Confirm Password</label>
+                                  <input type="password" value="newPassword@123" class="form-control" placeholder="Confirm Password"> 
+                                  </div>
+                                  <div class="form-check">
+                                      <button type="submit" class="btn btn-primary">Update Password</button>
+                                  </div>                                  
+                              </form>  
+                              <!-- End form -->
+                          </div>  
+                      </div>
+                  </div>
+
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="orderSummary"> 
+
+                  <div class="card">
+                      <div class="card-body p-0">
+                          <div class="row p-5">
+                              <div class="col-md-6">
+                                  <img src="http://via.placeholder.com/400x90?text=logo">
+                              </div>
+      
+                              <div class="col-md-6 text-right">
+                                  <p class="font-weight-bold mb-1">Event Ticket #550</p>
+                                  <p class="text-muted">Date Booked: 3 Mar, 2020</p>
+                              </div>
+                          </div>
+      
+                          <hr class="my-5">
+      
+                          <div class="row pb-5 p-5">
+                              <div class="col-md-6">
+                                  <p class="font-weight-bold mb-4">Attendees Information</p>
+                                  <p class="mb-1">John Doe</p>
+                                  <p>ABC School of Management</p>
+                                  <p class="mb-1">Paris, France</p>
+                                  <p class="mb-1">2345, Dp90</p>
+                              </div>
+      
+                              <div class="col-md-6 text-right">
+                                  <p class="font-weight-bold mb-4">Payment Details</p>
+                                  <p class="mb-1"><span class="text-muted">Payment Type: </span> Paypal</p>
+                                  <p class="mb-1"><span class="text-muted">Name: </span> John Doe</p>
+                              </div>
+                          </div>
+      
+                          <div class="row p-5">
+                              <div class="col-md-12">
+                                  <table class="table">
+                                      <thead>
+                                          <tr>
+                                              <th class="border-0 text-uppercase small font-weight-bold">ID</th>
+                                              <th class="border-0 text-uppercase small font-weight-bold">Item</th>
+                                              <th class="border-0 text-uppercase small font-weight-bold">Description</th>
+                                              <th class="border-0 text-uppercase small font-weight-bold">Quantity</th>
+                                              <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th>
+                                              <th class="border-0 text-uppercase small font-weight-bold">Total</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <tr>
+                                              <td>01</td>
+                                              <td>Early Bird</td>
+                                              <td>Some content</td>
+                                              <td>2</td>
+                                              <td>&euro; 425</td>
+                                              <td>&euro; 850</td>
+                                          </tr>
+                                          <tr>
+                                              <td>02</td>
+                                              <td>Bracelet</td>
+                                              <td>For Attend Event</td>
+                                              <td>1</td>
+                                              <td>&euro; 150</td>
+                                              <td>&euro; 150</td>
+                                          </tr>
+                                          <tr>
+                                              <td>03</td>
+                                              <td>Bracelet Topup</td>
+                                              <td>To Join More Event</td>
+                                              <td>1</td>
+                                              <td>&euro; 50</td>
+                                              <td>&euro; 50</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+      
+                          <div class="d-flex flex-row-reverse bg-dark text-white p-4">
+                              <div class="py-3 px-5 text-right">
+                                  <div class="mb-2">Grand Total</div>
+                                  <div class="h2 font-weight-light">&euro; 1,050</div>
+                              </div>
+      
+                              <div class="py-3 px-5 text-right">
+                                  <div class="mb-2">Discount</div>
+                                  <div class="h2 font-weight-light">10%</div>
+                              </div>
+      
+                              <div class="py-3 px-5 text-right">
+                                  <div class="mb-2">Sub - Total amount</div>
+                                  <div class="h2 font-weight-light">&euro; 9,45</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="eventTicket">
+                    
+                  <div class="container">
+                      <div class="row align-self-center">
+                          <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 p-4">
+
+                              <div class="eventTicket">
+
+                                  <div class="tile">
+                                      <div class="wrapper">
+                                          <div class="header">Event Ticket - MBAT2020</div>                    
+                                          <div class="banner-img"><img src="http://via.placeholder.com/640x360" alt="Image 1"></div>                    
+                                          <div class="dates">
+                                              <div class="start"><strong>Event</strong> May 7-9 2020<span></span></div>
+                                              <div class="ends"><strong>Time</strong> 09:00 - 17:00 </div>
+                                          </div>                    
+                                          <div class="stats">                    
+                                              <div><strong>Attendees</strong> 3</div>                    
+                                              <div><strong>Amount</strong>&euro; 12,060</div>                    
+                                              <div><strong>Discount</strong> 10%</div>                    
+                                          </div>                    
+                                          <div class="footer">
+                                              <a href="#" class="Cbtn Cbtn-primary">View</a>
+                                              <a href="#" class="Cbtn Cbtn-success">Download</a>
+                                          </div>
+                                      </div>
+                                  </div> 
+
+                              </div>
+                              
+                          </div>  
+                      </div>
+                  </div>
+
+                </div>
+
+            </div>	
 
           </div>
-          <!-- <div class="col-4">
-            <div class="ticket-card active">
-              <div class="cover">
-                <img src="./assets/img/mbat-logo-black.png" width="100px" alt="" />
-                <div class="info">
-                  <div class="going">
-                    <i class="fa fa-group"></i> Username
-                  </div>
-                  <div class="tickets-left">
-                    <i class="fa fa-ticket"></i> Email Id
-                  </div>
-                </div>
-              </div>
-              <div class="body">
-                <div class="artist">
-                  <h6 class="info">MBAT2020</h6>
-                  <h4 class="name">HEC Paris</h4>
-                </div>
-                <div class="price">
-                  <div class="from">Price</div>
-                  <div class="value">
-                    <b>&euro;</b>620
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="info">
-                  <p class="location">
-                    <i class="fa fa-map-marker"></i> Event Date
-                  </p>
-                  <p class="date">
-                    <i class="fa fa-calendar"></i> May 7-9  2020
-                  </p>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="collapse in">
-                <ul class="list-unstyled">
-                  <li>
-                    <div class="ticket">
-                      <h5>Event Ticket<br>
-                        <small>Username</small>
-                      </h5>
-                    </div>
-                    <div class="price">
-                      <div class="value"><b>&euro;</b>420</div>
-                    </div>                    
-                  </li>
-                  <li>
-                    <div class="ticket">
-                      <h5>Early Bird Ticket<br>
-                      <small>1 Purchase</small>
-                    </h5>
-                    </div>
-                    <div class="price">
-                      <div class="value"><b>&euro;</b>420</div>
-                    </div>  
-                  </li>
-                  <li>
-                    <div class="ticket">
-                      <h5>Bracelet<br>
-                        <small>1 Purchase</small>
-                    </h5>
-                    </div>
-                    <div class="price">
-                      <div class="value"><b>&euro;</b>150</div>
-                    </div>
- 
-                  </li>
-                  <li>
-                    <div class="ticket">
-                      <h5>Bracelet Topup<br>
-                      <small>1 Purchase</small>
-                    </h5>
-                    </div>
-                    <div class="price">
-                      <div class="value"><b>&euro;</b>50</div>
-                    </div>
-
-                  </li>
-                </ul>
-              </div>
-              <div class="footer">
-                <button class="btn toggle-tickets">Hide Tickets Details</button>
-              </div>
-            </div>
-          </div> -->
           
+      </div>
+
       </div>
   </div>
 </section>
 <!-- User Profile Section End -->
-
-

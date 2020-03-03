@@ -7,24 +7,41 @@
   /* Ticket
     ========================================================*/
 
-    $(document).ready(function(){
-      console.log('ready');
+    // $(document).ready(function(){
+    //   console.log('ready');
       
-      $('.toggle-tickets').click(function() {
-          $tickets = $(this).parent().siblings('.collapse');
+    //   $('.toggle-tickets').click(function() {
+    //       $tickets = $(this).parent().siblings('.collapse');
         
-          if ($tickets.hasClass('in')) {
-            $tickets.collapse('hide');
-            $(this).html('Show Tickets Details');
-            $(this).closest('.ticket-card').removeClass('active');
-          } else {
-            $tickets.collapse('show');
-            $(this).html('Hide Tickets Details');
-            $(this).closest('.ticket-card').addClass('active');
-          }
-        });
+    //       if ($tickets.hasClass('in')) {
+    //         $tickets.collapse('hide');
+    //         $(this).html('Show Tickets Details');
+    //         $(this).closest('.ticket-card').removeClass('active');
+    //       } else {
+    //         $tickets.collapse('show');
+    //         $(this).html('Hide Tickets Details');
+    //         $(this).closest('.ticket-card').addClass('active');
+    //       }
+    //     });
 
-    });
+    // });
+
+
+
+
+    $(document).ready(function(){
+      $('.pass_show').append('<span class="ptxt">Show</span>');  
+    });        
+      
+    $(document).on('click','.pass_show .ptxt', function(){ 
+      
+      $(this).text($(this).text() == "Show" ? "Hide" : "Show");      
+      $(this).prev().attr('type', function(index, attr){return attr == 'password' ? 'text' : 'password'; }); 
+      
+    });  
+
+
+
 
 
   //   $(document).ready(function(){
