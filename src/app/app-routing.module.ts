@@ -31,7 +31,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { SuccessComponent } from './product/success/success.component';
-import { UserInfoComponent } from './user-info/user-info.component';
+// import { UserInfoComponent } from './user-info/user-info.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 import { ShopComponent } from './shop/shop.component';
@@ -143,7 +143,7 @@ const routes = [
     { path: 'cart', component: CartComponent },
     { path: 'checkout', component: CheckoutComponent },
     { path: 'success', component: SuccessComponent },
-    { path: 'user-info', component: UserInfoComponent},
+    // { path: 'user-info', component: UserInfoComponent},
 
     {
       path: 'shop', component: ShopComponent, resolve: [ShopItemsResolverService]
