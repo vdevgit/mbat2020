@@ -53,8 +53,6 @@
                                       </div>  
                                       
                                       <form class="needs-validation" novalidate>
-
-                                        <span id="">{{errorMessage}}</span>
           
                                         <div class="row align-items-center">
                                           <div class="col mt-4">
@@ -99,6 +97,7 @@
                                             </div>
                                           </div>
                                         </div>
+                                        <div class="text-danger"><small>{{schoolError}}</small></div>
                                         <div class="row justify-content-start mt-4">
                                           <div class="col">
                                             <div class="form-group">
@@ -117,6 +116,7 @@
                             
                                           </div>
                                         </div>
+                                        <div class="text-danger"><small>{{errorMessage}}</small></div>
                                         <div class="row align-items-center mt-4">
                                           <div class="col-sm-12 mt-2 text-center">                            
                                             <button type="submit" (click)="register()" class="btn btn-primary mt-6 btn-sm" id="btnSubmit" >Register</button>
