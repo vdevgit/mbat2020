@@ -43,15 +43,15 @@ import { ShopItemsResolverService } from './shared/shop-items-resolver.service';
 
 import { AuthGuard } from './auth.guard';
 
-const routes = [
+const routes: Routes  = [
 
   // Home Page Layout
   {
     path: '',
     component: HomeLayoutComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full'},
-      { path: '', component: HomeComponent, pathMatch: 'full'},
+      { path: '', redirectTo: 'home', pathMatch: 'full', data: {title: 'Home'}},
+      { path: '', component: HomeComponent, pathMatch: 'full', data: {title: 'Home'}},
     ]
   },
 
@@ -65,23 +65,23 @@ const routes = [
       children: [
         {
           path: '',
-          component: AboutComponent
+          component: AboutComponent, data: {title: 'About MBAT'}
         },
         {
           path: 'mbat2020',
-          component: Mbat2020Component
+          component: Mbat2020Component, data: {title: 'MBAT2020'}
         },
         {
             path: 'our-history',
-            component: OurHistoryComponent
+            component: OurHistoryComponent, data: {title: 'Our History'}
         },
         {
             path: 'core-team',
-            component: CoreTeamComponent
+            component: CoreTeamComponent, data: {title: 'Core Team'}
         },
         {
             path: 'schedule',
-            component: ScheduleComponent
+            component: ScheduleComponent, data: {title: 'Schedule'}
         }
       ],
     },
@@ -89,82 +89,83 @@ const routes = [
       children: [
         {
           path: '',
-          component: TournamentComponent
+          component: TournamentComponent, data: {title: 'Tournament'}
         },
         {
           path: 'watch-live',
-          component: WatchLiveComponent
+          component: WatchLiveComponent, data: {title: 'Watch Live'}
         },
         {
             path: 'fixtures',
-            component: FixturesComponent
+            component: FixturesComponent, data: {title: 'Fixtures'}
         },
         {
             path: 'score-cards',
-            component: ScoreCardsComponent
+            component: ScoreCardsComponent, data: {title: 'Score Cards'}
         },
         {
             path: 'leader-board',
-            component: LeaderBoardComponent
+            component: LeaderBoardComponent, data: {title: 'Leader Board'}
         }
       ],
     },
-    { path: 'sports', component: SportsComponent },
-    { path: 'events', component: EventsComponent },
+    { path: 'sports', component: SportsComponent, data: {title: 'Sports'} },
+    { path: 'events', component: EventsComponent, data: {title: 'Events'} },
     { path: 'participants',
       children: [
         {
           path: '',
-          component: ParticipantsComponent
+          component: ParticipantsComponent, data: {title: 'Participants'}
         },
         {
           path: 'participating-schools',
-          component: ParticipatingSchoolsComponent
+          component: ParticipatingSchoolsComponent, data: {title: 'Participating Schools'}
         },
         {
             path: 'plan-your-trip',
-            component: PlanYourTripComponent
+            component: PlanYourTripComponent, data: {title: 'Plan Your Trip'}
         },
         {
             path: 'buy-tickets',
-            component: BuyTicketsComponent
+            component: BuyTicketsComponent, data: {title: 'Buy Tickets'}
         }
       ],
     },
-    { path: 'contact', component: ContactComponent },
-    { path: 'support', component: SupportComponent },
-    { path: 'faqs', component: FaqsComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent },
-    { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'contact', component: ContactComponent, data: {title: 'Contact'} },
+    { path: 'support', component: SupportComponent, data: {title: 'Support'} },
+    { path: 'faqs', component: FaqsComponent, data: {title: 'FAQs'} },
+    { path: 'login', component: LoginComponent, data: {title: 'Login'} },
+    { path: 'register', component: RegisterComponent, data: {title: 'Register'} },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent, data: {title: 'Privacy Policy'} },
 
-    { path: 'product-list', component: ProductListComponent},
-    { path: 'product-details', component: ProductDetailsComponent },
-    { path: 'cart', component: CartComponent },
-    { path: 'checkout', component: CheckoutComponent },
-    { path: 'success', component: SuccessComponent },
+    { path: 'product-list', component: ProductListComponent, data: {title: 'Product List'} },
+    { path: 'product-details', component: ProductDetailsComponent, data: {title: 'Product Details'} },
+    { path: 'cart', component: CartComponent, data: {title: 'Cart'} },
+    { path: 'checkout', component: CheckoutComponent, data: {title: 'Checkout'} },
+    { path: 'success', component: SuccessComponent, data: {title: 'Success'} },
     // { path: 'user-info', component: UserInfoComponent},
 
     {
-      path: 'shop', component: ShopComponent, resolve: [ShopItemsResolverService]
+      path: 'shop', component: ShopComponent, data: {title: 'shop'}, resolve: [ShopItemsResolverService]
     },
-    { path: 'manage-items', redirectTo: '/manage-items/new', pathMatch: 'full' },
+    { path: 'manage-items', redirectTo: '/manage-items/new', pathMatch: 'full', data: {title: 'manage-items'} },
     {
       path: 'manage-items',
-      component: ManageItemsBaseComponent,
+      component: ManageItemsBaseComponent, data: {title: 'Manage Items'},
       children: [
         {
           path: 'new',
-          component: ManageItemsComponent
+          component: ManageItemsComponent, data: {title: 'New'}
         },
         {
           path: 'edit/:id',
-          component: ManageItemsComponent
+          component: ManageItemsComponent, data: {title: 'Edit'}
         }
       ]
     },
-    { path: 'cart', component: CartComponent },
-    { path: '404', component: NotFoundComponent }
+    { path: 'cart', component: CartComponent, data: {title: 'cart'} },
+    { path: '404', component: NotFoundComponent, data: {title: '404'} },
+    { path: 'users',  loadChildren: './users/users.module#UsersModule' }
 
     ],
   },
