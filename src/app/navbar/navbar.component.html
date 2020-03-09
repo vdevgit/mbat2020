@@ -99,15 +99,15 @@
           
           <!-- hidden-md-down -->
           <ng-template #notLogged >            
-            <li class="nav-item navbarLastBtn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"> 
+            <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"> 
               <a [routerLink]="" type="button" class="btn btn-common mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</a>
             </li>
-            <li class="nav-item navbarLastBtn" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
               <a href="#" type="button" class="btn btn-common mt-2 font-weight-bold" routerLink="/register">Register</a>
             </li>
           </ng-template>
 
-          <li class="nav-item dropdownn" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <li class="nav-item dropdownn hidden-md-down" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="lni-user"></i>
               <span class="ml-2" *ngIf="fullName"><span>{{fullName}}</span></span>
@@ -117,7 +117,7 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
             </ul>
           </li>    
-          
+
         </ul>
 
       </div>

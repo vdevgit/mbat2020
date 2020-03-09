@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'sportsIcons';
+  src:  url('sportsIcons.eot?2ivacq');
+  src:  url('sportsIcons.eot?2ivacq#iefix') format('embedded-opentype'),
+    url('sportsIcons.ttf?2ivacq') format('truetype'),
+    url('sportsIcons.woff?2ivacq') format('woff'),
+    url('sportsIcons.svg?2ivacq#sportsIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sportsIcons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sicon-babyfoot-foosball:before {
+  content: "\e900";
+}
+.sicon-badminton:before {
+  content: "\e901";
+}
+.sicon-basketball:before {
+  content: "\e902";
+}
+.sicon-beach-volley-ball:before {
+  content: "\e903";
+}
+.sicon-chess:before {
+  content: "\e904";
+}
+.sicon-cricket:before {
+  content: "\e905";
+}
+.sicon-cross-country:before {
+  content: "\e906";
+}
+.sicon-e-sport:before {
+  content: "\e907";
+}
+.sicon-extreme-dodgeball:before {
+  content: "\e908";
+}
+.sicon-football:before {
+  content: "\e912";
+}
+.sicon-paintball:before {
+  content: "\e913";
+}
+.sicon-petanque:before {
+  content: "\e914";
+}
+.sicon-poker:before {
+  content: "\e915";
+}
+.sicon-rock-climbing:before {
+  content: "\e916";
+}
+.sicon-rowing:before {
+  content: "\e917";
+}
+.sicon-swimming:before {
+  content: "\e918";
+}
+.sicon-table-tennis:before {
+  content: "\e919";
+}
+.sicon-tennis:before {
+  content: "\e91a";
+}
+.sicon-touch-rugby-7s-rugby:before {
+  content: "\e91b";
+}
+.sicon-track:before {
+  content: "\e91c";
+}
+.sicon-ultimate-frisbee:before {
+  content: "\e91d";
+}
+.sicon-yoga:before {
+  content: "\e91e";
+}
+.sicon-billiards:before {
+  content: "\e91f";
+}
+.sicon-lazer-tag:before {
+  content: "\e920";
+}
+.sicon-bubble-soccer:before {
+  content: "\e921";
+}
+.sicon-beer-pong:before {
+  content: "\e90a";
+}
+.sicon-spike-ball:before {
+  content: "\e90b";
+}
+/* 
+<i class="sicon-babyfoot-foosball"></i>
+<i class="sicon-badminton"></i>
+<i class="sicon-basketball"></i>
+<i class="sicon-beach-volley-ball"></i>
+<i class="sicon-chess"></i>
+<i class="sicon-cricket"></i>
+<i class="sicon-cross-country"></i>
+<i class="sicon-e-sport"></i>
+<i class="sicon-extreme-dodgeball"></i>
+<i class="sicon-football"></i>
+<i class="sicon-paintball"></i>
+<i class="sicon-petanque"></i>
+<i class="sicon-poker"></i>
+<i class="sicon-rock-climbing"></i>
+<i class="sicon-rowing"></i>
+<i class="sicon-swimming"></i>
+<i class="sicon-table-tennis"></i>
+<i class="sicon-tennis"></i>
+<i class="sicon-touch-rugby-7s-rugby"></i>
+<i class="sicon-track"></i>  
+<i class="sicon-ultimate-frisbee"></i>
+<i class="sicon-yoga"></i>
+<i class="sicon-billiards"></i>
+<i class="sicon-lazer-tag"></i>
+<i class="sicon-bubble-soccer"></i>
+<i class="sicon-beer-pong"></i>
+<i class="sicon-spike-ball"></i> 
+
+*/

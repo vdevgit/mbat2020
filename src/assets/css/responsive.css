@@ -195,6 +195,11 @@
   .schedule .card .schedule-slot-time {
     display: none;
   }
+
+
+  .schedule.alt .card .schedule-slot-time {width: 100%; max-width: 100%;}
+
+
   .schedule .card-header {
     padding: 30px;
   }
