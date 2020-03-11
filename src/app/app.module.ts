@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,6 +53,8 @@ import { NotFoundComponent } from './shared/not-found.component';
 import { ShopItemsService } from './shared/shop-items.service';
 import { LoadingAnimationComponent } from './loading-animation/loading-animation.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ListusersComponent } from './listusers/listusers.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +103,9 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     NotFoundComponent,
     LoadingAnimationComponent,
     ManageItemsBaseComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    ProfileComponent,
+    ListusersComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +115,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     FontAwesomeModule,
     NgbModule
   ],
-  providers: [ShopItemsService],
+  providers: [ShopItemsService, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

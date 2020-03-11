@@ -8,14 +8,14 @@ import { AuthService } from '../../auth.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  ticketIframeURL: String;
+  ticketIframeURL: string;
   loggedIn: boolean;
   constructor(public auth: AuthService) {
     auth.getUserInfo();
   }
 
   ngOnInit(): void {
-    this.auth.userLoggedIn()
+    this.auth.userLoggedIn();
     this.loggedIn  = !!localStorage.getItem('idToken');
     this.ticketIframeURL = environment.ticketIframe;
     // $('.event-header').css('display', 'none');

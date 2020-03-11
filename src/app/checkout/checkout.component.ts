@@ -20,9 +20,9 @@ export class CheckoutComponent implements AfterViewChecked {
 
   constructor(public auth: AuthService) {
     auth.userProfile$.subscribe(value => {
-      console.log(value)
+      console.log(value);
     });
-    console.log(auth.userProfile$)
+    console.log(auth.userProfile$);
   }
 
   // ngOnInit(): void {

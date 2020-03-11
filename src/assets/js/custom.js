@@ -5,10 +5,7 @@
   $(window).on('load', function() {
 
 
-
-
         $("#bootstrapForm").submit(function(event) {
-
 
           var vForm = $(this);
 
