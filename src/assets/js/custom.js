@@ -4,22 +4,24 @@
 
   $(window).on('load', function() {
 
+    setTimeout(()=>{
+      $("#bootstrapForm").submit(function(event) {
 
-        $("#bootstrapForm").submit(function(event) {
+        var vForm = $(this);
 
-          var vForm = $(this);
+        if (vForm[0].checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        } else {        
 
-          if (vForm[0].checkValidity() === false) {
-            event.preventDefault()
-            event.stopPropagation()
-          } else {        
+          console.log("your form is valid and ready to send");           
+        }         
 
-            console.log("your form is valid and ready to send");           
-          }         
+        vForm.addClass('was-validated');          
 
-          vForm.addClass('was-validated');          
-
-        });
+      });
+      
+    }, 50);
 
 
 
