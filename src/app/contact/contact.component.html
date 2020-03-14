@@ -23,11 +23,11 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <!-- <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="col-lg-6 col-md-12 col-xs-12">
               <div class="container-form wow fadeInLeft" data-wow-delay="0.2s">
                 
                 <div class="form-wrapper p-4">
-                  <form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                  <form role="form" method="post" (ngSubmit)="submitContactUs(contactUsForm)" id="contactForm" name="contact-form" data-toggle="validator">
                     <div class="row">
                       <div class="col-md-12 text-center">
                         <h2 class="p-4">Message</h2>
@@ -75,7 +75,7 @@
                   </form>
                 </div>
               </div>
-            </div> -->
+            </div>
             <div class="col-lg-12 col-md-12 col-xs-12">
               <div class="container-form wow fadeInLeft" data-wow-delay="0.2s">
                 <div>
@@ -87,3 +87,10 @@
         </div>
       </section>
       <!-- Contact Us Section End --> 
+
+<!-- overlaySpinner -->
+
+<div id="overlaySpinner" *ngIf="visible">
+  <div class="spinner"></div>
+  <br/><p>Loading...</p>
+</div>
