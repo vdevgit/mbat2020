@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent implements OnInit {
   subject: string;
   message: string;
   visible = false;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +28,7 @@ export class ContactComponent implements OnInit {
       this.http.post<any>("https://formspree.io/mknzorgk", data).subscribe(data => {
         console.log(data);
         this.visible = false;
+        this.router.navigate(['/']);
       });
     }
   }
