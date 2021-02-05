@@ -1,0 +1,167 @@
+<!-- Page Header Start -->
+<div class="page-header">      
+    <div class="container"> 
+        <div class="row">
+        <div class="col-12">
+            <div class="page-header-inner text-center">   
+                <h1 class="page-title">Sponsors &amp; Partners</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End--> 
+
+<section id="sponsors" class="section-padding" style="background:none; padding-bottom:30px;">
+      <div class="overlay"></div>
+      <div class="container">
+        <!-- <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">Sponsors &amp; Partners</h2>
+              <p class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="row text-center wow fadeInDown animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+          <div class="col-lg-12">
+            <div class="sponsors-logo text-center">
+               <a href=""><img src="assets/img/sponsors/logo-1.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-2.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-3.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-4.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-5.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-6.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-7.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-8.png" alt=""></a>
+               <a href=""><img src="assets/img/sponsors/logo-9.png" alt=""></a>
+            </div><!-- sponsors logo end-->
+         </div>
+        </div>
+      </div>
+</section>
+
+<section id="contact-map" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title-header text-center">
+              <h2 class="section-title wow fadeInUp animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">Interested to become a partner</h2>
+              <p class="wow fadeInDown animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">Complete this form to show us your interest.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-12 col-xs-12">
+            <div class="container-form wow fadeInLeft animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+              <div class="form-wrapper">
+
+            	  <form class="needs-validation" novalidate id="bootstrapForm">
+
+                  <div class="form-group">
+
+                  	<div class="row">
+
+                      <div class="col-xs-12 col-sm-12 col-md-6">
+
+                      	<label class="form-control-label" for="partners_firstName">First Name <abbr class="text-danger" title="This is required">*</abbr></label>
+                        <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="partners_firstName" required>
+                        
+                        <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
+                        <div class="valid-feedback">First Name looks good</div>
+                        <div class="invalid-feedback">Please enter your First Name.</div>
+
+                      </div>
+
+                      <div class="col-xs-12 col-sm-12 col-md-6">
+
+                        <label class="form-control-label" for="partners_lastName">Last Name <abbr class="text-danger" title="This is required">*</abbr></label>
+                        <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="partners_lastName" required>
+                        
+                        <!-- <div class="text-danger"><small>{{lastNameError}}</small></div> -->
+                        <div class="valid-feedback">Last Name looks good</div>
+                        <div class="invalid-feedback">Please enter your Last Name.</div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-control-label" for="partners_email">Email Id <abbr class="text-danger" title="This is required">*</abbr></label>
+                    <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" id="partners_email" required>
+
+                    <div class="valid-feedback">Email Id looks good</div>
+                    <div class="invalid-feedback">Please enter your Email Id.</div>
+                  </div> 
+
+                  <div class="form-group">
+
+	                  <div class="page__section page__custom-settings">
+									    <div class="page__toggle">
+									      <label class="toggle">
+									        <input class="toggle__input" type="checkbox" (change)="validateSponsors($event)" id="invalidCheck1" required>
+									        <span class="toggle__label" for="invalidCheck1">
+									          <span class="toggle__text">Sponsors</span>
+									        </span>
+									      </label>
+									      <div class="valid-feedback">Confirmed</div>
+	                      <div class="invalid-feedback">Please confirm by clicking Checkbox above.</div>
+									    </div>
+									    <div class="page__toggle">
+									      <label class="toggle">
+									        <input class="toggle__input" type="checkbox"  id="invalidCheck2" (change)="validatePartners($event)" required>
+									        <span class="toggle__label" for="invalidCheck2">
+									          <span class="toggle__text">Partners</span>
+									        </span>
+									      </label>
+									      <div class="valid-feedback">Confirmed</div>
+	                      <div class="invalid-feedback">Please confirm by clicking Checkbox above.</div>  
+									    </div>
+									  </div>   
+
+								  </div> 
+
+									<!--
+									<div class="form-group">  
+
+                    <div class="form-check">                                            
+                        <input type="checkbox" class="form-check-input"  (change)="validateSponsors($event)" id="invalidCheck1" required> 
+                        <label class="form-check-label" for="invalidCheck1">Sponsors</label>
+
+                        <div class="valid-feedback">Confirmed</div>
+                        <div class="invalid-feedback">Please confirm by clicking Checkbox above.</div>
+                    </div>  
+
+                    <div class="form-check">                                    
+                        <input type="checkbox" class="form-check-input" value="" id="invalidCheck2" (change)="validatePartners($event)" required>
+                        <label class="form-check-label" for="invalidCheck2">Partners</label>
+
+                       <div class="valid-feedback">Confirmed</div>
+                      <div class="invalid-feedback">Please confirm by clicking Checkbox above.</div>   
+                    </div>
+                                                                                                         
+                  </div>
+                	-->
+
+                  <div class="text-danger"><small>{{errorMessage}}</small></div>  
+
+                  <div class="form-group has-error">
+                  	<label class="form-control-label" for="message">Message <abbr class="text-danger" title="This is required">*</abbr></label>
+                    <textarea class="form-control" rows="4" id="message" name="message" required="" data-error="Write your message"></textarea>
+                  </div>
+
+                  <div class="form-submit">
+                    <button type="submit" class="btn btn-common disabled" id="form-submit" style="pointer-events: all; cursor: pointer;"><i class="fa fa-paper-plane" aria-hidden="true" (click)="submit()"></i>  Send Message</button>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                  </div>
+                  
+                </form>                 
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

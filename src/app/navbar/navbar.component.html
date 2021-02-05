@@ -21,18 +21,30 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/about/schedule">Schedule</a></li> -->
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:test@example.com?subject=Testing out mailto!&body=This is only a test!">Support</a>
+          </li>
+
+          <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" href="#" routerLink="/sponsors">Sponsors &amp; Partners</a>
+          </li>
+
+          <!-- 
           <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament</a>
             <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/watch-live">Watch Live</a></li>
-              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/fixtures">Fixtures</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/fixtures">Fixtures</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/score-cards">Score Cards</a></li>
-              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/leader-board">Leader board</a></li> -->
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/tournament/leader-board">Leader board</a></li>
             </ul>
           </li>
+           -->
+          <!-- 
           <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" href="#" routerLink="/sports">Sports</a>
-            <!-- <ul class="dropdown-menu">
+            <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Babyfoot</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Badminton</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Basketball</a></li>
@@ -54,26 +66,31 @@
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Table Tennis</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Tennis</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/sports">Ultimate Frisbee</a></li>
-            </ul> -->
+            </ul>
           </li>
+           -->
+          <!-- 
           <li class="nav-item navLinkDummy" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" href="#" routerLink="/events">Events</a>
-            <!-- <ul class="dropdown-menu">
+            <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Forest Party</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Dance Competition</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Battle of the Bands</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Fashion Show</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/events">Gala Night</a></li>
-            </ul> -->
+            </ul>
           </li>
+           -->
+           <!-- 
           <li class="nav-item dropdown" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Participants</a>
             <ul class="dropdown-menu">
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/participating-schools">Participating Schools</a></li>
-              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li>
-              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>             -->
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/participants/plan-your-trip">Plan Your Trip</a></li>
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/product-list">Buy Tickets</a></li>
             </ul>
           </li>
+          -->
 
           <!-- <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/shop">Buy Tickets New</a></li>
 
@@ -98,25 +115,28 @@
           <li class="nav-item mobileIcon lineIcon" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" href="https://www.instagram.com/hecmbat/" target="_blank"><i class="lni-instagram-original"></i></a></li>  
           
           <!-- hidden-md-down -->
-          <ng-template #notLogged >            
+          <!-- <ng-template #notLogged >            
             <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"> 
               <a [routerLink]="" type="button" class="btn btn-common mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</a>
             </li>
             <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
               <a href="#" type="button" class="btn btn-common mt-2 font-weight-bold" routerLink="/register">Register</a>
             </li>
-          </ng-template>
+          </ng-template> -->
 
+          <!-- 
           <li class="nav-item dropdownn hidden-md-down" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="lni-user"></i>
               <span class="ml-2" *ngIf="fullName"><span>{{fullName}}</span></span>
             </a>
             <ul class="dropdown-menu">
-              <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li> -->
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
             </ul>
-          </li>    
+          </li> 
+
+           -->   
 
         </ul>
 

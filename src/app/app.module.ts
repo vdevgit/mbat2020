@@ -55,6 +55,7 @@ import { LoadingAnimationComponent } from './loading-animation/loading-animation
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ListusersComponent } from './listusers/listusers.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -105,7 +106,8 @@ import { ListusersComponent } from './listusers/listusers.component';
     ManageItemsBaseComponent,
     PrivacyPolicyComponent,
     ProfileComponent,
-    ListusersComponent
+    ListusersComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,

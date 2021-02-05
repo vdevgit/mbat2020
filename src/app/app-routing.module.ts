@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 import { Mbat2020Component } from './about/mbat2020/mbat2020.component';
 import { OurHistoryComponent } from './about/our-history/our-history.component';
 import { CoreTeamComponent } from './about/core-team/core-team.component';
@@ -85,6 +86,8 @@ const routes: Routes  = [
         }
       ],
     },
+    { path: 'sponsors', component: SponsorsComponent, data: {title: 'sponsors'} },
+
     { path: 'tournament',
       children: [
         {
