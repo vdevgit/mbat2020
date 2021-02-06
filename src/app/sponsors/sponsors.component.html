@@ -56,7 +56,7 @@
             <div class="container-form wow fadeInLeft animated" data-wow-delay="0.2s" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
               <div class="form-wrapper">
 
-            	  <form class="needs-validation" novalidate id="bootstrapForm">
+            	  <form class="needs-validation" novalidate method="post" (ngSubmit)="submitInterest()" id="bootstrapForm">
 
                   <div class="form-group">
 
@@ -65,7 +65,7 @@
                       <div class="col-xs-12 col-sm-12 col-md-6">
 
                       	<label class="form-control-label" for="partners_firstName">First Name <abbr class="text-danger" title="This is required">*</abbr></label>
-                        <input type="text" class="form-control" (keyup)="OnFirstName($event)" placeholder="First Name" name="i1" id="partners_firstName" required>
+                        <input type="text" class="form-control" [(ngModel)]="firstName" placeholder="First Name" name="i1" id="partners_firstName" required>
                         
                         <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
                         <div class="valid-feedback">First Name looks good</div>
@@ -76,7 +76,7 @@
                       <div class="col-xs-12 col-sm-12 col-md-6">
 
                         <label class="form-control-label" for="partners_lastName">Last Name <abbr class="text-danger" title="This is required">*</abbr></label>
-                        <input type="text" class="form-control" (keyup)="OnLastName($event)" placeholder="Last Name" name="i1" id="partners_lastName" required>
+                        <input type="text" class="form-control" [(ngModel)]="lastName" placeholder="Last Name" name="i1" id="partners_lastName" required>
                         
                         <!-- <div class="text-danger"><small>{{lastNameError}}</small></div> -->
                         <div class="valid-feedback">Last Name looks good</div>
@@ -90,7 +90,7 @@
 
                   <div class="form-group">
                     <label class="form-control-label" for="partners_email">Email Id <abbr class="text-danger" title="This is required">*</abbr></label>
-                    <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" id="partners_email" required>
+                    <input type="email" class="form-control" [(ngModel)]="emailId" placeholder="Email" name="i1" id="partners_email" required>
 
                     <div class="valid-feedback">Email Id looks good</div>
                     <div class="invalid-feedback">Please enter your Email Id.</div>
@@ -149,11 +149,11 @@
 
                   <div class="form-group has-error">
                   	<label class="form-control-label" for="message">Message <abbr class="text-danger" title="This is required">*</abbr></label>
-                    <textarea class="form-control" rows="4" id="message" name="message" required="" data-error="Write your message"></textarea>
+                    <textarea class="form-control" rows="4" id="message" name="message" required="" [(ngModel)]="message" data-error="Write your message"></textarea>
                   </div>
 
                   <div class="form-submit">
-                    <button type="submit" class="btn btn-common disabled" id="form-submit" style="pointer-events: all; cursor: pointer;"><i class="fa fa-paper-plane" aria-hidden="true" (click)="submit()"></i>  Send Message</button>
+                    <button type="submit" class="btn btn-common disabled" id="form-submit" style="pointer-events: all; cursor: pointer;"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Submit</button>
                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                   </div>
                   
@@ -165,3 +165,10 @@
         </div>
       </div>
     </section>
+
+<!-- overlaySpinner -->
+
+<div id="overlaySpinner" *ngIf="visible">
+  <div class="spinner"></div>
+  <br/><p>Loading...</p>
+</div>
