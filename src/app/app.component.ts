@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
             if (child.firstChild) {
                 child = child.firstChild;
             } else if (child.snapshot.data && child.snapshot.data.title) {
-                return child.snapshot.data.title + ' | MBAT 2020';
+                return child.snapshot.data.title + ' | MBAT 2021';
             } else {
                 return null;
             }
