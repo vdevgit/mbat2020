@@ -11,9 +11,11 @@ export class SponsorsComponent implements OnInit {
 
   firstName: string;
   lastName: string;
-  emailId: string;
+  partner: boolean;
+  sponsor: boolean;
   message: string;
   visible = false;
+  emailId: string;
   constructor(private http: HttpClient, public router: Router) { }
 
   errorMessage: string;
@@ -29,7 +31,9 @@ export class SponsorsComponent implements OnInit {
     if ( this.firstName && this.lastName && this.emailId && this.message) {
       console.log(this.message);
       this.visible = true;
-      let data = { fristName: this.firstName, lastName: this.lastName, emailId: this.emailId, message: this.message }
+      let data = { fristName: this.firstName, lastName: this.lastName, emailId: this.emailId,
+                    message: this.message, sponsor: this.sponsor?true:false, partner: this.partner?true:false
+                  }
       this.http.post<any>("https://formspree.io/mknzorgk", data).subscribe(data => {
         console.log(data);
         this.visible = false;

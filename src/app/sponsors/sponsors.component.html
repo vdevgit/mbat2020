@@ -66,7 +66,7 @@
 
                       	<label class="form-control-label" for="partners_firstName">First Name <abbr class="text-danger" title="This is required">*</abbr></label>
 
-                        <input type="text" class="form-control" placeholder="First Name" name="i1" id="partners_firstName" required>
+                        <input type="text" class="form-control" placeholder="First Name" name="i1" id="partners_firstName" [(ngModel)]="firstName" required>
                         
                         <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
                         <div class="valid-feedback">First Name looks good</div>
@@ -78,7 +78,7 @@
 
                         <label class="form-control-label" for="partners_lastName">Last Name <abbr class="text-danger" title="This is required">*</abbr></label>
 
-                        <input type="text" class="form-control" placeholder="Last Name" name="i1" id="partners_lastName" required>
+                        <input type="text" class="form-control" placeholder="Last Name" name="i1" id="partners_lastName" [(ngModel)]="lastName" required>
 
                         
                         <!-- <div class="text-danger"><small>{{lastNameError}}</small></div> -->
@@ -94,7 +94,7 @@
                   <div class="form-group">
                     <label class="form-control-label" for="partners_email">Email Id <abbr class="text-danger" title="This is required">*</abbr></label>
 
-                    <input type="email" class="form-control" placeholder="Email" id="partners_email" required>
+                    <input type="email" class="form-control" placeholder="Email" id="partners_email" name="email" [(ngModel)]="emailId" required>
 
                     <div class="valid-feedback">Email Id looks good</div>
                     <div class="invalid-feedback">Please enter your Email Id.</div>
@@ -106,7 +106,7 @@
 	                  <div class="page__section page__custom-settings">
 									    <div class="page__toggle">
 									      <label class="toggle">
-									        <input class="toggle__input" type="checkbox" id="invalidCheck1" required>
+									        <input class="toggle__input" type="checkbox" id="invalidCheck1" name="sponsor" [(ngModel)]="sponsor" required>
 									        <span class="toggle__label" for="invalidCheck1">
 									          <span class="toggle__text">Sponsor</span>
 									        </span>
@@ -116,7 +116,7 @@
 									    </div>
 									    <div class="page__toggle">
 									      <label class="toggle">
-									        <input class="toggle__input" type="checkbox"  id="invalidCheck2" required>
+									        <input class="toggle__input" type="checkbox"  id="invalidCheck2" name="partner" [(ngModel)]="partner" required>
 									        <span class="toggle__label" for="invalidCheck2">
 									          <span class="toggle__text">Partner</span>
 									        </span>
