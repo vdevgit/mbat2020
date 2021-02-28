@@ -2,16 +2,21 @@ $white: #fff;
 $black: #0e1111;
 
 $grey: #f5f5fa;
-$purple: #26047e;
+$purple: #310070; //#26047e
+
 $pink: #c23390;
 $orange: #f08718;
 $red: #f20c3a;
-$blue: #212529;
+
+$blue: #000390; //#212529
 $eton-blue: #80c3eb;
+
+$green-dark:  #287770;
+$green-light:  #49d768;
 
 $background: $grey;
 $accent1: $purple;
-$accent2: $pink;
+$accent2: $green-dark;
 $logo-accent: $eton-blue;
 
 $border-radius: 7px;
