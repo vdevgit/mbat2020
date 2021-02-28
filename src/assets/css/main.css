@@ -123,7 +123,7 @@ input, select, textarea {background: #fff; color:rgba(0, 0, 92, 1)}
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;}
 
-.text-blue-green{background: -webkit-linear-gradient(#000390, #49d768);
+.text-blue-green{background: #49d768;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;}

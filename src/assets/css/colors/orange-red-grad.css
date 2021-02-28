@@ -1,11 +1,11 @@
 a{
-  color: #287770;
+  color: #000390;
 }
 a:hover, a:focus{
-  color: #287770;
+  color: #49d768;
 }
 .btn-common{
-    background-color: #287770;
+    background-color: #49d768;
 }
 .slicknav_btn{
   background: rgb(49,0,112);
@@ -16,16 +16,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endCo
 }
 .section-title:before,
 .section-title:after{
-  color: #287770;
+  color: #49d768;
 }
 .navbar li.active a.nav-link{
-  color: #287770 !important;
+  color: #49d768 !important;
 }
 .top-nav-collapse .navbar-nav li.active a.nav-link{
-  color: #287770 !important;
+  color: #49d768 !important;
 }
 .navbar-expand-lg .navbar-nav li > a:before{
-  background: #287770 !important;
+  background: #49d768 !important;
  /* background: rgb(240,135,24);
    background: -moz-linear-gradient(-45deg,  rgba(240,135,24,1) 0%, rgba(242,12,58,1) 100%);
   background: -webkit-linear-gradient(-45deg,  rgba(240,135,24,1) 0%,rgba(242,12,58,1) 100%);
@@ -33,10 +33,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endCo
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f08718', endColorstr='#f20c3a',GradientType=1 );  */
 }
 .navbar-expand-lg .navbar-nav .nav-link:focus, .navbar-expand-lg .navbar-nav .nav-link:hover{
-  color: #287770 !important;
+  color: #49d768 !important;
 }
 #hero-area .contents .icon i{
-  color: #287770;
+  color: #49d768;
 }
 #count .count-wrapper{
   background: rgb(49,0,112);
@@ -46,7 +46,7 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .about-content ul li i{
-  color: #287770;
+  color: #49d768;
 }
 .ready-to-play:before{
     background: rgb(49,0,112);
@@ -56,7 +56,7 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 #information-bar ul li i{
-  color: #287770;
+  color: #49d768;
 }
 .single-intro-text .count-number{
     background: rgb(49,0,112);
@@ -66,7 +66,7 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .single-intro-text:hover i{
-  color: #287770;
+  color: #49d768;
 }
 .counter-section .counter .icon{
     background: rgb(49,0,112);
@@ -83,7 +83,7 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .schedule .nav-tabs .nav-item.show .nav-link:before, .schedule .nav-tabs .nav-link.active:before{
-  border-color: #287770 transparent transparent transparent;
+  border-color: #49d768 transparent transparent transparent;
 }
 .schedule .card .schedule-slot-time{
     background: rgb(49,0,112);
@@ -93,10 +93,10 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .schedule .card-body .location span{
-  color: #287770;
+  color: #49d768;
 }
 .team-item .info-text h3 a:hover{
-  color: #287770;
+  color: #49d768;
 }
 #gallery .gallery-box:hover .overlay-box{
   background: rgb(49,0,112);
@@ -106,16 +106,16 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 #gallery .gallery-box .overlay-box i{
-  color: #287770;
+  color: #49d768;
 }
 #event-up .event-item .content a{
-  color: #287770;
+  color: #49d768;
 }
 #pricing .price-block-wrapper .price h2{
-  color: #287770;
+  color: #49d768;
 }
 #pricing .price-block-wrapper .pricing-list ul li i{
-  color: #287770;
+  color: #49d768;
 }
 #pricing .active{
     background: rgb(49,0,112);
@@ -132,19 +132,19 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .blog-item .meta-tags span i{
-  color: #287770;
+  color: #49d768;
 }
 .container-form .form-wrapper .form-control:focus{
-  border-color: #287770;
+  border-color: #49d768;
 }
 #contact-text ul li i{
-  color: #287770;
+  color: #49d768;
 }
 .subscribe-inner .form-control:focus{
-  border-color: #287770;
+  border-color: #49d768;
 }
 .site-info a:hover{
-  color: #287770;
+  color: #49d768;
 }
 a.back-to-top i{
     background: rgb(49,0,112);
@@ -161,54 +161,54 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .page-header ul li{
-  color: #287770;
+  color: #49d768;
 }
 .page-header ul li a:hover{
-  color: #287770;
+  color: #49d768;
 }
 .blog-post .post-content .meta .meta-part a:hover{
-  color: #287770;
+  color: #49d768;
 }
 .post-title a:hover{
-  color: #287770;
+  color: #49d768;
 }
 #pagination .current{
-  color: #287770;
+  color: #49d768;
 }
 #pagination a:hover{
-  color: #287770;
+  color: #49d768;
 }
 .widget-search input[type="search"]:focus{
-  border-color: #287770;
+  border-color: #49d768;
 }
 .widget-title{
-  border-color: #287770;
+  border-color: #49d768;
 }
 #sidebar .posts-list .widget-content a:hover{
-  color: #287770;
+  color: #49d768;
 }
 #sidebar .cat-list li a:hover{
-  color: #287770;
+  color: #49d768;
 }
 .post-slide .post-content .meta .meta-part a:hover{
-  color: #287770;
+  color: #49d768;
 }
 .post-slide .post-content h3 a:hover{
-  color: #287770;
+  color: #49d768;
 }
 #sidebar .tag a:hover{
-  color: #287770;
-  border-color: #287770;
+  color: #49d768;
+  border-color: #49d768;
 }
 #comments .comment-content .comment-by a:hover{
-  color: #287770;
+  color: #49d768;
 }
 #comments .comment-content .comment-date{
-  color: #287770;
+  color: #49d768;
 }
 .reply-link{
-  color: #287770;
+  color: #49d768;
 }
 .form-control:focus{
-  border-color: #287770;
+  border-color: #49d768;
 }
