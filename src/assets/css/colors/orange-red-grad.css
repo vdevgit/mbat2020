@@ -76,21 +76,13 @@ background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgb
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
 }
 .schedule .nav-tabs .nav-item.show .nav-link, .schedule .nav-tabs .nav-link.active, .schedule .nav-tabs .nav-item .nav-link:hover{
-    background: rgb(49,0,112);
-background: -moz-linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
+    background: rgba(0, 0, 92, 1);
 }
 .schedule .nav-tabs .nav-item.show .nav-link:before, .schedule .nav-tabs .nav-link.active:before{
-  border-color: #49d768 transparent transparent transparent;
+  border-color: rgba(0, 0, 92, 1) transparent transparent transparent;
 }
 .schedule .card .schedule-slot-time{
-    background: rgb(49,0,112);
-background: -moz-linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
+    background: rgba(0, 0, 92, 1);
 }
 .schedule .card-body .location span{
   color: #49d768;
