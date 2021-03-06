@@ -2,7 +2,17 @@
  * Custom CSS
  */
 
- .schedule .schedule-tab-content .tab-content {box-shadow:none;}
+.brand-white-bg {background:#fff !important;}
+.brand-primary-bg {color:#000390 !important;} /* blue */
+.brand-secondary-bg {color:#000390 !important;} /* green */
+
+.brand-primary-text {color:#000390 !important;} /* blue */
+.brand-secondary-text {color:#000390 !important;} /* green */
+
+.box-shadow-none {box-shadow:none;}
+.schedule .schedule-tab-content .tab-content {box-shadow:none;}
+
+.team-item {margin: 0 0; padding: 80px 15px;}
 
 .section-padding{ padding: 100px 0 ;}
 .section-padding.alt {margin: 120px 0 0 0;}

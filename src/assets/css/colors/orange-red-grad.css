@@ -139,11 +139,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endCo
   color: #49d768;
 }
 a.back-to-top i{
-    background: rgb(49,0,112);
-background: -moz-linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-background: linear-gradient(90deg, rgba(49,0,112,1) 0%, rgba(0,3,144,1) 40%, rgba(40,119,112,1) 80%, rgba(73,215,104,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#310070",endColorstr="#49d768",GradientType=1);
+    background: #49d768;
 }
 .sk-circle .sk-child:before {
   background: rgb(49,0,112);
