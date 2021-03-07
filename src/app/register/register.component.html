@@ -69,12 +69,12 @@
                                         </div> 
 
                                         <div class="form-group">
-                                          <label class="form-control-label" for="reg_email">Email Id <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <label class="form-control-label" for="reg_email">Email <abbr class="text-danger" title="This is required">*</abbr></label>
                                           <input type="email" class="form-control" (keyup)="OnEmail($event)" placeholder="Email" id="reg_email" required>
                                           
                                           <!-- <div class="text-danger"><small>{{emailError}}</small></div> -->
-                                          <div class="valid-feedback">Email Id looks good</div>
-                                          <div class="invalid-feedback">Please enter your Email Id.</div>
+                                          <div class="valid-feedback">Email looks good</div>
+                                          <div class="invalid-feedback">Please enter your Email.</div>
                                         </div>
 
                                         <div class="form-group">
@@ -119,6 +119,7 @@
                                         </div>
 
                                         <div class="form-group" id="blk-1" class="toHide" style="display:none">
+
                                           <label class="form-control-label" for="reg_school">School <abbr class="text-danger" title="This is required">*</abbr></label>
                                           <select class="form-control" #mySelect (change)='onOptionsSelected(mySelect.value)' id="reg_school" required>
                                             <option value="" selected disabled hidden>Please Select School</option>
@@ -127,41 +128,42 @@
 
                                           <!-- <div class="text-danger"><small>{{schoolError}}</small></div> -->
                                           <div class="valid-feedback">School looks good</div>
-                                          <div class="invalid-feedback">Select your School.</div>
+                                          <div class="invalid-feedback">Select your School.</div>   
+
                                         </div> 
 
-                                         <div class="form-group" id="blk-2" class="toHide" style="display:none">
+                                        <div class="form-group mt-4" id="blk-2" class="toHide" style="display:none">
+
+                                          <label class="form-control-label" for="reg_programName">Enter your Program <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="text" class="form-control" placeholder="Enter Program Name" name="i1" id="reg_programName" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
+                                          <div class="valid-feedback">Entered Program looks good</div>
+                                          <div class="invalid-feedback">Please enter your Program.</div>
+
+                                        </div>
 
 
-                                          <div class="row">
+                                        <div class="form-group mt-4">
 
-                                            <div class="col-sm-6">
+                                          <label class="form-control-label" for="reg_graduationYear">Enter Year of graduation <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="text" class="form-control" placeholder="Enter Year of graduation" name="i1" id="reg_graduationYear" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
+                                          <div class="valid-feedback">Entered Graduation Year looks good</div>
+                                          <div class="invalid-feedback">Please enter your Graduation Year.</div>
 
-                                              <label class="form-control-label" for="reg_programName">Enter your Program <abbr class="text-danger" title="This is required">*</abbr></label>
-                                              <input type="text" class="form-control" placeholder="Enter Program Name" name="i1" id="reg_programName" required>
-                                              
-                                              <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
-                                              <div class="valid-feedback">Entered Program looks good</div>
-                                              <div class="invalid-feedback">Please enter your Program.</div>
-
-                                            </div>
-
-                                             <div class="col-sm-6">
-
-                                              <label class="form-control-label" for="reg_graduationYear">Enter Year of graduation <abbr class="text-danger" title="This is required">*</abbr></label>
-                                              <input type="text" class="form-control" placeholder="Enter Year of graduation" name="i1" id="reg_graduationYear" required>
-                                              
-                                              <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
-                                              <div class="valid-feedback">Entered Graduation Year looks good</div>
-                                              <div class="invalid-feedback">Please enter your Graduation Year.</div>
-
-                                            </div>
-
-                                          </div>
+                                        </div>
 
 
-
-                                        </div>                                        
+                                        <div class="form-group mt-4">
+                                          <label class="form-control-label" for="reg_enterLinkedIn">LinkedIn Profile URL <abbr class="text-danger" title="This is required">*</abbr></label>
+                                          <input type="text" class="form-control" placeholder="LinkedIn URL" name="i1" id="reg_enterLinkedIn" required>
+                                          
+                                          <!-- <div class="text-danger"><small>{{enterLinkedInError}}</small></div> -->
+                                          <div class="valid-feedback">LinkedIn Profile URL looks good</div>
+                                          <div class="invalid-feedback">Please enter your LinkedIn Profile URL.</div>
+                                        </div>                                      
 
                                         <div class="form-group mt-4">  
                                      
