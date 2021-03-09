@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
   password: string;
   confirmPassword: string;
   program: string;
+  otherProgram: string;
   selectedSchool: string;
-  selectedSchool2: string;
   yearOfGraduation: string;
   linkedIn: string;
   dropDownData: [];
@@ -95,13 +95,12 @@ export class RegisterComponent implements OnInit {
   OnProgramChange(event: any) {
     this.program = event.target.value;
   }
+  OnOtherProgram(event: any) {
+    this.otherProgram = event.target.value;
+  }
   onOptionsSelected(value: string) {
     console.log('the selected value is ' + value);
     this.selectedSchool = value;
-  }
-  onOptionsSelected2(value: string) {
-    console.log('the selected value 2 is ' + value);
-    this.selectedSchool2 = value;
   }
   OnGraduationYear(event: any) {
     this.yearOfGraduation = event.target.value;
@@ -141,7 +140,8 @@ export class RegisterComponent implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
       password: this.password,
-      schoolId: this.program === '1' ? this.selectedSchool : this.selectedSchool2,
+      schoolId: this.selectedSchool,
+      program: this.program === "1" ? "MBA" : this.otherProgram,
       yearOfGraduation: this.yearOfGraduation,
       linkedIn: this.linkedIn
     };
@@ -178,8 +178,12 @@ export class RegisterComponent implements OnInit {
       this.passwordError = 'Password does not match!';
       isFormValid = false;
     }
-    if (!this.selectedSchool && !this.selectedSchool2) {
+    if (!this.selectedSchool) {
       this.schoolError = 'Select School!';
+      isFormValid = false;
+    }
+    if (!data.program) {
+      this.schoolError = 'Select program!';
       isFormValid = false;
     }
     if (!this.informationConfirm) {
