@@ -30,8 +30,13 @@ export class RegisterComponent implements OnInit {
   errorMessage: string;
   password: string;
   confirmPassword: string;
+  program: string;
   selectedSchool: string;
+  selectedSchool2: string;
+  yearOfGraduation: string;
+  linkedIn: string;
   dropDownData: [];
+  otherDropDownData: [];
   isBuyTicketFlow: boolean;
   firstNameError: string;
   lastNameError: string;
@@ -41,6 +46,9 @@ export class RegisterComponent implements OnInit {
   informationConfirm: boolean;
   policyConfirm: boolean;
   schoolError: string;
+  yearOfGraduationError: string;
+  linkedInError: string;
+
 
   ngOnInit(): void {
 
@@ -84,9 +92,22 @@ export class RegisterComponent implements OnInit {
   OnConfirmPassword(event: any) {
     this.confirmPassword = event.target.value;
   }
+  OnProgramChange(event: any) {
+    this.program = event.target.value;
+  }
   onOptionsSelected(value: string) {
     console.log('the selected value is ' + value);
     this.selectedSchool = value;
+  }
+  onOptionsSelected2(value: string) {
+    console.log('the selected value 2 is ' + value);
+    this.selectedSchool2 = value;
+  }
+  OnGraduationYear(event: any) {
+    this.yearOfGraduation = event.target.value;
+  }
+  OnLinkedIn(event: any) {
+    this.linkedIn = event.target.value;
   }
   getSchools() {
     const headers = {
@@ -95,6 +116,7 @@ export class RegisterComponent implements OnInit {
     this.http.get<any>(environment.mbatServer + 'schools/', { headers }).subscribe(data => {
       console.log(data);
       this.dropDownData = data;
+      this.otherDropDownData = data;
     });
   }
   validatePassword() {
@@ -119,7 +141,9 @@ export class RegisterComponent implements OnInit {
       firstName: this.firstName,
       lastName: this.lastName,
       password: this.password,
-      schoolId: this.selectedSchool
+      schoolId: this.program === '1' ? this.selectedSchool : this.selectedSchool2,
+      yearOfGraduation: this.yearOfGraduation,
+      linkedIn: this.linkedIn
     };
     this.errorMessage = '';
     this.firstNameError = '';
@@ -128,6 +152,8 @@ export class RegisterComponent implements OnInit {
     this.emailError = '';
     this.passwordError = '';
     this.schoolError = '';
+    this.yearOfGraduationError = '';
+    this.linkedInError = '';
     if (!this.firstName) {
       this.firstNameError = 'First name is empty!';
       isFormValid = false;
@@ -156,8 +182,20 @@ export class RegisterComponent implements OnInit {
       this.schoolError = 'Select School!';
       isFormValid = false;
     }
+    if (!this.selectedSchool2) {
+      this.schoolError = 'Select School!';
+      isFormValid = false;
+    }
     if (!this.informationConfirm) {
       // this.errorMessage = 'Please Confirm!';
+      isFormValid = false;
+    }
+    if (!this.yearOfGraduation) {
+      this.yearOfGraduationError = 'Year of graduation is empty!';
+      isFormValid = false;
+    }
+    if (!this.linkedIn) {
+      this.linkedInError = 'LinkedIn URL is empty!';
       isFormValid = false;
     }
     // if (!this.policyConfirm) {

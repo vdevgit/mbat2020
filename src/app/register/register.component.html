@@ -113,8 +113,8 @@
                                         <div class="form-group">
                                           <label class="form-control-label" for="reg_program">Select Program <abbr class="text-danger" title="This is required">*</abbr></label>
                                           <div class="row">
-                                            <div class="col-sm-4"><label><input id="rdb1" type="radio" name="toggler" value="1" /> MBA</label></div>
-                                            <div class="col-sm-4"><label><input id="rdb2" type="radio" name="toggler" value="2" /> Other</label></div>
+                                            <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="OnProgramChange($event)" name="toggler" value="1" /> MBA</label></div>
+                                            <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="OnProgramChange($event)" name="toggler" value="2" /> Other</label></div>
                                           </div>
                                         </div>
 
@@ -135,7 +135,10 @@
                                         <div class="form-group mt-4" id="blk-2" class="toHide" style="display:none">
 
                                           <label class="form-control-label" for="reg_programName">Enter your Program <abbr class="text-danger" title="This is required">*</abbr></label>
-                                          <input type="text" class="form-control" placeholder="Enter Program Name" name="i1" id="reg_programName" required>
+                                          <select class="form-control" #mySelect2 (change)='onOptionsSelected2(mySelect2.value)' id="reg_programName" required>
+                                            <option value="" selected disabled hidden>Please Select School</option>
+                                            <option *ngFor='let option of otherDropDownData' [value]="option.id">{{option.name}}</option>
+                                          </select>
                                           
                                           <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
                                           <div class="valid-feedback">Entered Program looks good</div>
@@ -147,7 +150,7 @@
                                         <div class="form-group mt-4">
 
                                           <label class="form-control-label" for="reg_graduationYear">Enter Year of graduation <abbr class="text-danger" title="This is required">*</abbr></label>
-                                          <input type="text" class="form-control" placeholder="Enter Year of graduation" name="i1" id="reg_graduationYear" required>
+                                          <input type="text" class="form-control" (keyup)="OnGraduationYear($event)"  placeholder="Enter Year of graduation" name="i1" id="reg_graduationYear" required>
                                           
                                           <!-- <div class="text-danger"><small>{{firstNameError}}</small></div> -->
                                           <div class="valid-feedback">Entered Graduation Year looks good</div>
@@ -158,7 +161,7 @@
 
                                         <div class="form-group mt-4">
                                           <label class="form-control-label" for="reg_enterLinkedIn">LinkedIn Profile URL <abbr class="text-danger" title="This is required">*</abbr></label>
-                                          <input type="text" class="form-control" placeholder="LinkedIn URL" name="i1" id="reg_enterLinkedIn" required>
+                                          <input type="text" class="form-control" (keyup)="OnLinkedIn($event)"  placeholder="LinkedIn URL" name="i1" id="reg_enterLinkedIn" required>
                                           
                                           <!-- <div class="text-danger"><small>{{enterLinkedInError}}</small></div> -->
                                           <div class="valid-feedback">LinkedIn Profile URL looks good</div>

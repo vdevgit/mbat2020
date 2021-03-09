@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  mbatServer: 'https://api.mbat.xyz/',
+  mbatServer: 'https://api.mbatapp.xyz/',
   auth0: {
     domain: 'mbat-staging.eu.auth0.com',
     clientId: '50PT42OeP7iJr8FdzIt5r4zTJS3cglFZ',
