@@ -178,11 +178,7 @@ export class RegisterComponent implements OnInit {
       this.passwordError = 'Password does not match!';
       isFormValid = false;
     }
-    if (!this.selectedSchool) {
-      this.schoolError = 'Select School!';
-      isFormValid = false;
-    }
-    if (!this.selectedSchool2) {
+    if (!this.selectedSchool && !this.selectedSchool2) {
       this.schoolError = 'Select School!';
       isFormValid = false;
     }
