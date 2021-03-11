@@ -2,6 +2,31 @@
  * Custom CSS
  */
 
+ body, html {
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+}
+
+ .dropdown-menu.dropdown-menu-right:before  {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 100%;
+    right: 8px !important;
+    margin-left: -5px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+ .dropdown-menu:before  {
+    left: auto !important;
+
+}
+
+
+
+
 .brand-white-bg {background:#fff !important;}
 .brand-primary-bg {color:#000390 !important;} /* blue */
 .brand-secondary-bg {color:#000390 !important;} /* green */
