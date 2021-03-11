@@ -7,6 +7,9 @@
   scroll-behavior: smooth !important;
 }
 
+
+p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0px; font-size: 14px; margin-top:20px;}
+
  .dropdown-menu.dropdown-menu-right:before  {
     content: "";
     display: inline-block;
