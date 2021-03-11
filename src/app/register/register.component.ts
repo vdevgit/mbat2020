@@ -221,7 +221,9 @@ export class RegisterComponent implements OnInit {
         } else {
           localStorage.setItem('idToken', data.access_token);
           sessionStorage.setItem('user', JSON.stringify(data));
-          this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
+          let paymentPage = 'http://mbat.assoconnect.com/collect/description/169398-n-payment-of-mbat-registration';
+          window.open(paymentPage, "_self");
+          //this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
         }
       });
     }
