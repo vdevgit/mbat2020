@@ -2,15 +2,11 @@
  * Custom CSS
  */
 
- body, html {
-  overflow-x: hidden;
-  scroll-behavior: smooth !important;
-}
-
+ body, html {overflow-x: hidden;scroll-behavior: smooth !important;}
 
 p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0px; font-size: 14px; margin-top:20px;}
 
- .dropdown-menu.dropdown-menu-right:before  {
+.dropdown-menu.dropdown-menu-right:before  {
     content: "";
     display: inline-block;
     position: absolute;
@@ -22,10 +18,9 @@ p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0p
     border-bottom: 10px solid #fff;
 }
 
- .dropdown-menu:before  {
-    left: auto !important;
+.dropdown-menu:before  {left: auto !important;}
 
-}
+#instafeed-container a img{ width: 20%;}
 
 .descr h3.title {font-size: 16px !important;}
 .plusSymbol {position: absolute; padding:0 10px;line-height: 42px;

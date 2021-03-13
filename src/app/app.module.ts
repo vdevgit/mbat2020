@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import "@ptkdev/webcomponent-instagram-widget";
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -118,6 +120,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     NgbModule
   ],
   providers: [ShopItemsService, Title],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
