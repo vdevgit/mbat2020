@@ -27,8 +27,10 @@ p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0p
 
 }
 
-
-
+.descr h3.title {font-size: 16px !important;}
+.plusSymbol {position: absolute; padding:0 10px;line-height: 42px;
+    font-size: 16px; background:lightgrey;}
+.pl-20px {padding-left: 35px;}
 
 .brand-white-bg {background:#fff !important;}
 .brand-primary-bg {color:#000390 !important;} /* blue */

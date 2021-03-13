@@ -79,8 +79,11 @@
 
                                         <div class="form-group">
                                           <label class="form-control-label" for="reg_phoneNumber">Phone Number <abbr class="text-danger" title="This is required">*</abbr></label>
-                                          <input type="number" class="form-control" (keyup)="OnPhoneNumber($event)" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="reg_phoneNumber" required>
-                                          
+                                          <div>
+                                             <span class="plusSymbol">+</span>                                 
+                                             <input type="number" class="form-control pl-20px" (keyup)="OnPhoneNumber($event)" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="reg_phoneNumber" required>
+                                          </div>                                          
+                                          <small class="badge badge-warning">Don't add <b>+</b> symbol in front of phone number</small>
                                           <!-- <div class="text-danger"><small>{{phoneNumberError}}</small></div> -->
                                           <div class="valid-feedback">Phone Number looks good</div>
                                           <div class="invalid-feedback">Please enter your Phone Number.</div>
@@ -90,14 +93,13 @@
                                           <div class="row">
                                             <div class="col-xs-12 col-sm-12 col-md-6">
                                               <label class="form-control-label" for="reg_password">Password <abbr class="text-danger" title="This is required">*</abbr></label>
-                                              <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password" id="reg_password" required>
+                                              <input type="password" class="form-control" (keyup)="OnPassword($event)" placeholder="Password" id="reg_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>
                                               <div class="valid-feedback">Password looks good</div>
                                               <div class="invalid-feedback">Please enter your Password.</div>
                                             </div>
                                             <div class="col-xs-12 col-sm-12 col-md-6">
                                               <label class="form-control-label" for="reg_confirmPassword">Confirm Password <abbr class="text-danger" title="This is required">*</abbr></label>
-                                              <input type="password" class="form-control" (keyup)="OnConfirmPassword($event)" placeholder="Confirm Password" id="reg_confirmPassword" required>
-                          
+                                              <input type="password" class="form-control" (keyup)="OnConfirmPassword($event)" placeholder="Confirm Password" id="reg_confirmPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" required>                          
                                             <div *ngIf="passwordError; else jqueryErrorMessage"> 
                                                 <div class="text-danger"><small>{{passwordError}}</small></div> 
                                               </div>
@@ -107,7 +109,7 @@
                                               </ng-template>
                                             </div>
                                           </div>
-                                                                                   
+                                          <small class="badge badge-warning mt-1">Password must contain at least one uppercase, <br> lowercase letter and one number and at least 6 or more characters</small>                                         
                                         </div>  
 
                                         <div class="form-group" id="blk">
