@@ -221,7 +221,7 @@ export class RegisterComponent implements OnInit {
         } else {
           localStorage.setItem('idToken', data.access_token);
           sessionStorage.setItem('user', JSON.stringify(data));
-          let paymentPage = 'https://www.helloasso.com/associations/hec-mbat/evenements/mbat-2021';
+          let paymentPage = 'https://www.helloasso.com/associations/hec-mbat/evenements/mbat-2021-1';
           window.open(paymentPage, "_self");
           //this.router.navigate([this.isBuyTicketFlow ? '/product-list' : '/']);
         }
