@@ -115,7 +115,7 @@ const routes: Routes  = [
     },
     { path: 'sports', component: SportsComponent, data: {title: 'Sports'} },
     { path: 'events', component: EventsComponent, data: {title: 'Events'} },    
-    { path: 'eventsRegistration', component: EventsRegistrationComponent, data: {title: 'Events Registration'} },
+    { path: 'events-registration', component: EventsRegistrationComponent, data: {title: 'Events Registration'} },
     { path: 'participants',
       children: [
         {

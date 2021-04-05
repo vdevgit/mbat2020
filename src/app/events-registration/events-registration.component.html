@@ -27,7 +27,7 @@
         -->
 
         <div class="row">
-          <div class="col-12 mb-5 text-center">
+          <!-- <div class="col-12 mb-5 text-center">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" id="competitiveEvents-tab" data-toggle="tab" href="#competitiveEvents" role="tab" aria-controls="competitiveEvents">
@@ -44,7 +44,7 @@
                 </a>                
               </li>
             </ul>
-          </div>
+          </div> -->
           <div class="col-12">
             <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
               <div class="schedule-tab-content col-12 clearfix">
@@ -55,12 +55,12 @@
                         <div class="row">	   
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="virtualGroupRunningOutter" (click)="checkboxFunction($event)">
 
                                   <div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/1-virtual-group-running-challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="virtualGroupRunning" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -78,12 +78,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="virtualIndividualRunningOutter" (click)="checkboxFunction($event)">
 
                                   <div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/2-virtual-individual-running-challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="virtualIndividualRunning" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                     
                                   </div>
@@ -101,12 +101,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="virtualGroupCyclingOutter" (click)="checkboxFunction($event)">
 
                                   <div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/3-virtual-group-cycling-challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="virtualGroupCycling" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -128,12 +128,12 @@
                         <div class="row">
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="virtualIndividualCyclingOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/4-virtual-individual-cycling-challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="virtualIndividualCycling" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -151,12 +151,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="mbatTalentOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/5-MBATs-Got-Talent.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="mbatTalent" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -174,12 +174,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="battleOfBandsOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/6-battle-of-the-bands.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="battleOfBands" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -199,12 +199,12 @@
                         <div class="row">
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="footballJugglingOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/7-football-Juggling-Challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="footballJuggling" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -222,12 +222,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="basketballTrickShotOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/8-Basketball-trick-shot-Competition.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="basketballTrickShot" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -245,12 +245,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="basketballSkillsOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/9-Basketball-Skills-Challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="basketballSkills" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -272,12 +272,12 @@
                         <div class="row">
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="parkourOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/10-Parkour-challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="parkour" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -295,12 +295,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="fitnessOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/11-Fitness-challenge.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="fitness" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -318,12 +318,12 @@
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="counterStrikeGolbalOffensiveOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/12-Counter-Strike-Global-Offensive.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="counterStrikeGolbalOffensive" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -340,6 +340,9 @@
                                   </div>
                                   
                                 </div>
+                                <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="XBOX" /> XBOX</label></div>
+                                <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="PS4" /> PS4</label></div>
+                                <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="PS5" /> PS5</label></div>
                             </div>
 
                         </div>
@@ -347,12 +350,12 @@
                         <div class="row">
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="dota2Outter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/13-Dota-2.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="dota2" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -369,15 +372,18 @@
                                   </div>
 
                                 </div>
+                                <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="XBOX" /> XBOX</label></div>
+                                <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="PS4" /> PS4</label></div>
+                                <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="PS5" /> PS5</label></div>
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="formula1EsportsOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/14-Formula-1-Esports.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="formula1Esports" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -394,15 +400,18 @@
                                   </div>
 
                                 </div>
+                                <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="XBOX" /> XBOX</label></div>
+                                <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS4" /> PS4</label></div>
+                                <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS5" /> PS5</label></div>
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
+                                <div class="blog-item h-100" id="fortniteOutter" (click)="checkboxFunction($event)">
 
                                 	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/15-Fortnite.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="fortnite" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -419,6 +428,9 @@
                                   </div>
 
                                 </div>
+                                <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="XBOX" /> XBOX</label></div>
+                                <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS4" /> PS4</label></div>
+                                <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS5" /> PS5</label></div>
                             </div>
 
                         </div>
@@ -426,12 +438,12 @@
                         <div class="row">
 
                             <div class="col-lg-4 col-md-6 col-xs-12">
-                              <div class="blog-item h-100">
+                              <div class="blog-item h-100" id="leagueOfLegendsOutter" (click)="checkboxFunction($event)">
 
                               	<div class="blog-image">
                                   	<label class="image-checkbox">
 							                        <img class="img-fluid" src="assets/img/event/16-League-of-Legends.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
+							                        <input name="image[]" id="leagueOfLegends" type="checkbox">
 							                        <i class="fa fa-check hidden"></i>							                        
 								                    </label>                                    
                                   </div>
@@ -448,15 +460,18 @@
                                 </div> 
 
                               </div>
+                              <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="XBOX" /> XBOX</label></div>
+                              <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="PS4" /> PS4</label></div>
+                              <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="PS5" /> PS5</label></div>
                             </div>	
 
                             <div class="col-lg-4 col-md-6 col-xs-12">
-                              <div class="blog-item h-100">
+                              <div class="blog-item h-100" id="fifaOutter" (click)="checkboxFunction($event)">
 
                               	<div class="blog-image">
                                 	<label class="image-checkbox">
 						                        <img class="img-fluid" src="assets/img/event/17-FIFA-21-20.jpg" alt="">
-						                        <input name="image[]" value="" type="checkbox">
+						                        <input name="image[]" id="fifa" type="checkbox">
 						                        <i class="fa fa-check hidden"></i>							                        
 							                    </label>                                    
                                 </div>
@@ -473,15 +488,18 @@
                                 </div>
 
                               </div>
+                              <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="XBOX" /> XBOX</label></div>
+                              <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS4" /> PS4</label></div>
+                              <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS5" /> PS5</label></div>
                             </div>
 
                             <div class="col-lg-4 col-md-6 col-xs-12">
-                              <div class="blog-item h-100">
+                              <div class="blog-item h-100" id="nbaOutter" (click)="checkboxFunction($event)">
 
                               	<div class="blog-image">
                                 	<label class="image-checkbox">
 						                        <img class="img-fluid" src="assets/img/event/18-NBA-2K21-20 .jpg" alt="">
-						                        <input name="image[]" value="" type="checkbox">
+						                        <input name="image[]" id="nba" type="checkbox">
 						                        <i class="fa fa-check hidden"></i>							                        
 							                    </label>                                    
                                 </div>
@@ -498,234 +516,22 @@
                                 </div> 
 
                               </div>
+                              <div class="col-sm-4"><label><input id="rdb1" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="XBOX" /> XBOX</label></div>
+                              <div class="col-sm-4"><label><input id="rdb2" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS4" /> PS4</label></div>
+                              <div class="col-sm-4"><label><input id="rdb3" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS5" /> PS5</label></div>
                             </div>
 
                         </div>
 
+                        <div class="text-danger"><small>{{errorText}}</small></div>    
+                        <div class="row align-items-center mt-4">
+                          <div class="col-sm-12 mt-2 text-center">
+                            <button type="submit" (click)="submitSelectedEvents()" class="btn btn-primary mt-6 btn-sm" id="btnSubmit">Submit</button>
+                            <button class="btn btn-danger mt-6 btn-sm ml-2" onclick="history.back()">Cancel</button>
+                          </div>
+                        </div>   
                     </div>
 
-                    <div class="tab-pane fade" id="socialEvents" role="tabpanel" aria-labelledby="socialEvents-tab">
-                        
-                        <div class="row">
-
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/01-Student-led-Masterclasses.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">   
-                                    <h3 class="title">Student-led Masterclasses</h3>
-                                  </div>
-
-                                  <div class="descrHover">   
-                                    <h5 class="title">Student-led Masterclasses</h5>
-                                    <p>Is there a skill that you really wanted to pick up, but have not had the opportunity to do so? With our student led masterclasses now you can learn a wide range of skills like cocktail mixing, chess, yoga, and meditation. etc.</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/02-Professional-and-Social-Networking-events.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Professional and Social Networking events</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Professional and Social Networking events</h5>
-                                    <p>We understand that building networks is an essential part of the MBA. During the pandemic it has become especially difficult to meet and greet people from other business schools, and with our networking events we hope to address exactly that.  You will be able to connect with people with similar professional/ social interests and specialized agendas will help you build your MBA network.</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/03-Individual-online-games.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Individual online games</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Individual online games</h5>
-                                    <p>If you feel like unwinding and having fun simultaneously, this is the place to be.  You will have the opportunity to join online games individually or as part of a team. Get excited for pictionary, trivia games, quizzes etc. – Hop in and out of these games at your convenience.</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/04-Online-treasure-hunt.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Online treasure hunt</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Online treasure hunt</h5>
-                                    <p>Get your Sherlock hats ready and find the answers hidden in plain sight. Exciting goodies will be given to the fastest solvers!</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/05-Photography-competition.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Photography competition</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Photography competition</h5>
-                                    <p>Get your DSLRs out and compete in this sport-themed photography competition! The most liked photos (via social media) will win MBAT goodies and valuable MBAT points for your school.</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/06-School-Anthem-competition.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">School Anthem competition (English anthems only) </h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">School Anthem competition (English anthems only) </h5>
-                                    <p>Create a unique anthem for your school. - This can  be a music video or  a recorded song. One entry per school. The winning team’s anthem will be played after each match. The best anthem (based on the lyrics and the music) will be given additional MBAT points.</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-lg-4 col-md-6 col-xs-12">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/07-Engaging-multiplayer-video-games.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Engaging multiplayer video games</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Engaging multiplayer video games</h5>
-                                    <p>Virtual video game parties will be organized for games like Among us, Wolf and Jackbox  to unwind and have some fun!</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-xs-12">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/08-Virtual-DJ-Music-evening.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Virtual DJ/Music evening</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Virtual DJ/Music evening</h5>
-                                    <p>The best way to celebrate is always with some music! Be ready to have fun with a glass of beer or wine from the comfort of your own room as we bring the party to you!</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-xs-12">
-                                <div class="blog-item h-100">
-
-                                	<div class="blog-image">
-	                                	<label class="image-checkbox">
-							                        <img class="img-fluid" src="assets/img/event/09-Other-fun-Social-Events.jpg" alt="">
-							                        <input name="image[]" value="" type="checkbox">
-							                        <i class="fa fa-check hidden"></i>							                        
-								                    </label>                                    
-	                                </div>
-
-                                  <div class="descr">         
-                                    <h3 class="title">Other fun Social Events!</h3>
-                                  </div>
-
-                                  <div class="descrHover">         
-                                    <h5 class="title">Other fun Social Events!</h5>
-                                    <p>Stay tuned for additional social events that will be added in the coming weeks!</p>
-                                  </div>
-                                  
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div> 
                   
                 </div>
               </div>
@@ -735,3 +541,10 @@
       </div>
     </section>
 <!-- Events Section End -->
+
+<!-- overlaySpinner -->
+
+<div id="overlaySpinner" *ngIf="visible">
+  <div class="spinner"></div>
+  <br/><p>Loading...</p>
+</div>

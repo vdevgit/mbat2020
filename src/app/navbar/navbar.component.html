@@ -15,9 +15,9 @@
           <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" href="#" routerLink="/events">Events</a>   
           </li>
-          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <!-- <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" href="#" routerLink="/eventsRegistration">Events Registration</a>   
-          </li>
+          </li> -->
           <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors &amp; Partners</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact-text">Contact Us</a></li> 
 
@@ -145,6 +145,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
               <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li> -->
+              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="/events-registration">Events Registration</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
             </ul>
           </li>
