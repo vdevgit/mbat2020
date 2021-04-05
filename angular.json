@@ -30,7 +30,7 @@
             "styles": [
               "./src/assets/css/bootstrap.min.css",
               "./src/assets/fonts/line-icons.css",
-              "./src/assets/fonts/sportsIcons/sports-icons.css",
+              // "./src/assets/fonts/sportsIcons/sports-icons.css",
               "./src/assets/css/slicknav.css",
               "./src/assets/css/nivo-lightbox.css",
               "./src/assets/css/animate.css",

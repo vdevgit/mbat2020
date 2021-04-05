@@ -58,6 +58,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { ProfileComponent } from './profile/profile.component';
 import { ListusersComponent } from './listusers/listusers.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { EventsRegistrationComponent } from './events-registration/events-registration.component';
 
 @NgModule({
   declarations: [
@@ -109,7 +110,8 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
     PrivacyPolicyComponent,
     ProfileComponent,
     ListusersComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    EventsRegistrationComponent
   ],
   imports: [
     BrowserModule,

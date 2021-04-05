@@ -28,6 +28,7 @@ import { HomeLayoutComponent } from './layout/home-layout/home-layout.component'
 import { InnerPageLayoutComponent } from './layout/inner-page-layout/inner-page-layout.component';
 import { BlankLayoutComponent } from './layout/blank-layout/blank-layout.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { EventsRegistrationComponent } from './events-registration/events-registration.component';
 
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
@@ -113,7 +114,8 @@ const routes: Routes  = [
       ],
     },
     { path: 'sports', component: SportsComponent, data: {title: 'Sports'} },
-    { path: 'events', component: EventsComponent, data: {title: 'Events'} },
+    { path: 'events', component: EventsComponent, data: {title: 'Events'} },    
+    { path: 'eventsRegistration', component: EventsRegistrationComponent, data: {title: 'Events Registration'} },
     { path: 'participants',
       children: [
         {

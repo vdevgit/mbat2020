@@ -2,7 +2,9 @@
  * Custom CSS
  */
 
- body, html {overflow-x: hidden;scroll-behavior: smooth !important;}
+@import "~font-awesome/css/font-awesome.min.css";
+
+body, html {overflow-x: hidden;scroll-behavior: smooth !important;}
 
 p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0px; font-size: 14px; margin-top:20px;}
 
@@ -1088,4 +1090,84 @@ body {
   font-size: var(--pageToggleTextFontSize);
 }
 
- 
+
+.alt .blog-item {margin-bottom: 0;}
+
+.alt .blog-item .descrHover {
+  position:absolute; 
+  top:0; 
+  left:15px;
+  max-width:350px;  
+  display:inline-block; 
+  background:rgba(0, 0, 0, 0.6); 
+  width:100%; 
+  height:100%; 
+  border-radius:4px; 
+  color:#fff; 
+  padding:15px 20px;  
+  z-index:-1;
+  -webkit-transform:rotateX(-180deg);
+  -ms-transform:rotateX(-180deg);
+  -moz-transform:rotateX(-180deg);
+  transform:rotateX(-180deg);
+/*   -o-transition:all .8s;
+  -ms-transition:all .8s;
+  -moz-transition:all .8s;
+  -webkit-transition:all .8s;
+  transition:all .8s; */
+  -webkit-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  backface-visibility:hidden;}
+
+.alt .blog-item:hover .descrHover {
+cursor:pointer;
+background:rgba(0, 0, 92, 0.9);
+z-index:2;
+-webkit-transform:rotateX(0deg);
+-ms-transform:rotateX(0deg);
+-moz-transform:rotateX(0deg);
+transform:rotateX(0deg);
+}
+
+.alt .blog-item:hover .descrHover .title {padding: 0 50px;}
+
+.hidden {
+    display: none!important;
+}
+
+i.fa {font-family: 'FontAwesome' !important;}
+
+/*image gallery*/
+.image-checkbox {
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;  
+  margin-bottom: 0;
+  outline: 0;
+  border: 4px solid transparent;
+}
+.image-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.image-checkbox-checked {
+  border-color:#49d768;
+  
+}
+.image-checkbox .fa {
+  position: absolute;
+  color: #49d768;
+  background-color: #fff;
+  padding: 10px;
+  top: 4px;
+  right: 4px;
+  z-index:3;
+}
+.image-checkbox-checked .fa {
+    display: block !important;
+}
+
+.image-checkbox-checked .fa.fa-check:before {font-size: 1rem;}
+
