@@ -15,38 +15,90 @@ export class EventsRegistrationComponent implements OnInit {
   leagueOfLegends: boolean;
   fifa: boolean;
   errorText: string;
+  selectedEventsList: string;
   selectedEvents = [];
   visible = false;
-  platforms = ['counterStrikeGolbalOffensive', 'dota2', 'formula1Esports', 'fortnite', 'leagueOfLegends', 'fifa', 'nba'];
-  selectedPlatform = {};
+  platforms = ['counterStrikeGolbalOffensive', 'dota2', 'formula1Esports', 'fortnite', 'leagueOfLegends', 'fifa', 'nba']
+  teamName = ['virtualGroupRunning', 'virtualGroupCyclingOutter', 'mbatTalent', 'battleOfBands', 'counterStrikeGolbalOffensive', 'dota2Outter', 'fortnite', 'leagueOfLegendsOutter']
+  selectedPlatform = {}
+  enteredTeamName = {}
   platformNumber = {XBOX: 0, PS4: 1, PS5: 2}
+  eventNames = {
+    virtualGroupRunning : "Virtual group running challenge",
+    virtualIndividualRunning: "Virtual individual running challenge",
+    virtualGroupCycling: "Virtual group cycling challenge",
+    virtualIndividualCycling: "Virtual individual cycling challenge",
+    mbatTalent : "MBAT’s Got Talent",
+    battleOfBands : "Battle of the Bands",
+    footballJuggling: "Football Juggling Challenge",
+    basketballTrickShot: "Basketball trick shot Competition",
+    basketballSkills: "Basketball Skills Challenge",
+    parkour: "Parkour challenge",
+    fitness: "Fitness challenge",
+    counterStrikeGolbalOffensive: "Counter Strike: Global Offensive",
+    dota2: "Dota 2",
+    formula1Esports: "Formula 1 Esports",
+    fortnite: "Fortnite",
+    leagueOfLegends: "League of Legends",
+    fifa: "FIFA 21/20",
+    nba: "NBA 2K21/20"
+  }
+  user;
 
   ngOnInit(): void {
     if (this.auth.userLoggedIn()) {
-      this.selectedEvents = [{event:'virtualGroupRunning'},{event:'nba', platform: 'PS5'}]
-      setTimeout(()=>{
-        this.selectedEvents.forEach((event)=>{
-          var element = document.getElementById(event.event + "Outter")
-          element.setAttribute('class', "blog-item h-100 image-checkbox-checked")
-          document.getElementById(event.event)['checked'] = true
-
-          if (event.platform) {
-            document.getElementsByName(event.event)[this.platformNumber[event.platform]]['checked'] = true;
-            this.selectedPlatform[event.event] = event.platform;
-          }
-        })
-      },2000);
+      this.user = JSON.parse(sessionStorage.getItem('user'));
+      this.getRegisteredEvents()
     }
+  }
+  getRegisteredEvents() {
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+    this.http.get<any>('https://europe-west1-mbat-3f9a4.cloudfunctions.net/getRegistrations?user=' + this.user['email'].replace('+', "%2B"), { headers }).subscribe(data => {
+      console.log(data)
+      data && (this.selectedEvents = data.sort(function(a, b){
+        return (+new Date(b['Details'].time)) - (+new Date(a['Details'].time));
+      })[0]['Details']['events'])
+      this.checkSelectedEvents()
+    });
+  }
+  checkSelectedEvents(){
+    setTimeout(()=>{
+      this.selectedEventsList = ''
+      this.selectedEvents.forEach((eventObj)=>{
+        var element = document.getElementById(eventObj.name + "Outter")
+        element.setAttribute('class', "blog-item h-100 image-checkbox-checked")
+        document.getElementById(eventObj.name)['checked'] = true
+
+        if (eventObj.platform) {
+          document.getElementsByName(eventObj.name)[this.platformNumber[eventObj.platform]]['checked'] = true;
+          this.selectedPlatform[eventObj.name] = eventObj.platform;
+        }
+
+        this.selectedEventsList = this.selectedEventsList ?
+          this.selectedEventsList.concat(this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
+      })
+    }, 2000)
   }
 
   checkboxFunction(e){
+    // added selected events
     setTimeout(()=>{
       this.selectedEvents = []
+      this.selectedEventsList = ''
       var elements = document.getElementsByName("image[]");
       elements.forEach((element)=>{
-        element['checked'] && this.selectedEvents.push({event: element.id})
+        if (element['checked']) {
+          this.selectedEvents.push({eventId: element.id})
+          this.selectedEventsList = this.selectedEventsList ?
+            this.selectedEventsList.concat(', ' + this.eventNames[element.id]) : this.eventNames[element.id]
+        }
       })
     });
+  }
+  onEnterTeamName(event: any) {
+    this.enteredTeamName[event.target.id] = event.target.value
   }
   onCounterStrikeGolbalOffensivePlatformChange(event: any) {
     this.selectedPlatform['counterStrikeGolbalOffensive'] = event.target.value;
@@ -71,29 +123,29 @@ export class EventsRegistrationComponent implements OnInit {
   }
   submitSelectedEvents() {
     this.errorText = ''
-    let tempUser = JSON.parse(sessionStorage.getItem('user'));
     var tempSelectedEvents = [];
+    // add platform for events
     this.selectedEvents.forEach((eventObj) => {
       var tempPlatform;
-      if (this.platforms.indexOf(eventObj.event) !== -1) {
-        if (this.selectedPlatform[eventObj.event]) {
-          tempPlatform = this.selectedPlatform[eventObj.event];
+      if (this.platforms.indexOf(eventObj.eventId) !== -1) {
+        if (this.selectedPlatform[eventObj.eventId]) {
+          tempPlatform = this.selectedPlatform[eventObj.eventId];
         } else {
           this.errorText = 'Please select the platform!'
         }
       }
       tempSelectedEvents.push({
-        event: eventObj.event,
+        name: eventObj.eventId,
         platform: tempPlatform
       })
     })
-    let data = { user: tempUser['email'], details: tempSelectedEvents}
+    let data = { user: this.user['email'], details: {events: tempSelectedEvents, time: new Date().toISOString()}}
     if (!this.errorText) {
       this.visible = true;
       this.http.post<any>("https://europe-west1-mbat-3f9a4.cloudfunctions.net/eventRegistration", data).subscribe(data => {
         console.log(data);
         this.visible = false;
-        // this.router.navigate(['/']);
+        this.router.navigate(['/']);
       }, ()=>{
         this.visible = false;
       });
