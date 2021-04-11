@@ -6,6 +6,32 @@
 
 body, html {overflow-x: hidden;scroll-behavior: smooth !important;}
 
+.bg-grey {background:#f7f7f9;}
+.bg-green-lt {background: rgba(73, 215, 104, 0.75);}
+
+
+.form-check .form-check-input:checked ~ .form-check .form-check-label::before {
+  color: rgba(0, 0, 92, 1);
+  border-color: #49d768;
+  background-color: #49d768;
+}
+
+input[type=radio]{transform:scale(1.5); cursor: pointer;}
+
+input[type=checkbox] + label.form-check-label {
+  color: rgba(0, 0, 92, 1);
+   font-weight: normal;
+   cursor: pointer !important;
+} 
+input[type=checkbox]:checked + label.form-check-label {
+   color: #49d768;
+   font-weight: bold;
+   cursor: pointer !important;
+} 
+.form-check-label {margin-left:4px;cursor: pointer}
+.form-check {padding:10px 0;cursor: pointer;}
+.form-check:hover, .form-check:focus {cursor: pointer;}
+
 p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0px; font-size: 14px; margin-top:20px;}
 
 .dropdown-menu.dropdown-menu-right:before  {
@@ -1090,13 +1116,18 @@ body {
   font-size: var(--pageToggleTextFontSize);
 }
 
+.alt .blog-item:hover .blog-image img {
+    -webkit-transform: scale(1) !important;
+    transform: scale(1) !important;
+}
+
 
 .alt .blog-item {margin-bottom: 0;}
 
 .alt .blog-item .descrHover {
   position:absolute; 
   top:0; 
-  left:15px;
+  left:0;
   max-width:350px;  
   display:inline-block; 
   background:rgba(0, 0, 0, 0.6); 
@@ -1152,14 +1183,15 @@ i.fa {font-family: 'FontAwesome' !important;}
     display: none;
 }
 
-.image-checkbox-checked {
-  border-color:#49d768;
-  
+.image-checkbox-checked .image-checkbox {
+  border-color:#49d768 !important;  
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 .image-checkbox .fa {
   position: absolute;
-  color: #49d768;
-  background-color: #fff;
+  color: #fff;
+  background-color: rgba(73, 215, 104, 1); /* #49d768 */ 
   padding: 10px;
   top: 4px;
   right: 4px;

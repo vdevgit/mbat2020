@@ -25,7 +25,7 @@
 
     // Event Registration - image gallery
     // init the state from the input
-    $(".blog-item").each(function () {
+    $(".blog-image").each(function () {
       if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
         $(this).addClass('image-checkbox-checked');
       }
@@ -35,12 +35,19 @@
     });
 
     // sync the state to the input
-    $(".blog-item").on("click", function (e) {
+    $(".blog-image").on("click", function (e) {
       $(this).toggleClass('image-checkbox-checked');
       var $checkbox = $(this).find('input[type="checkbox"]');
       $checkbox.prop("checked",!$checkbox.prop("checked"))
 
       e.preventDefault();
+    });
+
+  /* Tooltip
+    ========================================================*/
+
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
     });
 
 
