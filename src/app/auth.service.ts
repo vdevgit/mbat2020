@@ -180,6 +180,9 @@ export class AuthService {
           sessionStorage.setItem('user',JSON.stringify(response));
           this.emitConfig(true);
           this.emitUserDetails(response);
+        }, (error) => {
+          console.log(error.error)
+          this.logout()
         });
     }
   }
