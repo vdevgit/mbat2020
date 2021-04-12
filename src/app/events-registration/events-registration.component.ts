@@ -58,10 +58,12 @@ export class EventsRegistrationComponent implements OnInit {
     };
     this.http.get<any>('https://europe-west1-mbat-3f9a4.cloudfunctions.net/getRegistrations?user=' + this.user['email'].replace('+', "%2B"), { headers }).subscribe(data => {
       console.log(data)
-      data && (this.selectedEvents = data.sort(function(a, b){
-        return (+new Date(b['Details'].time)) - (+new Date(a['Details'].time));
-      })[0]['Details']['events'])
-      this.checkSelectedEvents()
+      if (data.length !== 0) {
+        data && (this.selectedEvents = data.sort(function(a, b){
+          return (+new Date(b['Details'].time)) - (+new Date(a['Details'].time));
+        })[0]['Details']['events'])
+        this.checkSelectedEvents()
+      }
     });
   }
   checkSelectedEvents(){
