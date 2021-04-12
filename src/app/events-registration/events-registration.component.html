@@ -13,716 +13,1918 @@
 <!-- Page Header End--> 
 
 <!-- Events Section Start -->
-   <section id="events" class="schedule section-padding">
-      <div class="container">
+<section id="events" class="schedule section-padding pt-5">
+  <div class="container">
+    <div class="row justify-content-center mb-3">
+      <h5>Download &amp; Preview - Rules and Regulations</h5>
+    </div>
+    <div class="row justify-content-center mb-5">
+      <div class="col-xs-12 mb-3">
+        <a class="btn btn-common" href="assets/downloads/HEC_Paris_MBAT_2021_Rulebook.docx" target="_blank">HEC Paris MBAT 2021 Rulebook</a>
+      </div>
+    </div>
 
-        <div class="row">
-          <div class="col-12 mb-4">
-            <a class="btn btn-common" href="assets/downloads/HEC_Paris_MBAT_2021_Rulebook.docx" target="_blank">HEC Paris MBAT 2021 Rulebook</a>
-          </div>   
-        </div>    
+    <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
+      <div class="schedule-tab-content col-12 clearfix">
 
-        <!-- 
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Events</h2>              
-            </div>
-          </div>
-        </div>
-        -->
+        <div class="tab-content altER" id="myTabContent">
 
-        <div class="row">
-          <!-- <div class="col-12 mb-5 text-center">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="competitiveEvents-tab" data-toggle="tab" href="#competitiveEvents" role="tab" aria-controls="competitiveEvents">
-                  <div class="item-text">
-                    <h5>Competitive Events</h5>
+          <div class="tab-pane fade show active" id="competitiveEvents" role="tabpanel" aria-labelledby="competitiveEvents-tab">
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#battle-of-the-bands">Event Info</button>
+                <div class="blog-item h-100" id="battleOfBandsOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/6-battle-of-the-bands.jpg" alt="">
+                      <input name="image[]" id="battleOfBands" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                       
                   </div>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="socialEvents-tab" data-toggle="tab" href="#socialEvents" role="tab" aria-controls="socialEvents" aria-expanded="true">
-                  <div class="item-text">
-                    <h5>Social Events</h5>
-                  </div>
-                </a>                
-              </li>
-            </ul>
-          </div> -->
-          <div class="col-12">
-            <div class="schedule-area row wow fadeInDown" data-wow-delay="0.3s">
-              <div class="schedule-tab-content col-12 clearfix">
-                <div class="tab-content alt" id="myTabContent">
-
-                  <div class="tab-pane fade show active" id="competitiveEvents" role="tabpanel" aria-labelledby="competitiveEvents-tab">
-
-                    <div class="row">	   
-
-                      <!-- <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="virtualGroupRunningOutter" (click)="checkboxFunction($event)">
-
-                            <div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/1-virtual-group-running-challenge.jpg" alt="">
-				                        <input name="image[]" id="virtualGroupRunning" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label>                                                                 
-                            </div>
-                            <div class="descr" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<h5 class='title'>Virtual group running challenge</h5> <p>Run Forrest Run! Let’s join effort with your friends to clock the most kilometers run during a pre-defined period to win this group running challenge, with the assistance of a running app for close monitoring and evaluation.</p>
-                              ">   
-                              <h3 class="title">Virtual group running challenge</h3>
-                            </div> 
-                          </div>
-                      </div> -->
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="virtualIndividualRunningOutter" (click)="checkboxFunction($event)">
-
-                            <div class="blog-image">
-                              <label class="image-checkbox">
-                                <img class="img-fluid" src="assets/img/event/1-virtual-group-running-challenge.jpg" alt="">
-                                <input name="image[]" id="virtualGroupRunning" type="checkbox">
-                                <i class="fa fa-check hidden"></i>                                      
-                              </label>
-                              <div class="descrHover">         
-                                <h5 class="title">Virtual group running challenge</h5>
-                                <p>Run Forrest Run! Let’s join effort with your friends to clock the most kilometers run during a pre-defined period to win this group running challenge, with the assistance of a running app for close monitoring and evaluation.</p>
-                              </div>                                     
-                            </div>
-
-                            <div class="descr">         
-                              <h3 class="title">Virtual group running challenge</h3>
-                            </div> 
-                          </div>
+                  <div class="descr">  
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="virtualIndividualRunningOutter" (click)="checkboxFunction($event)">
-
-                            <div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/2-virtual-individual-running-challenge.jpg" alt="">
-				                        <input name="image[]" id="virtualIndividualRunning" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label>
-                              <div class="descrHover">         
-                                <h5 class="title">Virtual individual running challenge</h5>
-                                <p>Do you have what it takes to be a marathon runner? Join this individual running challenge and run as much as you want during a pre-defined period to win this challenge. The winner will be evaluated with the assistance of a running app.</p>
-                              </div>                                     
-                            </div>
-
-                            <div class="descr">         
-                              <h3 class="title">Virtual individual running challenge</h3>
-                            </div> 
-                          </div>
-                      </div> 
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="blog-item h-100" id="virtualGroupCyclingOutter" (click)="checkboxFunction($event)">
-
-                          <div class="blog-image">
-                            <label class="image-checkbox">
-                              <img class="img-fluid" src="assets/img/event/3-virtual-group-cycling-challenge.jpg" alt="">
-                              <input name="image[]" id="virtualGroupCycling" type="checkbox">
-                              <i class="fa fa-check hidden"></i>                                      
-                            </label> 
-                            <div class="descrHover">         
-                              <h5 class="title">Virtual group cycling challenge</h5>
-                              <p>Gather your friends to ride together to win this group cycling challenge. With the assistance of an app, the winner is the school who rode the most kilometres in a pre-defined period.</p>
-                            </div>                                   
-                          </div>
-
-                          <div class="descr">         
-                            <h3 class="title">Virtual group cycling challenge</h3>
-                          </div>                                  
-
-                        </div>
-                      </div>                           
-
-                    </div>
-
-                    <div class="row">                          
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="virtualIndividualCyclingOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/4-virtual-individual-cycling-challenge.jpg" alt="">
-				                        <input name="image[]" id="virtualIndividualCycling" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label> 
-                              <div class="descrHover">   
-                                <h5 class="title">Virtual individual cycling challenge</h5>
-                                <p>The next Lance Armstrong (opss, wrong example for some obvious ethical reasons)? Come and join us in this individual cycling challenge to win points for your school. The most kilometres clocked during a pre-defined period will be crowned the winner of this challenge.</p>
-                              </div>                                   
-                            </div>
-
-                            <div class="descr">   
-                              <h3 class="title">Virtual individual cycling challenge</h3>
-                            </div>                               
-                            
-                          </div>
-                      </div>
-                      
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="mbatTalentOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/5-MBATs-Got-Talent.jpg" alt="">
-				                        <input name="image[]" id="mbatTalent" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label>  
-                              <div class="descrHover">         
-                                <h5 class="title">MBAT’s Got Talent</h5>
-                                <p>Who will be the next great talent among us? Moves like Jagger, moonwalks like Michael Jackson, magic tricks, daredevil stunts, etc. you name it, and the winner’s ticket is on the way to your doorstep.</p>
-                              </div>                                  
-                            </div>
-
-                            <div class="descr">         
-                              <h3 class="title">MBAT’s Got Talent</h3>
-                            </div>                               
-                            
-                          </div>
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="battleOfBandsOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/6-battle-of-the-bands.jpg" alt="">
-				                        <input name="image[]" id="battleOfBands" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label> 
-                              <div class="descrHover">         
-                                <h5 class="title">Battle of the Bands</h5>
-                                <p>From The Beatles to Maroon 5, we have seen the best bands who have graced our music scene for generations. Dust off your drums, tune your guitars, warm up your vocals and you are on track to grab your chance to make a mark in MBAT!</p>
-                              </div>                                       
-                            </div>
-
-                            <div class="descr">         
-                              <h3 class="title">Battle of the Bands</h3>
-                            </div>
-                                                          
-                          </div>
-                      </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="footballJugglingOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/7-football-Juggling-Challenge.jpg" alt="">
-				                        <input name="image[]" id="footballJuggling" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label> 
-                              <div class="descrHover">   
-                                <h5 class="title">Football Juggling Challenge</h5>
-                                <p>“Joga Bonito” - show us by recording your beautiful footballing skills to be the next Messi (or some may argue preferring Ronaldo) to win the bragging rights of this beautiful game and points for your school.</p>
-                              </div>                                   
-                            </div>
-
-                            <div class="descr">   
-                              <h3 class="title">Football Juggling Challenge</h3>
-                            </div>   
-                          </div>
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-
-                          <div class="blog-item h-100" id="basketballTrickShotOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/8-Basketball-trick-shot-Competition.jpg" alt="">
-				                        <input name="image[]" id="basketballTrickShot" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label> 
-                              <div class="descrHover">         
-                                <h5 class="title">Basketball trick shot Competition</h5>
-                                <p>Run against the clock to make all the shots, compete with other participants all over the world and become the best MBA basketball scorer!</p>
-                              </div>                                     
-                            </div>
-
-                            <div class="descr">         
-                              <h3 class="title">Basketball trick shot Competition</h3>
-                            </div>
-
-                          </div>
-
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="basketballSkillsOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/9-Basketball-Skills-Challenge.jpg" alt="">
-				                        <input name="image[]" id="basketballSkills" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label> 
-                              <div class="descrHover">         
-                                <h5 class="title">Basketball Skills Challenge</h5>
-                                <p>Can you finish the circuit as fast as possible? Or will you miss your shot at the last second and get second place? Test your abilities in MBAT's first basketball skills competition.</p>
-                              </div>                                   
-                            </div>
-
-                            <div class="descr">         
-                              <h3 class="title">Basketball Skills Challenge</h3>
-                            </div>
-
-                          </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                          <div class="blog-item h-100" id="parkourOutter" (click)="checkboxFunction($event)">
-
-                          	<div class="blog-image">
-                            	<label class="image-checkbox">
-				                        <img class="img-fluid" src="assets/img/event/10-Parkour-challenge.jpg" alt="">
-				                        <input name="image[]" id="parkour" type="checkbox">
-				                        <i class="fa fa-check hidden"></i>							                        
-					                    </label> 
-                              <div class="descrHover">   
-                                <h5 class="title">Parkour challenge</h5>
-                                <p>If you have the agility and flexibility to what it takes to participate in our parkour challenge, do join to put your skills to test. Send us your videos with the best tricks to win this challenge and points for your school. </p>
-                              </div>                                   
-                            </div>
-
-                            <div class="descr">   
-                              <h3 class="title">Parkour challenge</h3>
-                            </div>
-
-                          </div>
-
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="blog-item h-100" id="fitnessOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/11-Fitness-challenge.jpg" alt="">
-			                        <input name="image[]" id="fitness" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label> 
-                            <div class="descrHover">         
-                              <h5 class="title">Fitness challenge</h5>
-                              <p>Who is the fittest MBA? <br /> Complete each surprise round as fast as possible and prove you are the fittest MBA.</p>
-                            </div>                                   
-                          </div>
-                          <div class="descr">         
-                            <h3 class="title">Fitness challenge</h3>
-                          </div>
-
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="blog-item h-100" id="counterStrikeGolbalOffensiveOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/12-Counter-Strike-Global-Offensive.jpg" alt="">
-			                        <input name="image[]" id="counterStrikeGolbalOffensive" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label> 
-                            <div class="descrHover">         
-                              <h5 class="title">Counter Strike: Global Offensive</h5>
-                              <p>Create your team of 5 to play in this fast-paced FPS with some of the most iconic weapons and maps of all esports.</p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                   
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb3" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>                                 
-
-                          <div class="descr">         
-                            <h3 class="title">Counter Strike: Global Offensive</h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>
-                          
-                        </div>                                
-                      </div>
-
-                    </div>
-
-                    <div class="row">
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="blog-item h-100" id="dota2Outter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/13-Dota-2.jpg" alt="">
-			                        <input name="image[]" id="dota2" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label>   
-                            <div class="descrHover">   
-                              <h5 class="title">Dota 2</h5>
-                              <p>Choose one of more than 100 heroes, join a team of at least 5 players and compete for the first position in this MOBA.</p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                 
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb3" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-
-                          <div class="descr">   
-                            <h3 class="title">Dota 2</h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>                                 
-
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="blog-item h-100" id="formula1EsportsOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/14-Formula-1-Esports.jpg" alt="">
-			                        <input name="image[]" id="formula1Esports" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label> 
-                            <div class="descrHover">         
-                              <h5 class="title">Formula 1 Esports</h5>
-                              <p>Feel the thrill of a run, from the qualifications to the podium. Join many players from different schools to define who is the fastest in MBAT. </p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                   
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input"  id="rdb3" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-
-                          <div class="descr">         
-                            <h3 class="title">Formula 1 Esports</h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>
-
-                        </div>       
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-                        <div class="blog-item h-100" id="fortniteOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/15-Fortnite.jpg" alt="">
-			                        <input name="image[]" id="fortnite" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label> 
-                            <div class="descrHover">         
-                              <h5 class="title">Fortnite</h5>
-                              <p>Play alone or in teams of four, in the most famous battle royale. Can you or your team be the best across all rounds?</p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                   
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb3" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-
-                          <div class="descr">         
-                            <h3 class="title">Fortnite</h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>                                  
-
-                        </div>
-                      </div>
-
-                    </div>
-
-                    <div class="row">
-
-                      <div class="col-lg-4 col-md-6 col-xs-12">
-                        <div class="blog-item h-100" id="leagueOfLegendsOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/16-League-of-Legends.jpg" alt="">
-			                        <input name="image[]" id="leagueOfLegends" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label>  
-                            <div class="descrHover">   
-                              <h5 class="title">League of Legends</h5>
-                              <p>Create your team of five and enter Summoners Rift hunt the dragons or the Baron to get an edge and fight to break the Nexus of the opposing team first.</p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                   
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb3" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-
-                          <div class="descr">   
-                            <h3 class="title">League of Legends</h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>
-
-                        </div>
-                      </div>	
-
-                      <div class="col-lg-4 col-md-6 col-xs-12">
-                        <div class="blog-item h-100" id="fifaOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/17-FIFA-21-20.jpg" alt="">
-			                        <input name="image[]" id="fifa" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label>
-                            <div class="descrHover">         
-                              <h5 class="title">FIFA 21/20</h5>
-                              <p>Create your team and compete in Ultimate Team Mode, to know who the best FIFA player of MBAT is.</p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                    
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb3" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-
-                          <div class="descr">         
-                            <h3 class="title">FIFA 21/20</h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>
-
-                        </div>
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 col-xs-12">
-                        <div class="blog-item h-100" id="nbaOutter" (click)="checkboxFunction($event)">
-
-                        	<div class="blog-image">
-                          	<label class="image-checkbox">
-			                        <img class="img-fluid" src="assets/img/event/18-NBA-2K21-20 .jpg" alt="">
-			                        <input name="image[]" id="nba" type="checkbox">
-			                        <i class="fa fa-check hidden"></i>							                        
-				                    </label>  
-                            <div class="descrHover">         
-                              <h5 class="title">NBA 2K21/20 </h5>
-                              <p>Choose your team and compete against others to be the winner of the first NBA 2k championship in MBAT history. </p>
-                              <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                            </div>                                  
-                          </div>
-
-                          <form class="col-sm-12">
-                            <div class="row bg-green-lt">
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb1" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="XBOX">
-                                  <label class="form-check-label" for="rdb1">XBOX</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb2" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS4">
-                                  <label class="form-check-label" for="rdb2">PS4</label>
-                                </div>
-                              </div>
-
-                              <div class="col">
-                                <div class="form-check">
-                                  <input class="form-check-input" id="rdb3" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS5">
-                                  <label class="form-check-label" for="rdb3">PS5</label>
-                                </div>
-                              </div>
-
-                            </div>
-                          </form>
-
-                          <div class="descr">         
-                            <h3 class="title">NBA 2K21/20 </h3>
-                            <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
-                          </div>                               
-
-                        </div>
-                      </div>
-
-                    </div>
-                        
-                  </div>
-                  
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>       
+                    <h3 class="title">Battle of the Bands</h3>
+                  </div>                                                    
                 </div>
+              </div>
 
-                <div class="text-danger"><small>{{errorText}}</small></div>  
-                <div class="">{{selectedEventsList}}</div>
-
-                <div class="row align-items-center mt-4">
-                  <div class="col-sm-12 mt-2 text-center">
-                    <button type="submit" (click)="submitSelectedEvents()" class="btn btn-common btn-sm" id="btnSubmit">Submit</button>
-                    <button type="button" class="btn btn-danger btn-sm ml-4" onclick="history.back()">Cancel</button>
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#mbats-got-talent">Event Info</button>
+                <div class="blog-item h-100" id="mbatTalentOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/5-MBATs-Got-Talent.jpg" alt="">
+                      <input name="image[]" id="mbatTalent" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>  
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                  
                   </div>
-                </div> 
+                  <div class="descr">     
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>     
+                    <h3 class="title">MBAT’s Got Talent</h3>                    
+                  </div>
+                </div>
+              </div>
 
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#basketball-skills-competition">Event Info</button>
+                <div class="blog-item h-100" id="basketballSkillsOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/9-Basketball-Skills-Challenge.jpg" alt="">
+                      <input name="image[]" id="basketballSkills" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <div class="descr">         
+                    <h3 class="title">Basketball Skills Competition</h3>
+                  </div>
+                </div>
+              </div>                   
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#basketball-shooting-competition">Event Info</button>
+                <div class="blog-item h-100" id="basketballTrickShotOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/8-Basketball-trick-shot-Competition.jpg" alt="">
+                      <input name="image[]" id="basketballTrickShot" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                     
+                  </div>
+                  <div class="descr">         
+                    <h3 class="title">Basketball Shooting Competition</h3>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#counter-strike-global-offensive">Event Info</button>
+                <div class="blog-item h-100" id="counterStrikeGolbalOffensiveOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/12-Counter-Strike-Global-Offensive.jpg" alt="">
+                      <input name="image[]" id="counterStrikeGolbalOffensive" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onCounterStrikeGolbalOffensivePlatformChange($event)" name="counterStrikeGolbalOffensive" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form> 
+                  <div class="descr"> 
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>         
+                    <h3 class="title">Counter Strike: Global Offensive</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>                      
+                </div>                                
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#dota-2">Event Info</button>
+                <div class="blog-item h-100" id="dota2Outter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/13-Dota-2.jpg" alt="">
+                      <input name="image[]" id="dota2" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>   
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                 
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onDota2PlatformChange($event)" name="dota2" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>       
+                    <h3 class="title">Dota 2</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>  
+                </div>
+              </div>                                      
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#formula-1-2020">Event Info</button>
+                <div class="blog-item h-100" id="formula1EsportsOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/14-Formula-1-Esports.jpg" alt="">
+                      <input name="image[]" id="formula1Esports" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input"  id="rdb3" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">         
+                    <h3 class="title">Formula 1 2020</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>
+                </div>       
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#fifa-2020">Event Info</button>
+                <div class="blog-item h-100" id="fifaOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/17-FIFA-21-20.jpg" alt="">
+                      <input name="image[]" id="fifa" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">         
+                    <h3 class="title">FIFA 2020</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#fitness-challenge">Event Info</button>
+                <div class="blog-item h-100" id="fitnessOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/11-Fitness-challenge.jpg" alt="">
+                      <input name="image[]" id="fitness" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <div class="descr">         
+                    <h3 class="title">Fitness Challenge</h3>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#football-freestyle">Event Info</button>
+                <div class="blog-item h-100" id="footballJugglingOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/7-football-Juggling-Challenge.jpg" alt="">
+                      <input name="image[]" id="footballJuggling" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <div class="descr">   
+                    <h3 class="title">Football Freestyle</h3>
+                  </div>   
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#individual-fortnite">Event Info</button>
+                <div class="blog-item h-100" id="fortniteOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/15-Fortnite.jpg" alt="">
+                      <input name="image[]" id="fortnite" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>           
+                    <h3 class="title">Individual Fortnite</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#fortnite-group-competition">Event Info</button>
+                <div class="blog-item h-100" id="fortniteOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/15-Fortnite.jpg" alt="">
+                      <input name="image[]" id="fortnite" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onFortnitePlatformChange($event)" name="fortnite" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">         
+                    <h3 class="title">Fortnite Group Competition</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>
+                </div>
+              </div>                                      
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#league-of-legends">Event Info</button>
+                <div class="blog-item h-100" id="leagueOfLegendsOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/16-League-of-Legends.jpg" alt="">
+                      <input name="image[]" id="leagueOfLegends" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>  
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onLeagueOfLegendsPlatformChange($event)" name="leagueOfLegends" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>   
+                    <h3 class="title">League of Legends</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#nba-2k20">Event Info</button>
+                <div class="blog-item h-100" id="nbaOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/18-NBA-2K21-20 .jpg" alt="">
+                      <input name="image[]" id="nba" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>  
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                  
+                  </div>
+                  <form class="col-sm-12">
+                    <div class="row bg-green-lt">
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb1" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="XBOX">
+                          <label class="form-check-label" for="rdb1">XBOX</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb2" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS4">
+                          <label class="form-check-label" for="rdb2">PS4</label>
+                        </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="form-check">
+                          <input class="form-check-input" id="rdb3" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS5">
+                          <label class="form-check-label" for="rdb3">PS5</label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="descr">         
+                    <h3 class="title">NBA 2k20</h3>
+                    <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
+                  </div> 
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#parkour-challenge">Event Info</button>
+                <div class="blog-item h-100" id="parkourOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/10-Parkour-challenge.jpg" alt="">
+                      <input name="image[]" id="parkour" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <div class="descr">   
+                    <h3 class="title">Parkour Challenge</h3>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row"> 
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#virtual-group-running">Event Info</button>
+                <div class="blog-item h-100" id="virtualIndividualRunningOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/1-virtual-group-running-challenge.jpg" alt="">
+                      <input name="image[]" id="virtualGroupRunning" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                                         
+                  </div>
+                  <div class="descr">         
+                    <h3 class="title">Virtual Group Running</h3>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                  </div>
+                </div>
+              </div>  
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#virtual-group-cycling">Event Info</button>
+                <div class="blog-item h-100" id="virtualGroupCyclingOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/3-virtual-group-cycling-challenge.jpg" alt="">
+                      <input name="image[]" id="virtualGroupCycling" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <div class="descr">         
+                    <h3 class="title">Virtual Group Cycling</h3>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                  </div> 
+                </div>
+              </div>                
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#virtual-individual-running">Event Info</button>
+                <div class="blog-item h-100" id="virtualIndividualRunningOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image"> 
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/2-virtual-individual-running-challenge.jpg" alt="">
+                      <input name="image[]" id="virtualIndividualRunning" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label>
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                     
+                  </div> 
+                  <div class="descr"> 
+                    <h3 class="title">Virtual Individual Running</h3>                    
+                  </div> 
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row"> 
+
+              <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#virtual-individual-cycling">Event Info</button>
+                <div class="blog-item h-100" id="virtualIndividualCyclingOutter" (click)="checkboxFunction($event)">
+                  <div class="blog-image">
+                    <label class="image-checkbox">
+                      <img class="img-fluid" src="assets/img/event/4-virtual-individual-cycling-challenge.jpg" alt="">
+                      <input name="image[]" id="virtualIndividualCycling" type="checkbox">
+                      <i class="fa fa-check hidden"></i>                                      
+                    </label> 
+                    <div class="descrHover">         
+                      <h6>Click to select this event</h6>                         
+                    </div>                                   
+                  </div>
+                  <div class="descr">   
+                    <h3 class="title">Virtual individual cycling challenge</h3>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+                
           </div>
-        </div>
+          
+        </div>            
+
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
 <!-- Events Section End -->
 
 <!-- overlaySpinner -->
 
+<section class="div-bottom">
+  <div class="container">  
+
+    <div class="col-xs-12 text-left font-bold p-0 m-0">
+      <h6 class="p-0 m-0 text-danger"><span>{{errorText}}</span></h6>
+    </div>    
+
+    <div class="row div-bottom-wrapper py-2">
+      <div class="col-lg-8 col-md-9 col-xs-12 text-left align-middle">
+        <h6 class="mt-2"><mark>Selected Events:</mark> {{selectedEventsList}}</h6>
+      </div>
+      <div class="col-lg-4 col-md-3 col-xs-12 text-right">
+        <button type="submit" (click)="submitSelectedEvents()" class="btn btn-common btn-sm" id="btnSubmit">Submit</button>
+        <button type="button" class="btn btn-danger btn-sm ml-4" onclick="history.back()">Cancel</button>  
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <div id="overlaySpinner" *ngIf="visible">
   <div class="spinner"></div>
   <br/><p>Loading...</p>
+</div>
+
+<!-- Battle of the Bands -->
+<div class="modal fade" id="battle-of-the-bands">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Battle of the Bands</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The format of this challenge will be judged based on pre-recorded shows. The band must consist of a minimum of two (2) person and maximum eight (8) members in order to qualify. Single-person performance is strongly encouraged to join MBAT’s Got Talent. Each band is open to choose the genre of the performance. Instrumental performance is mandatory, and vocal performance is not mandatory. Bands are allowed to submit a performance with a maximum clip of 10 mins per audition tape. Performances with the contents that are deemed to be: unlawful, threatening; harmful; abusive; pornographic or include nudity; offensive; harassing; excessively violent; defamatory; vulgar; libelous; hateful; or discriminatory, shall be led to automatic dismissal.</p>
+
+        <p><u><b>The criterion for the scoring system:</b></u></p>
+
+        <ul>
+          <li>Aesthetic, based on the overall look and personality of the band; and</li>
+          <li>Performance and presentation.</li>
+        </ul>      
+
+        <p>If a school has entered two bands or more, only one (1) band will be selected to advance to final round. The selection of the bands in qualifying round is based on the aforementioned criteria.</p>  
+
+       <p>All the schools’ best band performances will be shown on MBAT 2021 online stream, where the winner of MBAT’s Got Talent will be chosen via online voting. The winner, 1st runner-up, 2nd runner-up, and so forth will be based on the number of votes garnered through online voting platform.</p> 
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MBAT’s Got Talent -->
+<div class="modal fade" id="mbats-got-talent">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">MBAT’s Got Talent</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The format of this challenge will be judged based on pre-recorded shows. Any talent shows (other than group band singing) will fall under this event category. Participants are allowed to record at free-will to showcase talents with a maximum clip of 10 mins per audition tape. Participants are strongly prohibited to submit recorded shows that the contents are deemed to be: unlawful; threatening; harmful; abusive; pornographic or include nudity; offensive; harassing; excessively violent; defamatory; vulgar; libellous; hateful; or discriminatory. Violation of any of such act shall lead to immediate dismissal.</p> 
+
+        <p><u><b>The criterion for the scoring system:</b></u></p> 
+
+        <ul>
+          <li>Ingenuity; and</li>
+          <li>Entertaining; </li>
+        </ul>    
+
+        <p>If a school has two submissions or more, only one (1) performance will be selected to advance to final round. The selection of the performances in qualifying round is based on the criteria.</p>   
+
+        <p>All the schools’ top shows will be shown on MBAT 2021 online stream, where the winner of MBAT’s Got Talent will be chosen via online voting. The winner, 1st runner-up, 2nd runner-up, and so forth will be based on the number of votes garnered through online voting platform.</p> 
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Basketball Skills Competition -->
+<div class="modal fade" id="basketball-skills-competition">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Basketball Skills Competition</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The Basketball Skills Competition will be conducted in a Live online format.</p> 
+
+        <p>The competition is individual and will be divided between male and female, and each one will count as one sport in the total scoring of MBAT. </p> 
+
+        <p>The competition will consist of a single elimination bracket, whoever has the shortest time to complete the circuit successfully is the winner of the match. </p> 
+
+        <p>If there are more than 8 participating teams, there will be a qualifying round and rules will be communicated to the participants by the 22th of April of 2021</p>        
+
+        <p><b>Materials and preparation:</b></p> 
+
+        <p><u><b>To participate in the competition, the athletes will need:</b></u></p> 
+
+        <ul>
+          <li>Basketball court of official size as regulated by FIBA</li>
+          <li>At least one official basketball ball, based on size for specific gender </li>
+          <li>Ten tall cones</li>
+          <li>Ruler or metric tape</li>
+        </ul> 
+ 
+        During the recording the court must be cleaned of any object or people other than the ones described on this regulation.
+
+        <p><u><b>The skills competition has 4 stations:</b></u></p> 
+
+        <ul>
+          <li>Dribbling between the cones (station 1)</li>
+          <li>Layup (station 2)</li>
+          <li>Spinning on the cones (station 3)</li>
+          <li>3-point shot (station 4)</li>
+        </ul>
+
+        <p>Each station should be positioned as shown in the image bellow:</p> 
+
+        <img class="img-fluid" src="assets/img/events-registration/basketball-skills-competition.jpg" alt="">
+
+        <p>At Station 1, five cones will be positioned in a straight line parallel to the sideline of the court, they must not be farther than 50cm between each other.</p>
+
+        <p>At Station 2 no material is needed.</p>
+
+        <p>At Station 3, five cones will be positioned in a straight line parallel to the sideline of the court, they must have between 1m and 2m of distance between each other.</p>
+
+        <p>At Station 4, no material is needed. Extra balls can be positioned, either along the 3-point line or near the basket.</p>
+
+        <p>At the beginning of each recording the competing school must go through a procedure to prove that the rules are being followed.</p>
+
+        <p><b>The procedure consists of</b></p>
+
+        <ul>
+          <li>Proving that the distance between the cones at Station 2 is at most 50 cm.</li>
+          <li>Proving that the distance between cone at Station 3 is between 1m and 2m.</li>
+          <li>Proving that the rim height is 3.05m.</li>
+          <li>Proving that every ball used in the recording is the same and official size.</li>
+        </ul> 
+
+        <p>The recording can be made using a fixed camera and tripod, or can be recorded by someone holding the camera, with either option the competing player must be always present in the image.</p>
+
+        <p>The player and/or school can opt to send to the MBAT team a second live feed of the competition, focused on entertainment purposes to be used on the live coverage, the choice to send this video don't substitute the original video described in the recording section.</p>
+
+        <p><b>Competition:</b></p>
+
+        <p>The goal of the competition is to finish all four stations of the circuit as fast as possible.</p>
+
+        <p>The clock starts when a voice or sound signal is given to the player.</p>
+
+        <p>The clock stops when the ball goes in the basket for the 3-point shot.</p>
+
+        <p>Before the start of the timer, the player must be positioned behind the baseline, no other players or extra material can be inside the court.</p>
+
+        <p>The presence of people outside the limits of the court is allowed and encouraged, only being limited by sanitary conditions on each location. </p>
+
+        <p>At station one, the player must dribble between the cones with the ball, if a cone is knocked down, the run is invalidated.</p>
+
+        <p>At station two, the player must do a layup, if the player misses the shot he will need to get the ball by himself/herself and do the layup again, until the ball goes in.</p>
+
+        <p>At station three, the player must do a spin dribble at each cone, alternating the orientation of the rotation in each move.</p>
+
+        <p>At station four, the player must make a 3-point shot, a helper can be inside the court to help retrieve the ball if the player misses and extra balls can be positioned along the baseline and the 3-point line.</p>
+
+        <p>While moving from one station to the other, the player must be constantly dribbling, if the player stops dribbling while walking or performs a double dribble, the attempt is invalidated. </p>
+
+        <p>The player must go through stations one to three without help from anyone else, if the player loses control of the ball he needs to go after it and start from where he/she stopped.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Basketball Shooting Competition -->
+<div class="modal fade" id="basketball-shooting-competition">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Basketball Shooting Competition</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The Basketball Shooting Competition will be conducted in a pre-recorded format.</p>
+
+        <p>The competition is individual and will be divided between male and female, and each one will count as one sport in the total scoring of MBAT.</p>
+
+        <p><b><u>Materials and Preparation</u></b></p>
+
+        <p><u>To participate in the competition, the competitors will need:</u></p>
+
+        <ul>
+          <li>Basketball court of official size as regulated by FIBA.</li>
+          <li>At least one official basketball ball, based on size for specific gender.</li>
+          <li>Eight tall cones.</li>
+        </ul>
+
+        <p>During the recording the court must be cleaned of any object or people other than the ones described in this regulation.</p>
+
+        <p>The shooting competition preparation consists of 10 stations where the player will have to make a basket, each station is positioned on the image 2 below:</p>
+
+        <img class="img-fluid" src="assets/img/events-registration/basketball-shooting-competition.jpg" alt="">
+
+        <p>Every station needs to be highlighted in some way, either by a cone or by tape on the floor.</p>
+
+        <p>At the beginning of each recording the competing school must go through a procedure to prove that the rules are being followed.</p>
+
+        <p><b>The procedure consists of</b></p>
+
+        <ul>
+          <li>Proving that the rim height is 3.05m.</li>
+          <li>Proving that every ball used in the recording is the same and official size.</li>
+          <li>Showing that the position of each station corresponds to the ones pointed in the image 2.</li>
+          <li>Showing that there is a line draw on the court limiting the shooting distance of each station.</li>
+        </ul> 
+
+        <p>The recording can be made using a fixed camera and tripod, or can be recorded by someone holding the camera, with either option the competing player must be always present in the image.</p>
+
+        <p><b>Competition</b></p>
+
+        <p>The clock starts when a voice or sound signal is given to the player.</p>
+        <p>The clock stops when the ball goes in the basket for the last shot.</p>
+        <p>The player can decide in which order he/she wants to shoot from each station.</p>
+        <p>At all times during competition the player can have the help of only one other person to gather and pass balls to him/her.</p>
+        <p>Cones and balls can be positioned at each station, based on the preferences of the players.</p>
+        <p>For each station, the player must make the shot behind the line of reference positioned on the floor.</p>
+        <p>The classification will be determined by increasing order of time to finish the circuit.</p>
+                        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Counter Strike: Global Offensive -->
+<div class="modal fade" id="counter-strike-global-offensive">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Counter Strike: Global Offensive</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p><b>A.  Player Settings</b></p>
+
+        <p>CS GO will be conducted in a live online format. Every participant is responsible for his/her own licence of the game, and the MBAT Admin will not provide either computers or licences to participants.</p>
+
+        <p><b><u>Illegal scripts</u></b></p>
+
+        <p>In general, all scripts are illegal except for buy, toggle and demo scripts, and the examples of illegals scripts are:</p>
+
+        <ul>
+          <li>Stop shoot scripts (Use or AWP scrips);</li>
+          <li>Center view scripts;</li>
+          <li>Turn scripts (180° or similar);</li>
+          <li>No recoil scripts;</li>
+          <li>Burst fire scripts;</li>
+          <li>Rate changers (Lag scripts);</li>
+          <li>FPS scripts;</li>
+          <li>Anti-flash scripts or binding;</li>
+          <li>Bunny hop scipts; or</li>
+          <li>Stop sound scripts.</li>
+        </ul> 
+
+        <p>Violations of this rule will lead to immediate dismissal.</p> 
+
+
+        <p><b>B.  Match Rules</b></p>
+
+        <p>Nickname and clan tag</p>
+
+        <p>Each player has to use a nickname that is similar to the nickname entered in the registration player sheet. Player is not allowed to change the nickname in-game. In the event that the MBAT Admin’s job is hindered because of mismatch or different nicknames and/or clan tags than the registered ones, penalty points can be given to the players and teams.  </p>
+
+        <p><b><u>Warm up</u></b></p>
+
+        <p>In order to start the match, all contestants have to type .ready in the chat.</p>
+
+        <p><b><u>Number of player</u></b></p>
+
+        <p>A match can only start when the following minimum number of players are available, and all matches must be played with a complete line-up:</p>
+
+        <ul>
+          <li>5 vs 5: only 5on5 is allowed </li>          
+        </ul>        
+
+       <p>The maximum number of players in a team is six (6), in which five (5) core players + two (2) substitutes. Only players who are in the team roster prior to match confirmation are allowed to play in the match.</p>
+
+        <p><b>C.  Match Procedure</b></p>
+        <p><b><u>CSGO Map Pool</u></b></p>
+
+        The map pool includes the following maps:
+
+         <ul>
+          <li>Train</li>
+          <li>Inferno</li>
+          <li>Nuke</li>
+          <li>Mirage</li>
+          <li>Vertigo</li>
+          <li>Dust 2</li>
+          <li>Overpass</li>
+        </ul> 
+
+        <p><b><u>Best-of-One Matches and Best-of-Three Matches</u></b></p>
+
+        <p>In early rounds (including qualifying rounds) until quarter-final, all matches will be based on best-of-one matches. Semi-final and final rounds will be played on best-on-three matches. The map selection processes are as follows:</p>
+
+        <table class="table table-bordered mb-4">
+          <thead>
+            <tr>
+              <th scope="col">Step</th>
+              <th scope="col">Best-of-One Matches</th>
+              <th scope="col">Best-of-Three Matches</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Team A will ban a map </td>
+              <td>Team A will ban a map</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Team B will ban a map</td>
+              <td>Team B will ban a map</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Team A will ban a map</td>
+              <td>Team A will pick a map</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Team B will ban a map</td>
+              <td>Team B will pick a map</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Team A will ban a map</td>
+              <td>Team A will ban a map</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>Team B will ban a map</td>
+              <td>Team B will ban a map</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>The remaining map will be used as the map for the game </td>
+              <td>The remaining map will be used as the 3rd map if the series goes three (3) games</td>
+            </tr>
+          </tbody>
+        </table>           
+ 
+         
+        <p>When Team A picks a map, Team B will decide sides. When Team B picks a map, Team A will decide sides.</p>
+
+        <p><b><u>Match Settings and Information</u></b></p>
+
+        <p>The following match settings will be used during the tournament: </p>   
+
+        <ul>
+          <li>Competitive mode pitting two (2) teams of 5 against each other in a 30-round match.</li>
+          <li>The first team to score 16 points wins the map. </li>
+          <li>The two (2) teams will switch sides at halftime (after the first 15 rounds).</li>
+          <li>If both teams score a total of 15 points by the end of the 30th round, the match will go into an overtime. The winner of the match is the first team to win two (2) consecutive rounds in an overtime. </li>
+          <li>During the start of the overtime, teams will maintain on the same side which they played in the 30th round. Both teams will continue to play until a winner is determined. </li>
+          <li>The round time is 1 minute 55 seconds.</li>
+          <li>The bomb timer is 40 seconds.</li>
+          <li>The buy time is 20 seconds.</li>
+          <li>The break during half-time is 2 mins 30 seconds.</li>
+          <li>The start money is $800.</li>
+          <li>The overtime start money is $16,000.</li>
+        </ul> 
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dota 2 -->
+<div class="modal fade" id="dota-2">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Dota 2</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>Dota 2 will be conducted in a live online format.</p> 
+
+        <p>Every participant is responsible for his own licence of the game, and the MBAT Admin will not provide either computers or licences to participants.</p> 
+
+        <p>The competition will be between teams of five (5) participants. Each team can have up to two (2) reserves.</p> 
+
+        <p>The tournament will be conducted in a bracket format, in which each round will be a best of 1 match before semi-final rounds. Semi-finals and final will be based on best-of-3 matches.</p>  
+
+        <p>There will be a 5-minute interval between matches.</p>
+
+        <p>The ranked battle system will be applied to each match.</p> 
+
+        <p>Each team is allowed to substitute their players with reserves between matches, and the team needs to communicate such change to MBAT Admin before the next match starts.</p> 
+
+        <p>Players need to be logged in a zoom meeting with their cameras on throughout match in order for the camera feed to be used in the MBAT 2021 live stream.</p> 
+
+        <p>In the event that there are more than 32 participating teams, there will be a need for qualifying rounds and rules will be communicated to the participants by the 22nd April 2021.</p> 
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Formula 1 2020 -->
+<div class="modal fade" id="formula-1-2020">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Formula 1 2020</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The Formula 1 2020 will be conducted in a live online format.</p> 
+
+        <p>The competition will be held only on PCs.</p> 
+
+        <p>The tournament is individual.</p>
+
+        <p>Every participant is responsible for his own licence of the game, and the MBAT Admin will not provide either consoles or licences to participants.</p>
+
+        <p>The competition will be held during the three (3) days of MBAT, and in each day the participants will go through the training sessions in the first hour and the run on the second one.</p> 
+
+        <p>The training sessions will be divided in three (3) parts with 20 minutes each. In the first set, every player will race. Only the top-14 fastest racer will proceed to the second set.In the second set, the 14 players will race and only the top-8 racers with the fastest lap time will advance to the third set. In third set, the 8 players will race for the best lap time to compete for pole positions.</p> 
+
+        <p>The grid positioning will be determined with the fastest qualifying lap of the circuit, ranking from first pole position to twentieth pole position.</p> 
+
+        <p>The tournament is limited to 20 participants, and in the event that there are more than 20 participants, there will be a need for qualifying rounds and rules will be communicated to the participants by 22nd April 2021.</p>
+
+        <p>The circuits will be communicated to participants closer to the tournament.</p>
+
+        <p>Players need to be logged in a Zoom meeting with their cameras on during competition as the camera feed would be used for the MBAT 2021 live stream.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FIFA 2020 -->
+<div class="modal fade" id="fifa-2020">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">FIFA 2020</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The FIFA 2020 competition will be conducted in a live online format.</p> 
+
+        <p>The competition will be held on multiple platforms: PlayStation, Xbox and PCs, and points will be awarded for each competition as if they are different sports.</p>
+
+        <p>The tournament is individual, and the participants can be either male or female.</p>
+
+        <p>Every participant is responsible for his own licence of the game, the MBAT Admin will not provide either consoles or licences to participants.</p>
+
+        <p>Participants will be required to indicate their player account name in the registration form and submit to MBAT Admin before the tournament begins.</p> 
+
+        <p>The tournament will be held on a double elimination bracket and knock-out format, in which the participant that loses the first game will still be able to play the second game until he/she loses for a second time, unless the first loss is in the final.</p> 
+
+        <p>It is allowed to play with club and national teams. It is also allowed to change teams during the tournament.</p> 
+
+        <table class="table table-borderless mb-4">
+          <tbody>
+            <tr>
+              <td>Settings </td>
+              <td>: Standard settings</td>
+            </tr>
+            <tr>
+              <td>Match duration </td>
+              <td>: 12 minutes (6 minutes per half)</td>
+            </tr>
+            <tr>
+              <td>Game speed </td>
+              <td>: Normal</td>
+            </tr>
+            <tr>
+              <td>Level</td>
+              <td>: Legendary</td>
+            </tr>
+          </tbody>
+        </table>            
+
+        <p>All matches shall be played in ‘Friendly Match’ and with the online squads. Only tactical defense is allowed. The winner of a knockout round will be the player with the highest aggregated score between the 2 matches. In case of draw, the winner will be decided with golden goal. In the event that a tie still persists after extra time, winner will be decided in a best of five (5) penalty kicks. If tie persists after five (5) penalty kicks, there will be alternated penalty kicks until one player misses and the other scores a goal.</p>
+
+        <p>Players need to be logged in a zoom meeting with their cameras on during all the length of their matches, the feed of the camera can be used during the MBAT 2021 live stream.</p>
+                
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fitness Challenge -->
+<div class="modal fade" id="fitness-challenge">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Fitness Challenge</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+
+        <p><b>Format: Pre-recorded</b></p>
+
+        <p>Fitness challenge is divided into the following categories, and all the following workouts must be conducted in one (1) take without interruption:</p>
+
+        <table class="table table-bordered mb-4">
+          <thead>
+            <tr>              
+              <th scope="col">Exercise</th>
+              <th scope="col">How to</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>              
+              <td>Burpee Rep 1</td>
+              <td>Do as many burpees as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Push Up Rep 1</td>
+              <td>Do as many push-ups as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Plank It Rep 1</td>
+              <td>Do a plank exercise for 2 mins</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Sit Up Rep 1</td>
+              <td>Do as many sit-ups as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Squat Rep 1</td>
+              <td>Do as many squats as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Burpee Rep 2</td>
+              <td>Do as many burpees as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Push Up Rep 2</td>
+              <td>Do as many push-ups as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Sit Up Rep 2</td>
+              <td>Do as many sit-ups as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Squat Rep 2</td>
+              <td>Do as many squats as you can</td>
+              <td>2 mins</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Rest</td>
+              <td>1 min</td>
+            </tr>
+            <tr>              
+              <td>Plank It Rep 2</td>
+              <td>Do a plank exercise for as long as you can</td>
+              <td>Time-based</td>
+            </tr>            
+            <tr>              
+              <td colspan="2">Finish</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>The scoring system is as follows, and all the points will be aggregated from burpee rep 1 workout to plank it rep 2 workout. The winner of fitness challenge will be determined based on the highest accumulated points in all the below-mentioned exercises. Timing is crucial in this challenge and in any such event that any participant is deemed to take longer rest than the allotted time, MBAT Admin has the right to deduct points from relevant participant.</p>
+
+        <table class="table table-bordered mb-4">
+          <thead>
+            <tr>              
+              <th scope="col">Exercise</th>
+              <th scope="col">Scoring Format</th>              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>              
+              <td>Burpee Rep 1</td>
+              <td>
+                <p>The most numbers of completed burpees in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul> 
+              </td>              
+            </tr>
+            <tr>              
+              <td>Push Up Rep 1</td>
+              <td>
+                <p>The most numbers of completed push ups in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Plank It Rep 1</td>
+              <td>
+                <p>Successful plank for 2 mins</p>
+                <ul>
+                  <li>10 points</li>                  
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Sit Up Rep 1</td>
+              <td>
+                <p>The most numbers of completed sit ups in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Squat Rep 1</td>
+              <td>
+                <p>The most numbers of completed squats in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Burpee Rep 2</td>
+              <td>
+                <p>The most numbers of completed burpees in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Push Up Rep 2</td>
+              <td>
+                <p>The most numbers of completed push ups in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Sit Up Rep 2</td>
+              <td>
+                <p>The most numbers of completed sit ups in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Squat Rep 2</td>
+              <td>
+                <p>The most numbers of completed squats in 2 mins:</p>
+                <ul>
+                  <li>Winner: 10 points</li>
+                  <li>1st runner-up: 6 points</li>
+                  <li>2nd runner-up: 4 points</li>
+                  <li>3rd runner-up: 3 points</li>
+                  <li>4th runner-up: 2 points</li>
+                </ul>
+              </td>              
+            </tr>
+            <tr>              
+              <td>Plank It Rep 2</td>
+              <td>
+                <p>The longest plank:</p>
+                <ul>
+                  <li>Winner: 20 points</li>
+                  <li>1st runner-up: 12 points</li>
+                  <li>2nd runner-up: 8 points</li>
+                  <li>3rd runner-up: 6 points</li>
+                  <li>4th runner-up: 4 points</li>
+                </ul>
+              </td>              
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Football Freestyle -->
+<div class="modal fade" id="football-freestyle">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Football Freestyle</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p><b>Format:</b> Live online</p>
+
+        <p>Knockout battle competition format with eight (8) or 16 participants; if number of participants is between 8-16 or >16, then a qualification stage is taking place to choose the top 8 or 16 performers. Each performer is competing against one other on every knockout stage.</p>
+
+        <p>Each participant must take a 1-minute live performance and they can use their own ball (ball of size 5 is preferable choice, nevertheless there is tolerance of 0.5 both ways); it is strictly prohibited to use more than one (1) ball in the performance and no modifications to ball is allowed.</p>
+
+        <p>Regarding general rules, hands are not allowed, and every use of hand is considered as mistake (by hand understand “from shoulders to end of fingers”); foreign objects cannot be integrated into the performance (e.g. bottles, rope, etc.); no other people can be brought into the performance; dropped ball after trick attempt is not considered as anything else than drop; any action after the time limit does not count into the performance, however if the ball is dropped it is considered as mistake; and no outside interference in holding the ball to body (e.g. glue, tape, laces, etc.)</p>
+
+        <p>Each performance will be evaluated in five (5) main categories, all equally weighted: difficulty, all-round, originality, execution and control. The winner is determined by the performer who gets the greatest number of points on the scoreboard when all points are summed up. If the performers get equal number of points, the performer who won the most criteria win the battle. If there is still a tie, there will be an extra round each. The extra round will be judged the same way as a normal performance, but with 30 seconds for each performance.</p>
+
+        <p>The general guidelines for giving scores are as follows:</p>
+
+        <ul> 
+          <li>5 – Excellent</li>
+          <li>4 – Very good</li>
+          <li>3 – Good</li>
+          <li>2 – Fair</li>
+          <li>1 – Poor</li>
+          <li>0 – Absolutely failed</li>
+        </ul>
+
+        <p>It is also possible to give 0.5, 1.5, 2.5, 3.5, 4.5 points if the performance for a player was somewhere between the scores mentioned above. The point-giving must be given based on the main criteria and the sub-criteria. The criteria and sub-criteria are:</p>
+
+        <ul>  
+                
+          <li>Difficulty (technical difficulty of the tricks and combinations, as well as response) <br>
+          -Overall performance – how difficult full performance generally is
+          </li>
+
+          <li>All-round (general ability to perform all parts of sport the best way possible) <br>
+          -The sum of the general level in uppers, lowers, sit-downs, transitions, acrobatics and ground moves
+          </li>
+
+          <li>Originality (performing with individual style, creativity and variety) <br>
+          -Original style – original composition of tricks, unique execution of moves <br>
+          -Original moves – new, unusual, unexpected tricks <br>
+          -Variety – ability to not repeat tricks or always tricks of the same kind
+          </li>
+
+          <li>Execution (the style performance with ball is executed) <br>
+          -Cleanness – clean execution of tricks <br>
+          -Flow – ability to move the ball around body without hesitation <br>
+          -Style – how good looking the tricks are being performed <br>
+          -Dynamics – strength and speed of movements <br>
+          -Musicality – hitting the beat or clearly shows that he/she is following the music 
+          </li>
+
+          <li>Control (the way the whole performance with the ball is controlled) <br>
+          -Control – general control of the ball  <br>
+          -Mistakes – dropping the ball or creating mistakes
+          </li>
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Individual Fortnite -->
+<div class="modal fade" id="individual-fortnite">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Individual Fortnite</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The Individual Fortnite competition will be conducted in a live online format.</p>
+
+        <p>Every participant is responsible for his own licence of the game, and the MBAT Admin will not provide either computers or licences to participants.</p>
+
+        <p>The competition will be individual-based on the Battle Royale mode.</p> 
+
+        <p>The competition will be held over a period of two (2) hours, with 3 minutes intervals between each round. Players will accumulate points in each round and whoever amassed the most cumulative points during the competition is the winner.</p> 
+
+        <p>If the 2-hour period is lapsed during the course of a round, the said round will automatically be the last round of the competition and the results will count towards the total scoring.</p> 
+
+        <p>Every round, the top 10 players will be awarded points based on the following table:</p>
+
+        <table class="table table-bordered mb-4 w-50">
+          <thead>
+            <tr>
+              <th scope="col">Position</th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>If there are more than 100 participants, there will be a need for qualifying rounds and the rules will be communicated to the participants by 22nd April 2021.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fortnite Group Competition -->
+<div class="modal fade" id="fortnite-group-competition">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Fortnite Group Competition</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The Group Fortnite competition will be conducted in a live online format.</p> 
+
+        <p>Every participant is responsible for his own licence of the game, and the MBAT Admin will not provide either computers or licences to participants.</p>
+
+        <p>The competition will be on the Battle Royale 4-person team mode. Each team can have up to one (1) reserve.</p> 
+
+        <p>The competition will be held over a period of two (2) hours, with 3 minutes intervals between each round. Teams will gather points during each round, and whichever gets the most cumulative points during the competition is the winner.</p> 
+
+        <p>If the 2-hour period is lapsed during the course of a round, the said round will automatically be the last round of the competition and the results will count towards the total scoring.</p> 
+
+        <p>Each team is allowed to substitute their players with reserves between matches, and the team needs to communicate such change to MBAT Admin before the next match starts.</p> 
+
+        <p>Every round, the top 10 teams will be awarded points based on the following table:</p>
+
+        <table class="table table-bordered mb-4 w-50">
+          <thead>
+            <tr>
+              <th scope="col">Position</th>
+              <th scope="col">Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>If there are more than 25 teams, there will be a need for qualifying rounds and the rules will be communicated to the participants by 22nd April 2021.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- League of Legends  -->
+<div class="modal fade" id="league-of-legends">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">League of Legends </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>League of Legends will be conducted in a live online format.</p> 
+
+        <p>Every participant is responsible for his own license of the game, and the MBAT Admin will not provide either computers or licences to participants.</p> 
+
+        <p>The competition will be held on the Summoners Rift mode.</p>  
+
+        <p>The competition will be between teams of five (5) participants. Each team can have up to two (2) reserves. The participants can be either male or female.</p>  
+
+        <p>The tournament will be conducted in a bracket format, in which each round will be a best of 1 match before semi-final rounds. Semi-finals and final will be based on best-of-3 matches.</p>   
+
+        <p>There will be a 5-minute interval between matches.</p> 
+
+        <p>The ranked battle system will be applied to each match.</p>  
+
+        <p>Each team is allowed to substitute their players with reserves between matches, and the team needs to communicate such change to MBAT Admin before the next match starts.</p>  
+
+        <p>Players need to be logged in a zoom meeting with their cameras on throughout match in order for the camera feed to be used in the MBAT 2021 live stream.</p>  
+
+        <p>In the event that there are more than 32 participating teams, there will be a need for qualifying rounds and rules will be communicated to the participants by the 22nd April 2021.</p>  
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NBA 2k20 -->
+<div class="modal fade" id="nba-2k20">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">NBA 2k20</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>NBA 2k20 will be conducted in a live online format.</p>
+
+        <p>Every participant shall be responsible for his own game licence, and the MBAT Admin will not provide either computers or licences to participants.</p>
+
+        <p>The competition will be held on multiple platforms; PlayStation, Xbox and PCs, points will be awarded for each competition as if they are different sports.</p>
+
+        <p>The tournament is individual, and the participants can be either male or female.</p>
+
+        <p>Participants will be required to indicate their player account name in the registration form and submit to MBAT Admin before the tournament begins.</p> 
+
+        <p>The tournament will be played as a single elimination bracket on best of one match.</p> 
+
+        <p>The matches will be played with six (6) minutes per quarter, and maximum half-time of one (1) minute.</p> 
+
+        <p>Before the start of the match, a coin will be tossed by the MBAT Admin to determine who is the home and away team.</p> 
+
+        <p>The away team will choose his/her team first, and both players cannot pick the same team.</p> 
+
+        <p>During the tournament, a player can choose any team but only once, and the control of the teams the players have already selected shall be communicated to the MBAT Admin.</p> 
+
+        <p>If there is any specific rule of the NBA 2k tournament that is not respected by the player will result in the player being disqualified.</p> 
+
+        <p>In the event that there are more than 64 participants, there will be a need of qualifying rounds and rules will be communicated to the participants by the 22nd April 2021.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Parkour Challenge -->
+<div class="modal fade" id="parkour-challenge">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Parkour Challenge</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p>The Parkour Challenge will be conducted in a pre-recorded format.</p>
+
+        <p>Performances can be submitted either as a team or as individual, for as long as every participant has signed up for MBAT 2021.</p> 
+
+        <p>Participants are required to submit a video showcasing parkour jumps, flips, or tricks. Safety first, risky moves are not allowed (e.g., jumping off buildings, flips on dangerous locations, etc.). Filming and editing are the responsibility of the participants. Any type of music edit is also allowed. The evaluation criteria for this challenge is based on the following:</p>
+
+        <ul>
+          <li>Execution</li>
+          <li>Versatility</li>
+          <li>Flow</li> 
+          <li>Difficulty</li>
+        </ul>
+
+        <p>The maximum length for a video submission is 10 minutes. If a school has two submissions or more, only one (1) performance will be selected to advance to final round. The selection of the performances in qualifying round is based on the aformentioned criteria.</p> 
+
+        <p>The performances that are chosen to advance to final will be shown on MBAT 2021 online stream, where the winner of Parkour Challenge will be chosen via online voting. The winner, 1st runner-up, 2nd runner-up, and so forth will be based on the number of votes garnered through online voting platform.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Virtual Group Running -->
+<div class="modal fade" id="virtual-group-running">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Virtual Group Running</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p><b>Format:</b> Group challenge.</p>
+
+        <p>This competition will be monitored via the Strava app. Competitors will be required to sign up to this challenge specifically and they will be allocated to groups. Each school will have a group on Strava where they will be logging in their runs. Only runs with GPS tracking will be counted to the total tally. Runs must be tracked by an official running tracker e.g., smart watch, Strava, Nike Run Club, Garmin… No subscription for any app is mandatory, free versions are enough for the challenge.</p> 
+
+        <p><b>Timing:</b></p>
+
+        <p>This challenge will be from 29th of April 00:00 until 5th of May 23:59 Paris time. Only runs between these dates will be counted towards the total group score.</p>
+
+        <p><b>Scoring:</b></p>
+
+        <p>Scoring will be based on three factors. For each participating school, and therefore group, the total distance logged will be the first scoring factor. The number of participants will be the second factor for scoring. And last, in order to accommodate for smaller batch sizes, a factoring of MBAs per school will be taken into consideration. Note that the last factor is about batch sizes in schools and not only MBAT participants.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Virtual Group Cycling -->
+<div class="modal fade" id="virtual-group-cycling">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Virtual Group Cycling</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p><b>Format:</b> Group challenge.</p> 
+
+        <p><b>Required equipment:</b> Bicycle.</p>
+
+        <p>This competition will be monitored via the Strava app. Competitors will be required to sign up to this challenge specifically and they will be allocated to groups. Each school will have a group on Strava where they will be logging in their cycles. Only cycles with GPS tracking will be counted to the total tally. Cycles must be tracked by an official cycling tracker e.g., smart watch, Strava, Garmin, Polar… No subscription for any app is mandatory, free versions are enough for the challenge.</p> 
+
+        <p><b>Timing:</b></p>
+
+        <p>This challenge will be from 29th of April 00:00 until 5th of May 23:59 Paris time. Only cycles between these dates will be counted towards the total group score.</p>
+
+        <p><b>Scoring:</b></p>
+
+        <p>Scoring will be based on three (3) factors. For each participating school, and therefore group, the total distance logged will be the first scoring factor. The number of participants will be the second factor for scoring. And last, in order to accommodate for smaller batch sizes, a factoring of MBAs per school will be taken into consideration. Note that the last factor is about batch sizes in schools and not only MBAT participants.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Virtual Individual Running -->
+<div class="modal fade" id="virtual-individual-running">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Virtual Individual Running</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p><b>Format:</b> Live online</p>
+
+        <p><b>Required equipment:</b> Treadmill.</p>
+
+        <p>This challenge will be a live treadmill run. Participants are required to run for 30 min on a treadmill. The scoring will be based on the distance logged at the end of the 30 min. Grade/Inclination is mandatory at 2.0 throughout the run.</p>
+
+        <p>The running challenge will be monitored on zoom. For this challenge, two cameras per participant might be required. The Monitor will require a full vision of the participant at all time and at the treadmill’s screen. The first camera needs to show a wide enough view to make sure the participant is running and that the participant is not being aided by anyone. This view should also show the second camera (equipment not the feed) at all time. The second camera is required to view the treadmill’s screen. This camera needs to start at a position where we see the participant and then move into the location where it films the screen of the treadmill for the whole run. Any glitches can be deemed cheating and could lead to disqualification.</p>
+
+        <p>Compliance of regional COVID-19 safety rules is mandatory.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Virtual Individual Cycling -->
+<div class="modal fade" id="virtual-individual-cycling">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Virtual Individual Cycling</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <p><b>Format:</b> Live online.</p>
+
+        <p><b>Materials and Preparation:</b></p>
+
+        <p>To participate in the competition, the competitors will need:</p>
+
+        <ul>
+          <li>Bike</li>
+          <li>Zwift account</li>
+          <li>Zwift trainer</li>
+        </ul>
+
+        <p>Throughout the competition, the bike, Zwift trainer and athlete must be always on screen.</p>
+
+        <p>No homemade solution will be tolerated to substitute the Zwift trainer.</p>
+
+        <p>Cyclers must be logged in on Zoom half an hour before the official meet-up time starts.</p> 
+
+        <p><b>Competition:</b></p>
+
+        <p>Each participant will be invited to a private meetup.</p>
+
+        <p>The start signal will be transmitted through Zoom for all participants to start cycling.</p> 
+
+        <p>The cycling length will be approximately 30km, with elevation variations.</p> 
+
+        <p>The selected circuit will be communicated closer to the competition to participants.</p>
+
+        <p>The winner is the first to reach the goal on the simulation.</p> 
+
+        <p>Participants are allowed to consume any sorts of food and beverages throughout the competition. However, participants are strictly prohibited to receive any external help from any person during the competition.</p> 
+
+        <p>Compliance of regional COVID-19 safety rules is mandatory</p>
+        
+      </div>
+    </div>
+  </div>
 </div>

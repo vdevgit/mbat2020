@@ -6,9 +6,17 @@
 
 body, html {overflow-x: hidden;scroll-behavior: smooth !important;}
 
+.descr:hover {cursor: pointer !important;}
+.tooltip-inner {max-width: 360px;background: rgba(0, 0, 92, 0.9);}
+
 .bg-grey {background:#f7f7f9;}
 .bg-green-lt {background: rgba(73, 215, 104, 0.75);}
 
+.float-btn {
+    background-color: rgba(0, 0, 92, 0.9);
+}
+
+.float-btn {position: absolute; top: -16px; left: 33%;z-index: 11;}
 
 .form-check .form-check-input:checked ~ .form-check .form-check-label::before {
   color: rgba(0, 0, 92, 1);
@@ -1116,15 +1124,51 @@ body {
   font-size: var(--pageToggleTextFontSize);
 }
 
-.alt .blog-item:hover .blog-image img {
+/* .modal-body {height:620px; overflow-y:auto;} */
+.modal-body p { margin-bottom:20px; }
+.modal-body ul {margin-bottom:20px;}
+.modal-body li {list-style: disc; margin-left: 20px;} 
+
+@media (max-width: 991px){ .div-bottom{width: 60%;}}
+@media (max-width: 767px){ .div-bottom{width: 60%;}}
+
+.div-bottom{width: 60%;}
+
+.div-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 20%; 
+  background-color: #fff; 
+  text-align: center;
+  z-index:1000;
+  margin-bottom: 5px;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 10%);
+}
+
+.altER .blog-item .descrHover h6 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.altER .blog-item:hover .blog-image img {
     -webkit-transform: scale(1) !important;
     transform: scale(1) !important;
 }
 
 
-.alt .blog-item {margin-bottom: 0;}
+.altER .blog-item {margin-bottom: 0;}
 
-.alt .blog-item .descrHover {
+.altER .blog-item .descrHover {
   position:absolute; 
   top:0; 
   left:0;
@@ -1151,9 +1195,9 @@ body {
   -moz-backface-visibility:hidden;
   backface-visibility:hidden;}
 
-.alt .blog-item:hover .descrHover {
+.altER .blog-item:hover .descrHover {
 cursor:pointer;
-background:rgba(0, 0, 92, 0.9);
+background:rgba(0, 0, 92, 0.8);
 z-index:2;
 -webkit-transform:rotateX(0deg);
 -ms-transform:rotateX(0deg);
@@ -1161,7 +1205,7 @@ z-index:2;
 transform:rotateX(0deg);
 }
 
-.alt .blog-item:hover .descrHover .title {padding: 0 50px;}
+.altER .blog-item:hover .descrHover .title {padding: 0 50px;}
 
 .hidden {
     display: none!important;
