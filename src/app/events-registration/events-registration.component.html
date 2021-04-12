@@ -51,7 +51,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="battleOfBandsInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>       
                     <h3 class="title">Battle of the Bands</h3>
                   </div>                                                    
@@ -76,7 +76,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="mbatTalentInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>     
                     <h3 class="title">MBAT’s Got Talent</h3>                    
                   </div>
@@ -143,7 +143,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="counterStrikeGolbalOffensiveInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>         
                     <h3 class="title">Counter Strike: Global Offensive</h3>
                     <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
@@ -169,7 +169,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="dota2Inputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>       
                     <h3 class="title">Dota 2</h3>
                     <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
@@ -199,22 +199,22 @@
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb1" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="XBOX">
-                          <label class="form-check-label" for="rdb1">XBOX</label>
+                          <input class="form-check-input" id="f1rdb1" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="XBOX">
+                          <label class="form-check-label" for="f1rdb1">XBOX</label>
                         </div>
                       </div>
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb2" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS4">
-                          <label class="form-check-label" for="rdb2">PS4</label>
+                          <input class="form-check-input" id="f1rdb2" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS4">
+                          <label class="form-check-label" for="f1rdb2">PS4</label>
                         </div>
                       </div>
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input"  id="rdb3" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PS5">
-                          <label class="form-check-label" for="rdb3">PC</label>
+                          <input class="form-check-input"  id="f1rdb3" type="radio" (change)="onFormula1EsportsPlatformChange($event)" name="formula1Esports" value="PC">
+                          <label class="form-check-label" for="f1rdb3">PC</label>
                         </div>
                       </div>
 
@@ -245,22 +245,22 @@
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb1" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="XBOX">
-                          <label class="form-check-label" for="rdb1">XBOX</label>
+                          <input class="form-check-input" id="frdb1" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="XBOX">
+                          <label class="form-check-label" for="frdb1">XBOX</label>
                         </div>
                       </div>
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb2" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS4">
-                          <label class="form-check-label" for="rdb2">PS4</label>
+                          <input class="form-check-input" id="frdb2" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS4">
+                          <label class="form-check-label" for="frdb2">PS4</label>
                         </div>
                       </div>
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb3" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PS5">
-                          <label class="form-check-label" for="rdb3">PC</label>
+                          <input class="form-check-input" id="frdb3" type="radio" (change)="onFifaPlatformChange($event)" name="fifa" value="PC">
+                          <label class="form-check-label" for="frdb3">PC</label>
                         </div>
                       </div>
 
@@ -316,11 +316,11 @@
 
               <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
                 <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#individual-fortnite">Event Info</button>
-                <div class="blog-item h-100" id="fortniteOutter" (click)="checkboxFunction($event)">
+                <div class="blog-item h-100" id="fortniteIndividualOutter" (click)="checkboxFunction($event)">
                   <div class="blog-image">
                     <label class="image-checkbox">
                       <img class="img-fluid" src="assets/img/event/15-Fortnite.jpg" alt="">
-                      <input name="image[]" id="fortnite" type="checkbox">
+                      <input name="image[]" id="fortniteIndividual" type="checkbox">
                       <i class="fa fa-check hidden"></i>                                      
                     </label> 
                     <div class="descrHover">         
@@ -328,12 +328,6 @@
                     </div>                                   
                   </div>
                   <div class="descr">
-                    <div class="input-group input-group-sm mb-3">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="teamName">Team Name</span>
-                      </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                    </div>           
                     <h3 class="title">Individual Fortnite</h3>
                     <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
                   </div>
@@ -342,18 +336,24 @@
 
               <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
                 <button type="button" class="btn btn-sm float-btn" data-toggle="modal" data-target="#fortnite-group-competition">Event Info</button>
-                <div class="blog-item h-100" id="fortniteOutter" (click)="checkboxFunction($event)">
+                <div class="blog-item h-100" id="fortniteGroupOutter" (click)="checkboxFunction($event)">
                   <div class="blog-image">
                     <label class="image-checkbox">
                       <img class="img-fluid" src="assets/img/event/15-Fortnite.jpg" alt="">
-                      <input name="image[]" id="fortnite" type="checkbox">
+                      <input name="image[]" id="fortniteGroup" type="checkbox">
                       <i class="fa fa-check hidden"></i>                                      
                     </label> 
                     <div class="descrHover">         
                       <h6>Click to select this event</h6>                         
                     </div>                                   
                   </div>
-                  <div class="descr">         
+                  <div class="descr">    
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="teamName">Team Name</span>
+                      </div>
+                      <input id="fortniteGroupInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
+                    </div>     
                     <h3 class="title">Fortnite Group Competition</h3>
                     <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
                   </div>
@@ -382,7 +382,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="leagueOfLegendsInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>   
                     <h3 class="title">League of Legends</h3>
                     <p class="text-danger">* Participants will need to have access to the game to be able to participate</p>
@@ -408,22 +408,22 @@
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb1" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="XBOX">
-                          <label class="form-check-label" for="rdb1">XBOX</label>
+                          <input class="form-check-input" id="nrdb1" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="XBOX">
+                          <label class="form-check-label" for="nrdb1">XBOX</label>
                         </div>
                       </div>
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb2" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS4">
-                          <label class="form-check-label" for="rdb2">PS4</label>
+                          <input class="form-check-input" id="nrdb2" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS4">
+                          <label class="form-check-label" for="nrdb2">PS4</label>
                         </div>
                       </div>
 
                       <div class="col">
                         <div class="form-check">
-                          <input class="form-check-input" id="rdb3" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PS5">
-                          <label class="form-check-label" for="rdb3">PC</label>
+                          <input class="form-check-input" id="nrdb3" type="radio" (change)="onNbaPlatformChange($event)" name="nba" value="PC">
+                          <label class="form-check-label" for="nrdb3">PC</label>
                         </div>
                       </div>
 
@@ -478,7 +478,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="virtualGroupRunningInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>
                   </div>
                 </div>
@@ -503,7 +503,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="teamName">Team Name</span>
                       </div>
-                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                      <input id="virtualGroupCyclingInputfield" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (keyup)="onEnterTeamName($event)">
                     </div>
                   </div> 
                 </div>
@@ -570,7 +570,10 @@
   <div class="container">  
 
     <div class="col-xs-12 text-left font-bold p-0 m-0">
-      <h6 class="p-0 m-0 text-danger"><span>{{errorText}}</span></h6>
+      <h6 class="p-0 m-0 text-danger"><span>{{platformErrorText}}</span></h6>
+    </div>    
+    <div class="col-xs-12 text-left font-bold p-0 m-0">
+      <h6 class="p-0 m-0 text-danger"><span>{{teamNameErrorText}}</span></h6>
     </div>    
 
     <div class="row div-bottom-wrapper py-2">

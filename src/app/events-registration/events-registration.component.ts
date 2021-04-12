@@ -14,12 +14,13 @@ export class EventsRegistrationComponent implements OnInit {
 
   leagueOfLegends: boolean;
   fifa: boolean;
-  errorText: string;
+  platformErrorText: string;
+  teamNameErrorText: string;
   selectedEventsList: string;
   selectedEvents = [];
   visible = false;
   platforms = ['formula1Esports', 'fifa', 'nba']
-  teamName = ['virtualGroupRunning', 'virtualGroupCyclingOutter', 'mbatTalent', 'battleOfBands', 'counterStrikeGolbalOffensive', 'dota2Outter', 'fortnite', 'leagueOfLegendsOutter']
+  teamName = ['virtualGroupRunning', 'virtualGroupCycling', 'mbatTalent', 'battleOfBands', 'counterStrikeGolbalOffensive', 'dota2', 'fortniteGroup', 'leagueOfLegends']
   selectedPlatform = {}
   enteredTeamName = {}
   platformNumber = {XBOX: 0, PS4: 1, PC: 2}
@@ -77,6 +78,11 @@ export class EventsRegistrationComponent implements OnInit {
           this.selectedPlatform[eventObj.name] = eventObj.platform;
         }
 
+        if (eventObj.teamName) {
+          document.getElementById(eventObj.name + 'Inputfield')['value'] = eventObj.teamName;
+          this.enteredTeamName[eventObj.name] = eventObj.teamName;
+        }
+
         this.selectedEventsList = this.selectedEventsList ?
           this.selectedEventsList.concat(', ' + this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
       })
@@ -99,7 +105,7 @@ export class EventsRegistrationComponent implements OnInit {
     });
   }
   onEnterTeamName(event: any) {
-    this.enteredTeamName[event.target.id] = event.target.value
+    this.enteredTeamName[event.target.id.replace('Inputfield','')] = event.target.value
   }
   // onCounterStrikeGolbalOffensivePlatformChange(event: any) {
   //   this.selectedPlatform['counterStrikeGolbalOffensive'] = event.target.value;
@@ -123,30 +129,40 @@ export class EventsRegistrationComponent implements OnInit {
     this.selectedPlatform['nba'] = event.target.value;
   }
   submitSelectedEvents() {
-    this.errorText = ''
+    this.platformErrorText = ''
+    this.teamNameErrorText = ''
     var tempSelectedEvents = [];
     // add platform for events
     this.selectedEvents.forEach((eventObj) => {
       var tempPlatform;
+      var tempTeamName;
       if (this.platforms.indexOf(eventObj.eventId) !== -1) {
         if (this.selectedPlatform[eventObj.eventId]) {
           tempPlatform = this.selectedPlatform[eventObj.eventId];
         } else {
-          this.errorText = 'Please select the platform!'
+          this.platformErrorText = 'Please select the platform!'
+        }
+      }
+      if (this.teamName.indexOf(eventObj.eventId) !== -1) {
+        if (this.enteredTeamName[eventObj.eventId]) {
+          tempTeamName = this.enteredTeamName[eventObj.eventId]
+        } else {
+          this.teamNameErrorText = 'Please enter team name!'
         }
       }
       tempSelectedEvents.push({
         name: eventObj.eventId,
-        platform: tempPlatform
+        platform: tempPlatform,
+        teamName: tempTeamName
       })
     })
     let data = { user: this.user['email'], details: {events: tempSelectedEvents, time: new Date().toISOString()}}
-    if (!this.errorText) {
+    if (!this.platformErrorText && !this.teamNameErrorText) {
       this.visible = true;
       this.http.post<any>("https://europe-west1-mbat-3f9a4.cloudfunctions.net/eventRegistration", data).subscribe(data => {
         console.log(data);
         this.visible = false;
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
       }, ()=>{
         this.visible = false;
       });
