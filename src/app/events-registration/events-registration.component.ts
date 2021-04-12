@@ -38,7 +38,8 @@ export class EventsRegistrationComponent implements OnInit {
     counterStrikeGolbalOffensive: "Counter Strike: Global Offensive",
     dota2: "Dota 2",
     formula1Esports: "Formula 1 Esports",
-    fortnite: "Fortnite",
+    fortniteIndividual: "Individual Fortnite",
+    fortniteGroup: "Fortnite Group Competition",
     leagueOfLegends: "League of Legends",
     fifa: "FIFA 21/20",
     nba: "NBA 2K21/20"
