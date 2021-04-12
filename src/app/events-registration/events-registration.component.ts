@@ -18,7 +18,7 @@ export class EventsRegistrationComponent implements OnInit {
   selectedEventsList: string;
   selectedEvents = [];
   visible = false;
-  platforms = ['counterStrikeGolbalOffensive', 'dota2', 'formula1Esports', 'fortnite', 'leagueOfLegends', 'fifa', 'nba']
+  platforms = ['formula1Esports','fifa', 'nba']
   teamName = ['virtualGroupRunning', 'virtualGroupCyclingOutter', 'mbatTalent', 'battleOfBands', 'counterStrikeGolbalOffensive', 'dota2Outter', 'fortnite', 'leagueOfLegendsOutter']
   selectedPlatform = {}
   enteredTeamName = {}
