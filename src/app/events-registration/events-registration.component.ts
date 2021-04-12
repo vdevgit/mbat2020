@@ -15,7 +15,6 @@ export class EventsRegistrationComponent implements OnInit {
   leagueOfLegends: boolean;
   fifa: boolean;
   platformErrorText: string;
-  teamNameErrorText: string;
   selectedEventsList: string;
   selectedEvents = [];
   visible = false;
@@ -70,7 +69,7 @@ export class EventsRegistrationComponent implements OnInit {
       this.selectedEventsList = ''
       this.selectedEvents.forEach((eventObj)=>{
         var element = document.getElementById(eventObj.name + "Outter")
-        element.setAttribute('class', "blog-item h-100 image-checkbox-checked")
+        element.setAttribute('class', "blog-image image-checkbox-checked")
         document.getElementById(eventObj.name)['checked'] = true
 
         if (eventObj.platform) {
@@ -86,7 +85,7 @@ export class EventsRegistrationComponent implements OnInit {
         this.selectedEventsList = this.selectedEventsList ?
           this.selectedEventsList.concat(', ' + this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
       })
-    }, 2000)
+    }, 3000)
   }
 
   checkboxFunction(e){
@@ -130,7 +129,6 @@ export class EventsRegistrationComponent implements OnInit {
   }
   submitSelectedEvents() {
     this.platformErrorText = ''
-    this.teamNameErrorText = ''
     var tempSelectedEvents = [];
     // add platform for events
     this.selectedEvents.forEach((eventObj) => {
@@ -146,8 +144,6 @@ export class EventsRegistrationComponent implements OnInit {
       if (this.teamName.indexOf(eventObj.eventId) !== -1) {
         if (this.enteredTeamName[eventObj.eventId]) {
           tempTeamName = this.enteredTeamName[eventObj.eventId]
-        } else {
-          this.teamNameErrorText = 'Please enter team name!'
         }
       }
       tempSelectedEvents.push({
@@ -157,12 +153,12 @@ export class EventsRegistrationComponent implements OnInit {
       })
     })
     let data = { user: this.user['email'], details: {events: tempSelectedEvents, time: new Date().toISOString()}}
-    if (!this.platformErrorText && !this.teamNameErrorText) {
+    if (!this.platformErrorText) {
       this.visible = true;
       this.http.post<any>("https://europe-west1-mbat-3f9a4.cloudfunctions.net/eventRegistration", data).subscribe(data => {
         console.log(data);
         this.visible = false;
-        // this.router.navigate(['/']);
+        this.router.navigate(['/']);
       }, ()=>{
         this.visible = false;
       });
