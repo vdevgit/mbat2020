@@ -18,11 +18,11 @@ export class EventsRegistrationComponent implements OnInit {
   selectedEventsList: string;
   selectedEvents = [];
   visible = false;
-  platforms = ['counterStrikeGolbalOffensive', 'dota2', 'formula1Esports', 'fortnite', 'leagueOfLegends', 'fifa', 'nba']
+  platforms = ['formula1Esports', 'fifa', 'nba']
   teamName = ['virtualGroupRunning', 'virtualGroupCyclingOutter', 'mbatTalent', 'battleOfBands', 'counterStrikeGolbalOffensive', 'dota2Outter', 'fortnite', 'leagueOfLegendsOutter']
   selectedPlatform = {}
   enteredTeamName = {}
-  platformNumber = {XBOX: 0, PS4: 1, PS5: 2}
+  platformNumber = {XBOX: 0, PS4: 1, PC: 2}
   eventNames = {
     virtualGroupRunning : "Virtual group running challenge",
     virtualIndividualRunning: "Virtual individual running challenge",
@@ -77,7 +77,7 @@ export class EventsRegistrationComponent implements OnInit {
         }
 
         this.selectedEventsList = this.selectedEventsList ?
-          this.selectedEventsList.concat(this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
+          this.selectedEventsList.concat(', ' + this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
       })
     }, 2000)
   }
@@ -100,21 +100,21 @@ export class EventsRegistrationComponent implements OnInit {
   onEnterTeamName(event: any) {
     this.enteredTeamName[event.target.id] = event.target.value
   }
-  onCounterStrikeGolbalOffensivePlatformChange(event: any) {
-    this.selectedPlatform['counterStrikeGolbalOffensive'] = event.target.value;
-  }
-  onDota2PlatformChange(event: any) {
-    this.selectedPlatform['dota2'] = event.target.value;
-  }
+  // onCounterStrikeGolbalOffensivePlatformChange(event: any) {
+  //   this.selectedPlatform['counterStrikeGolbalOffensive'] = event.target.value;
+  // }
+  // onDota2PlatformChange(event: any) {
+  //   this.selectedPlatform['dota2'] = event.target.value;
+  // }
   onFormula1EsportsPlatformChange(event: any) {
     this.selectedPlatform['formula1Esports'] = event.target.value;
   }
-  onFortnitePlatformChange(event: any) {
-    this.selectedPlatform['fortnite'] = event.target.value;
-  }
-  onLeagueOfLegendsPlatformChange(event: any) {
-    this.selectedPlatform['leagueOfLegends'] = event.target.value;
-  }
+  // onFortnitePlatformChange(event: any) {
+  //   this.selectedPlatform['fortnite'] = event.target.value;
+  // }
+  // onLeagueOfLegendsPlatformChange(event: any) {
+  //   this.selectedPlatform['leagueOfLegends'] = event.target.value;
+  // }
   onFifaPlatformChange(event: any) {
     this.selectedPlatform['fifa'] = event.target.value;
   }
