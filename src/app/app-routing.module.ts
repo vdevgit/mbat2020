@@ -43,6 +43,9 @@ import { NotFoundComponent } from './shared/not-found.component';
 import { ManageItemsBaseComponent } from './manage-items-base/manage-items-base.component';
 import { ShopItemsResolverService } from './shared/shop-items-resolver.service';
 
+import { SchedulesComponent } from './schedules/schedules.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+
 import { AuthGuard } from './auth.guard';
 
 const routes: Routes  = [
@@ -116,6 +119,10 @@ const routes: Routes  = [
     { path: 'sports', component: SportsComponent, data: {title: 'Sports'} },
     { path: 'events', component: EventsComponent, data: {title: 'Events'} },    
     { path: 'events-registration', component: EventsRegistrationComponent, data: {title: 'Events Registration'} },
+
+    { path: 'schedules', component: SchedulesComponent, data: {title: 'Schedules'} },
+    { path: 'leaderboards', component: LeaderboardComponent, data: {title: 'Leader Boards'} },  
+
     { path: 'participants',
       children: [
         {

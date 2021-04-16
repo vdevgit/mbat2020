@@ -59,6 +59,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ListusersComponent } from './listusers/listusers.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { EventsRegistrationComponent } from './events-registration/events-registration.component';
+import { SchedulesComponent } from './schedules/schedules.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +113,9 @@ import { EventsRegistrationComponent } from './events-registration/events-regist
     ProfileComponent,
     ListusersComponent,
     SponsorsComponent,
-    EventsRegistrationComponent
+    EventsRegistrationComponent,
+    SchedulesComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

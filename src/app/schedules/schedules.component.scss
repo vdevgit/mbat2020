@@ -1,0 +1,40 @@
+// .card-horizontal {
+//   display: flex;
+//   flex: 1 1 auto;
+// }
+
+
+.new .blog-item{ display: flex; flex: 1 1 auto; flex-direction: row; align-items: center; }
+.new .blog-item .blog-image img {border-radius:0;}
+.new  .blog-item:hover .blog-image img {-webkit-transform: scale(1);transform: scale(1);}
+.new .blog-item .descr {padding: 20px;}
+.new .descr.w100p {width: 100%;}
+
+
+.hbox {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.hbox .col {
+    display: table-cell;
+    float: none;
+    height: 100%;
+    vertical-align: top;
+}
+
+.padder-v {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.b-r {
+    border-right: 1px solid #dee5e7;
+}
+
+.b-light {
+    border-color: #edf1f2;
+}
