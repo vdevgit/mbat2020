@@ -1,0 +1,143 @@
+<!-- Page Header Start -->
+<div class="page-header">      
+    <div class="container"> 
+        <div class="row">
+        <div class="col-12">
+            <div class="page-header-inner text-center">   
+                <h1 class="page-title">Admin</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End--> 
+
+<!-- Section Area Start -->
+<section class="section-padding p-2">
+	<div class="container">
+
+	  <div class="row justify-content-center">
+	    <div class="col-lg-12 col-md-12 col-xs-12">
+	      <div class="container-form">
+	        
+	        <div class="form-wrapper px-4 py-2 b-b">
+	          <form role="form" method="post" id="leaderPointsForm" name="leaderPoints-form" data-toggle="validator">
+
+	            <div class="row">
+
+	              <div class="col-md-12 text-center">
+	                <h2 class="p-4">Leader Points</h2>
+	              </div>
+
+	              <div class="col-md-4 form-line">
+
+	              	<div class="form-group" id="">
+
+                    <label class="form-control-label" for="list_school">Select School <abbr class="text-danger" title="This is required">*</abbr></label>
+                    <select class="form-control" id="list_school" required>
+                      <option value="" selected disabled hidden>Please Select School</option>
+                      <option *ngFor=''>option.name</option>
+                    </select>
+
+                  </div> 
+
+                </div>
+
+                <div class="col-md-6 form-line">
+
+                  <div class="form-group">
+                  	<label class="form-control-label" for="enter_points">Enter Points <abbr class="text-danger" title="This is required">*</abbr></label>
+	                  <input type="text" class="form-control" id="surname" name="surname" placeholder="Points" required data-error="Please Enter Points">
+	                  <div class="help-block with-errors"></div>
+	                </div>
+
+	              </div>
+
+	              <div class="col-md-2 mt-4 form-line">
+	                <div class="form-submit pt-2">
+	                  <button type="submit" class="btn btn-common" id="update-leaderPoint">Update</button>	                  
+	                </div>
+	              </div>
+	              
+	            </div>
+	          </form>
+	        </div>
+
+	        <div class="form-wrapper px-4 py-2">
+	          <form role="form" method="post" id="questionsForm" name="questions-form" data-toggle="validator">
+
+	            <div class="row">
+
+	              <div class="col-md-12 text-center">
+	                <h2 class="p-4">Questions</h2>
+	              </div>	              
+
+                <div class="col-md-5 form-line">
+
+                  <div class="form-group">
+                  	<label class="form-control-label" for="enter_questions">Enter Questions <abbr class="text-danger" title="This is required">*</abbr></label>
+	                  <input type="text" class="form-control" id="questions" name="questions" placeholder="Enter Questions" required data-error="Please Enter Questions">
+	                  <div class="help-block with-errors"></div>
+	                </div>
+
+	              </div>
+
+	              <div class="col-md-2 form-line">
+
+                  <div class="form-group">
+                  	<label class="form-control-label" for="enter_options">Enter Options <abbr class="text-danger" title="This is required">*</abbr></label>
+	                  <input type="text" class="form-control" id="options" name="options" placeholder="options" required data-error="Please Enter Options" >
+	                  <div class="help-block with-errors"></div>
+	                </div>
+
+	              </div> 
+
+	              <div class="col-md-2 form-line">
+
+	              	<div class="form-group" id="">
+
+                    <label class="form-control-label" for="enter_time">Select Time<abbr class="text-danger" title="This is required">*</abbr></label>
+                    <select class="form-control" id="enter_time" required>
+                      <option value="" selected disabled hidden>Select Time</option>
+                      <option *ngFor=''>option.name</option>
+                    </select>
+
+                  </div> 
+
+                </div>
+
+                <div class="col-md-1 form-line">
+
+                	<label class="form-control-label" for="stateRadios">State<abbr class="text-danger" title="This is required">*</abbr></label>
+                	<div class="form-check text-center">
+									  <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios1" value="option1" checked>									  
+									  <div class="help-block with-errors"></div>
+									</div>
+
+	              </div>
+
+	              <div class="col-md-2 mt-4 form-line">
+	                <div class="form-submit pt-2">
+	                  <button type="submit" class="btn btn-common" id="update-question">Update</button>	                  
+	                </div>
+	              </div>
+	              
+	            </div>
+	          </form>
+	        </div>
+
+	        <div class="col-md-12  pb-4 bg-white">
+
+            <div class="col-sm-4 mx-auto form-submit pt-2">
+              <button type="submit" class="btn btn-common" id="add-question">Add Question</button>	                  
+            </div>
+
+          </div>      
+
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+</section>
+<!-- Section Area End -->

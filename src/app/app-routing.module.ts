@@ -45,6 +45,8 @@ import { ShopItemsResolverService } from './shared/shop-items-resolver.service';
 
 import { SchedulesComponent } from './schedules/schedules.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { VotingComponent } from './voting/voting.component';
+import { AdminComponent } from './admin/admin.component';
 
 import { AuthGuard } from './auth.guard';
 
@@ -123,6 +125,9 @@ const routes: Routes  = [
     { path: 'schedules', component: SchedulesComponent, data: {title: 'Schedules'} },
     { path: 'leaderboards', component: LeaderboardComponent, data: {title: 'Leader Boards'} },  
 
+    { path: 'voting', component: VotingComponent, data: {title: 'Voting'} },
+    { path: 'admin', component: AdminComponent, data: {title: 'Admin'} },  
+    
     { path: 'participants',
       children: [
         {

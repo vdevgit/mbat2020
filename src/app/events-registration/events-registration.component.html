@@ -579,9 +579,11 @@
       </div>
       <div class="col-lg-4 col-md-3 col-xs-12 text-right">
         <button type="submit" (click)="submitSelectedEvents()" class="btn btn-common btn-sm" id="btnSubmit">Submit</button>
-        <button type="button" class="btn btn-danger btn-sm ml-4" onclick="history.back()">Cancel</button>  
+        <button type="button" class="btn btn-danger btn-sm ml-4" onclick="history.back()">Cancel</button> 
       </div>
     </div>
+
+    <button type="submit" class="btn btn-common btn-sm" data-toggle="modal" data-target="#submitSuccessfully">Success Submit Modal Window</button> 
 
   </div>
 </section>
@@ -589,6 +591,20 @@
 <div id="overlaySpinner" *ngIf="visible">
   <div class="spinner"></div>
   <br/><p>Loading...</p>
+</div>
+
+<div class="modal fade" id="submitSuccessfully">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-5 text-center bg-green-lt">
+        <h5 class="text-success">Successfully Submitted all selected events</h5> 
+      </div>
+      <div class="modal-footer centerAlign">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close &amp; Redirect to Home Page</button>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <!-- Battle of the Bands -->

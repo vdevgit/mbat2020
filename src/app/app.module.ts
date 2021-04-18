@@ -61,6 +61,8 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { EventsRegistrationComponent } from './events-registration/events-registration.component';
 import { SchedulesComponent } from './schedules/schedules.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { VotingComponent } from './voting/voting.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -115,7 +117,9 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     SponsorsComponent,
     EventsRegistrationComponent,
     SchedulesComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    VotingComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
