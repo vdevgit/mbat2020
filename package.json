@@ -29,7 +29,7 @@
     "@ng-bootstrap/ng-bootstrap": "^6.0.0",
     "@popperjs/core": "^2.0.6",
     "@ptkdev/webcomponent-instagram-widget": "^2.9.0",
-    "@types/jquery": "^3.3.33",
+    "@types/jquery": "^3.5.5",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.4.1",
     "faker": "^4.1.0",

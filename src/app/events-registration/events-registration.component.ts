@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+declare var $ :any;
 
 @Component({
   selector: 'app-events-registration',
@@ -160,10 +161,13 @@ export class EventsRegistrationComponent implements OnInit {
       this.http.post<any>("https://europe-west1-mbat-3f9a4.cloudfunctions.net/eventRegistration", data).subscribe(data => {
         console.log(data);
         this.visible = false;
-        this.router.navigate(['/']);
+        $('#submitSuccessfully').modal('show')
       }, ()=>{
         this.visible = false;
       });
     }
+  }
+  redirectToHome () {
+    this.router.navigate(['/'])
   }
 }

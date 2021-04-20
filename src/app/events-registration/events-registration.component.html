@@ -582,9 +582,6 @@
         <button type="button" class="btn btn-danger btn-sm ml-4" onclick="history.back()">Cancel</button> 
       </div>
     </div>
-
-    <button type="submit" class="btn btn-common btn-sm" data-toggle="modal" data-target="#submitSuccessfully">Success Submit Modal Window</button> 
-
   </div>
 </section>
 
@@ -600,7 +597,7 @@
         <h5 class="text-success">Successfully Submitted all selected events</h5> 
       </div>
       <div class="modal-footer centerAlign">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close &amp; Redirect to Home Page</button>
+        <button type="button" (click)="redirectToHome()" class="btn btn-danger" data-dismiss="modal">Close &amp; Redirect to Home Page</button>
       </div>
 
     </div>

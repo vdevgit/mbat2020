@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import "@ptkdev/webcomponent-instagram-widget";
+import * as bootstrap from "bootstrap"
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
