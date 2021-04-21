@@ -193,4 +193,11 @@ export class AuthService {
       this.router.navigate(['/']);
     }
   }
+  isUserAdmin() {
+    if (JSON.parse(sessionStorage.getItem('user')).role === "admin"){
+      return true
+    } else {
+      this.router.navigate(['/']);
+    }
+  }
 }

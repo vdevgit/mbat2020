@@ -34,9 +34,9 @@
 	              	<div class="form-group" id="">
 
                     <label class="form-control-label" for="list_school">Select School <abbr class="text-danger" title="This is required">*</abbr></label>
-                    <select class="form-control" id="list_school" required>
+                    <select class="form-control" #mySelect (change)='onSchoolSelected(mySelect.value)' id="list_school">
                       <option value="" selected disabled hidden>Please Select School</option>
-                      <option *ngFor=''>option.name</option>
+					  <option *ngFor='let option of schools' [value]="option.id">{{option.name}}</option>
                     </select>
 
                   </div> 
@@ -47,7 +47,7 @@
 
                   <div class="form-group">
                   	<label class="form-control-label" for="enter_points">Enter Points <abbr class="text-danger" title="This is required">*</abbr></label>
-	                  <input type="text" class="form-control" id="surname" name="surname" placeholder="Points" required data-error="Please Enter Points">
+	                  <input type="text" class="form-control" id="surname" (keyup)="onPointChange($event)" [value]="points" name="surname" placeholder="Points" required data-error="Please Enter Points">
 	                  <div class="help-block with-errors"></div>
 	                </div>
 
@@ -55,7 +55,7 @@
 
 	              <div class="col-md-2 mt-4 form-line">
 	                <div class="form-submit pt-2">
-	                  <button type="submit" class="btn btn-common" id="update-leaderPoint">Update</button>	                  
+	                  <button type="submit" (click)="updatePoints()" class="btn btn-common" id="update-leaderPoint">Update</button>	                  
 	                </div>
 	              </div>
 	              
@@ -138,6 +138,25 @@
 	    </div>
 	  </div>
 
+	  <div id="overlaySpinner" *ngIf="visible">
+		<div class="spinner"></div>
+		<br/><p>Loading...</p>
+	  </div>
+	  
+	  <div class="modal fade" id="updatedSuccessfully">
+		<div class="modal-dialog modal-dialog-scrollable modal-lg">
+		  <div class="modal-content">
+			<div class="modal-body p-5 text-center bg-green-lt">
+			  <h5 class="text-success">Updated/Added Successfully</h5> 
+			</div>
+			<div class="modal-footer centerAlign">
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+	  
+		  </div>
+		</div>
+	  </div>
+	  
 	</div>
 </section>
 <!-- Section Area End -->
