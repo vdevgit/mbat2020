@@ -13,7 +13,13 @@
 
           <li class="nav-item"><a class="nav-link" href="#hero-area">Home</a></li>
           <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a class="nav-link" href="#" routerLink="/events">Events</a>   
+            <a class="nav-link" href="#" routerLink="/events">Events</a> 
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" href="#" routerLink="/leader-board">Leader Board</a>   
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" href="#" routerLink="/schedules">Schedule</a>   
           </li>
           <!-- <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
             <a class="nav-link" href="#" routerLink="/eventsRegistration">Events Registration</a>   
@@ -146,6 +152,7 @@
             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
               <!-- <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" routerLink="/user-info">Profile</a></li> -->
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="/events-registration">Events Registration</a></li>
+              <li *ngIf="isAdmin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="/admin">Admin</a></li>
               <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" href="#" (click)="auth.logout()">Log Out</a></li>
             </ul>
           </li>

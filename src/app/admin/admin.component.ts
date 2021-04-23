@@ -50,7 +50,7 @@ export class AdminComponent implements OnInit {
     this.selectedSchoolId = value;
     var filteredSchool = this.schools.filter(school => this.selectedSchoolId === school['id'])
     if (filteredSchool.length !== 0 ) {
-      this.points = filteredSchool[0]['points'] || '0'
+      this.points = filteredSchool[0]['points'] || ''
     }
   }
   onPointChange(event: any) {

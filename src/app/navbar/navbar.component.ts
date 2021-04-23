@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   loggedIn: boolean;
   pathName: String;
   queryParm: String;
+  isAdmin: boolean;
 
   fullName = '';
   constructor(public auth: AuthService, private router: Router, private cartService: CartService) {
@@ -35,6 +36,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     });
     auth.userInfo$.subscribe(value => {
       this.fullName = value['fullName'];
+      this.isAdmin = value['role'] === 'admin';
     });
   }
   ngOnInit(): void {
