@@ -194,7 +194,7 @@ export class AuthService {
     }
   }
   isUserAdmin() {
-    if (JSON.parse(sessionStorage.getItem('user')).role === "admin"){
+    if (sessionStorage.getItem('user') && JSON.parse(sessionStorage.getItem('user')).role === "admin"){
       return true
     } else {
       this.router.navigate(['/']);
