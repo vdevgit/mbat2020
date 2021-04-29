@@ -66,17 +66,16 @@
 	        <div class="form-wrapper px-4 py-2">
 	          <form role="form" method="post" id="questionsForm" name="questions-form" data-toggle="validator">
 
-	            <div class="row">
-
-	              <div class="col-md-12 text-center">
+				<div class="col-md-12 text-center">
 	                <h2 class="p-4">Questions</h2>
-	              </div>	              
-
+	              </div>	
+	            <div class="row" *ngFor='let question of questions let i = index'>              
+				
                 <div class="col-md-5 form-line">
 
                   <div class="form-group">
                   	<label class="form-control-label" for="enter_questions">Enter Questions <abbr class="text-danger" title="This is required">*</abbr></label>
-	                  <input type="text" class="form-control" id="questions" name="questions" placeholder="Enter Questions" required data-error="Please Enter Questions">
+	                  <input type="text" class="form-control" id="{{question.questionId + 'QuestionField'}}" (keyup)="onQuestionChange($event)" name="questions" [value]="question.question" placeholder="Enter Questions" required data-error="Please Enter Questions">
 	                  <div class="help-block with-errors"></div>
 	                </div>
 
@@ -86,7 +85,7 @@
 
                   <div class="form-group">
                   	<label class="form-control-label" for="enter_options">Enter Options <abbr class="text-danger" title="This is required">*</abbr></label>
-	                  <input type="text" class="form-control" id="options" name="options" placeholder="options" required data-error="Please Enter Options" >
+	                  <input type="text" class="form-control" id="{{question.questionId + 'OptionsField'}}" (keyup)="onOptionsChange($event)" name="options" [value]="question.options" placeholder="options" required data-error="Please Enter Options" >
 	                  <div class="help-block with-errors"></div>
 	                </div>
 
@@ -97,30 +96,35 @@
 	              	<div class="form-group" id="">
 
                     <label class="form-control-label" for="enter_time">Select Time<abbr class="text-danger" title="This is required">*</abbr></label>
-                    <select class="form-control" id="enter_time" required>
-                      <option value="" selected disabled hidden>Select Time</option>
-                      <option *ngFor=''>option.name</option>
-                    </select>
+                    <input type="text" class="form-control" id="{{question.questionId + 'TimeField'}}" (keyup)="onTimeChange($event)" name="time" [value]="question.expireBy" placeholder="Enter Time" required data-error="Please Enter Time" >
 
                   </div> 
 
                 </div>
 
-                <div class="col-md-1 form-line">
-
-                	<label class="form-control-label" for="stateRadios">State<abbr class="text-danger" title="This is required">*</abbr></label>
-                	<div class="form-check text-center">
-									  <input class="form-check-input" type="radio" name="stateRadios" id="stateRadios1" value="option1" checked>									  
-									  <div class="help-block with-errors"></div>
-									</div>
-
-	              </div>
-
-	              <div class="col-md-2 mt-4 form-line">
-	                <div class="form-submit pt-2">
-	                  <button type="submit" class="btn btn-common" id="update-question">Update</button>	                  
+	              <div class="col-md-1 mt-4 form-line">
+	                <div *ngIf="question.questionId !== 'newQuestion'" class="form-submit pt-2">
+	                  <button type="submit" (click)="updateQuestion($event)" class="btn btn-common" id="{{question.questionId + 'UpdateField'}}">Update</button>
+	                </div>
+	                <div *ngIf="question.questionId === 'newQuestion'" class="form-submit pt-2">
+	                  <button type="submit" (click)="addQuestion($event)" class="btn btn-common" id="{{question.questionId + 'AddField'}}">Add</button>
 	                </div>
 	              </div>
+	              <div class="col-md-1 mt-4 form-line">
+	                <div class="form-submit pt-2">
+	                  <button type="submit" (click)="deleteQuestion($event)" class="btn btn-common" id="{{question.questionId + 'DeleteField'}}">Delete</button>
+	                </div>
+	              </div>
+
+				  <div class="col-md-1 form-line" *ngIf="question.questionId !== 'newQuestion'">
+  
+					  <label class="form-control-label" for="stateRadios"><abbr class="text-danger" title="This is required"></abbr></label>
+					  <div class="form-check text-center">
+						  <input class="form-check-input" type="radio" (change)="onStateChange($event)" name="stateRadios" id="{{question.questionId + 'StateField'}}" value="option1" [checked]="question.active">									  
+						  <div class="help-block with-errors"></div>
+					  </div>
+  
+					</div>
 	              
 	            </div>
 	          </form>
@@ -129,7 +133,7 @@
 	        <div class="col-md-12  pb-4 bg-white">
 
             <div class="col-sm-4 mx-auto form-submit pt-2">
-              <button type="submit" class="btn btn-common" id="add-question">Add Question</button>	                  
+              <button type="submit" (click)="addQuestionTemplate($event)" class="btn btn-common" id="add-question" [disabled]="disableAddButton">Add Question</button>	                  
             </div>
 
           </div>      
@@ -143,11 +147,11 @@
 		<br/><p>Loading...</p>
 	  </div>
 	  
-	  <div class="modal fade" id="updatedSuccessfully">
+	  <div class="modal fade" id="successfulModal">
 		<div class="modal-dialog modal-dialog-scrollable modal-lg">
 		  <div class="modal-content">
 			<div class="modal-body p-5 text-center bg-green-lt">
-			  <h5 class="text-success">Updated/Added Successfully</h5> 
+			  <h5 class="text-success">{{succesText}}</h5> 
 			</div>
 			<div class="modal-footer centerAlign">
 			  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

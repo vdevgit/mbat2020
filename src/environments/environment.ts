@@ -4,14 +4,21 @@
 
 export const environment = {
   production: false,
-  mbatServer: 'http://localhost:8080/',
+  // mbatServer: 'http://localhost:8080/',
+  // auth0: {
+  //   domain: 'blr-mbat.auth0.com',
+  //   clientId: 'qqNdkcYcmvJQVkImasI89REx8vLM6XQC',
+  //   clientSecret: 'O56J1R58lLqsR8BMyhBWmP_h89QsqEJDTFjw3pqr6FPmz6Fg3hy9MaZ9NqEZha3E'
+  // },
+  mbatServer: 'https://api.mbatapp.xyz/',
   auth0: {
-    domain: 'blr-mbat.auth0.com',
-    clientId: 'qqNdkcYcmvJQVkImasI89REx8vLM6XQC',
-    clientSecret: 'O56J1R58lLqsR8BMyhBWmP_h89QsqEJDTFjw3pqr6FPmz6Fg3hy9MaZ9NqEZha3E'
+    domain: 'mbat-staging.eu.auth0.com',
+    clientId: '50PT42OeP7iJr8FdzIt5r4zTJS3cglFZ',
+    clientSecret: 'HI8le1hd8pCao9t7Qsx5Ih_2LLzOKAuTQ5UK760tG6s9m-yTuJ2UlX0CNdPiXsnU'
   },
   ticketIframe: 'https://in.explara.com/widget-new/mba-tournament',
-  validEmailDomain: ['gmail.com', 'xyz.com']
+  validEmailDomain: ['gmail.com', 'xyz.com'],
+  paymentPage: 'https://www.helloasso.com/associations/hec-mbat/evenements/mbat-2021-1'
 };
 
 /*

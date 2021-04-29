@@ -26,26 +26,14 @@
 	            <div class="row">
 
 	              <div class="col-md-12 text-center">
-	                <h5 class="p-4">Find the Place ?</h5>
+	                <h5 class="p-4">{{question}}</h5>
 	              </div>
 
                 <div class="col-md-4 offset-4">
 
-					     	   <div class="form-check">
-					          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-					          <label class="form-check-label" for="gridRadios1">France</label>
-					        </div>
-					        <div class="form-check">
-					          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-					          <label class="form-check-label" for="gridRadios2">USA</label>
-					        </div>
-					        <div class="form-check">
-					          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-					          <label class="form-check-label" for="gridRadios3">England</label>
-					        </div>
-					        <div class="form-check">
-					          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
-					          <label class="form-check-label" for="gridRadios4">India</label>
+					     	<div class="form-check" *ngFor='let option of options let i = index'>
+					          <input class="form-check-input" type="radio" name="gridRadios" (change)="onOptionChange($event)" id="{{i}}" value="option1">
+					          <label class="form-check-label" for="gridRadios1">{{option}}</label>
 					        </div>
 	              
 	            	</div>
@@ -58,7 +46,7 @@
 	        <div class="col-md-12 pb-4 bg-white">
 
             <div class="col-sm-6 mx-auto form-submit pt-2">
-              <button type="submit" class="btn btn-common" id="submit_Voting">Submit</button>	                  
+              <button type="submit" class="btn btn-common" (click)="submitVote($event)" id="submit_Voting">Submit</button>	                  
             </div>
 
           </div>      
