@@ -139,9 +139,9 @@
             <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"> 
               <a [routerLink]="" type="button" class="btn btn-common mt-2 mr-2 font-weight-bold" (click)="auth.login()">Login</a>
             </li>
-            <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <!-- <li class="nav-item navbarLastBtn hidden-md-down" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
               <a href="/register" type="button" class="btn btn-common mt-2 font-weight-bold">Register</a>
-            </li>
+            </li> -->
           </ng-template>
 
           <li class="nav-item dropdown hidden-md-down" *ngIf="loggedIn; else notLogged" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">

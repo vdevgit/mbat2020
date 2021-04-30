@@ -152,7 +152,7 @@ const routes: Routes  = [
     { path: 'support', component: SupportComponent, data: {title: 'Support'} },
     { path: 'faqs', component: FaqsComponent, data: {title: 'FAQs'} },
     { path: 'login', component: LoginComponent, data: {title: 'Login'} },
-    { path: 'register', component: RegisterComponent, data: {title: 'Register'} },
+    // { path: 'register', component: RegisterComponent, data: {title: 'Register'} },
     { path: 'privacy-policy', component: PrivacyPolicyComponent, data: {title: 'Privacy Policy'} },
 
     { path: 'product-list', component: ProductListComponent, data: {title: 'Product List'} },
