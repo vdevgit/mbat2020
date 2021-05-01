@@ -17,9 +17,10 @@ export class VotingComponent implements OnInit {
   selectedOption;
   time;
   visible = false;
-  succesText = '';
+  successText = '';
   questionId;
   previouslySelected;
+  noQuestion;
 
   ngOnInit(): void {
     if (this.auth.userLoggedIn()) {
@@ -34,11 +35,15 @@ export class VotingComponent implements OnInit {
     };
     this.http.get<any>(environment.mbatServer + 'questions/active/', { headers }).subscribe(question => {
       console.log(question);
-      this.question = question[0].question
-      this.options = question[0].options
-      this.time = new Date(question[0].expireBy).toLocaleString()
-      this.questionId = question[0].questionId
-      this.getSubmittedVote()
+      if (question.length === 0 || (new Date().toISOString() > question[0].expireBy) ) {
+        this.noQuestion = 'No question to vote!'
+      } else {
+        this.question = question[0].question
+        this.options = question[0].options
+        this.time = new Date(question[0].expireBy).toLocaleString()
+        this.questionId = question[0].questionId
+        this.getSubmittedVote()
+      }
     });
   }
   getSubmittedVote () {
@@ -64,7 +69,7 @@ export class VotingComponent implements OnInit {
     this.http.post(environment.mbatServer + 'votes/', data, { headers }).subscribe(data => {
       console.log(data);
       this.visible = false;
-      this.succesText = 'Vote submitted successfully!'
+      this.successText = 'Vote submitted successfully!'
       $('#successfulModal').modal('show')
     }, ()=>{
       this.visible = false;
