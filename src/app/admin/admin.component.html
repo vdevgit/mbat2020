@@ -142,8 +142,8 @@
 	    </div>
 	  </div>
 	  <div class="row" *ngFor='let votes of groupByQuestionAndOption let i = index'>
-		  <div>{{votes.question}}</div>
-		  <div *ngFor='let vote of votes.votes let i = index'>
+		  <div class="col-md-4">{{votes.question}}</div>
+		  <div class="col-md-2" *ngFor='let vote of votes.votes let i = index'>
 			  {{vote.option}} : {{vote.votes}}
 			</div>
 	  </div>
