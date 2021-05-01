@@ -107,7 +107,7 @@
 	                  <button type="submit" (click)="updateQuestion($event)" class="btn btn-common" id="{{question.questionId + 'UpdateField'}}">Update</button>
 	                </div>
 	                <div *ngIf="question.questionId === 'newQuestion'" class="form-submit pt-2">
-	                  <button type="submit" (click)="addQuestion($event)" class="btn btn-common" id="{{question.questionId + 'AddField'}}">Add</button>
+	                  <button type="submit" (click)="addQuestion()" class="btn btn-common" id="{{question.questionId + 'AddField'}}">Add</button>
 	                </div>
 	              </div>
 	              <div class="col-md-1 mt-4 form-line">
@@ -133,7 +133,7 @@
 	        <div class="col-md-12  pb-4 bg-white">
 
             <div class="col-sm-4 mx-auto form-submit pt-2">
-              <button type="submit" (click)="addQuestionTemplate($event)" class="btn btn-common" id="add-question" [disabled]="disableAddButton">Add Question</button>	                  
+              <button type="submit" (click)="addQuestionTemplate()" class="btn btn-common" id="add-question" [disabled]="disableAddButton">Add Question</button>	                  
             </div>
 
           </div>      
@@ -141,7 +141,12 @@
 	      </div>
 	    </div>
 	  </div>
-
+	  <div class="row" *ngFor='let votes of groupByQuestionAndOption let i = index'>
+		  <div>{{votes.question}}</div>
+		  <div *ngFor='let vote of votes.votes let i = index'>
+			  {{vote.option}} : {{vote.votes}}
+			</div>
+	  </div>
 	  <div id="overlaySpinner" *ngIf="visible">
 		<div class="spinner"></div>
 		<br/><p>Loading...</p>
