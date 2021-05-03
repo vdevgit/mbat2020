@@ -14,7 +14,7 @@
 
 <!-- Section Area Start -->
 <section class="section-padding p-2">
-	<div class="container">
+	<div class="container-fluid">
 
 	  <div class="row justify-content-center">
 	    <div class="col-lg-12 col-md-12 col-xs-12">
@@ -36,7 +36,7 @@
                     <label class="form-control-label" for="list_school">Select School <abbr class="text-danger" title="This is required">*</abbr></label>
                     <select class="form-control" #mySelect (change)='onSchoolSelected(mySelect.value)' id="list_school">
                       <option value="" selected disabled hidden>Please Select School</option>
-					  <option *ngFor='let option of schools' [value]="option.id">{{option.name}}</option>
+					  					<option *ngFor='let option of schools' [value]="option.id">{{option.name}}</option>
                     </select>
 
                   </div> 
@@ -66,12 +66,34 @@
 	        <div class="form-wrapper px-4 py-2">
 	          <form role="form" method="post" id="questionsForm" name="questions-form" data-toggle="validator">
 
-				<div class="col-md-12 text-center">
-	                <h2 class="p-4">Questions</h2>
-	              </div>	
+							<div class="col-md-12 text-center">
+                <h2 class="p-4">Questions</h2>
+              </div>
+
+              <!-- No Questions -->
+              <div class="card bg-grey text-dark">				
+
+					    	<div class="row py-2">
+
+					    		<div class="col-md-11 font-weight-bold"><span class="pl-4">No Questions</span></div>
+
+					    		<div class="col-md-1">			  
+									  <div class="text-center">
+										  <input class="form-check-input" type="radio">									  
+										  <div class="help-block with-errors"></div>
+									  </div>						  
+									</div>					
+
+					    	</div>
+						
+						  </div>
+						  <!-- No Questions -->
+
+						  <br>
+
 	            <div class="row" *ngFor='let question of questions let i = index'>              
 				
-                <div class="col-md-5 form-line">
+                <div class="col-md-3 form-line">
 
                   <div class="form-group">
                   	<label class="form-control-label" for="enter_questions">Enter Questions <abbr class="text-danger" title="This is required">*</abbr></label>
@@ -102,7 +124,7 @@
 
                 </div>
 
-	              <div class="col-md-1 mt-4 form-line">
+	              <div class="col-md-2 mt-4 form-line">
 	                <div *ngIf="question.questionId !== 'newQuestion'" class="form-submit pt-2">
 	                  <button type="submit" (click)="updateQuestion($event)" class="btn btn-common" id="{{question.questionId + 'UpdateField'}}">Update</button>
 	                </div>
@@ -110,43 +132,84 @@
 	                  <button type="submit" (click)="addQuestion()" class="btn btn-common" id="{{question.questionId + 'AddField'}}">Add</button>
 	                </div>
 	              </div>
-	              <div class="col-md-1 mt-4 form-line">
+	              <div class="col-md-2 mt-4 form-line">
 	                <div class="form-submit pt-2">
 	                  <button type="submit" (click)="deleteQuestion($event)" class="btn btn-common" id="{{question.questionId + 'DeleteField'}}">Delete</button>
 	                </div>
 	              </div>
 
-				  <div class="col-md-1 form-line" *ngIf="question.questionId !== 'newQuestion'">
-  
-					  <label class="form-control-label" for="stateRadios"><abbr class="text-danger" title="This is required"></abbr></label>
-					  <div class="form-check text-center">
-						  <input class="form-check-input" type="radio" (change)="onStateChange($event)" name="stateRadios" id="{{question.questionId + 'StateField'}}" value="option1" [checked]="question.active">									  
-						  <div class="help-block with-errors"></div>
-					  </div>
-  
-					</div>
+							  <div class="col-md-1 form-line" *ngIf="question.questionId !== 'newQuestion'">
+			  
+								  <label class="form-control-label" for="stateRadios"><abbr class="text-danger" title="This is required"></abbr></label>
+								  <div class="form-check text-center">
+									  <input class="form-check-input" type="radio" (change)="onStateChange($event)" name="stateRadios" id="{{question.questionId + 'StateField'}}" value="option1" [checked]="question.active">									  
+									  <div class="help-block with-errors"></div>
+								  </div>
+			  
+								</div>
 	              
 	            </div>
 	          </form>
 	        </div>
 
-	        <div class="col-md-12  pb-4 bg-white">
+	        <div class="col-md-12 pb-4 bg-white">
 
             <div class="col-sm-4 mx-auto form-submit pt-2">
               <button type="submit" (click)="addQuestionTemplate()" class="btn btn-common" id="add-question" [disabled]="disableAddButton">Add Question</button>	                  
             </div>
 
-          </div>      
+          </div> 
+
+          <!-- Vote Result Start -->
+          <div class="col-md-12 pb-4 bg-green-lt-15">
+
+          	<div class="col-md-12 text-center">
+              <h2 class="p-4">Voting Result</h2>
+            </div>
+
+            <div class="row">
+            	<div class="col-3" *ngFor='let votes of groupByQuestionAndOption let i = index'>
+	            	<ul class="mb-2 list-group">
+							  	<div href="#" class="list-group-item list-group-item-action active">Question: {{votes.question}}?</div>
+								  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor='let vote of votes.votes let i = index'>
+								  	{{vote.option}}
+								    <h5><span class="badge badge-success">{{vote.votes}}</span></h5>
+								  </li>
+								</ul>	
+							</div>	          
+
+						</div>
+
+					</div>
+					<!-- Vote Result End -->   
+ 
 
 	      </div>
 	    </div>
 	  </div>
-	  <div class="row" *ngFor='let votes of groupByQuestionAndOption let i = index'>
-		  <div class="col-md-4">{{votes.question}}</div>
-		  <div class="col-md-2" *ngFor='let vote of votes.votes let i = index'>
-			  {{vote.option}} : {{vote.votes}}
-			</div>
+
+
+
+	  
+
+
+
+
+
+
+<!-- 	  <div class="card bg-grey">	
+    	<div class="row" *ngFor='let votes of groupByQuestionAndOption let i = index'>
+			  <div class="col-md-4">{{votes.question}}</div>
+			  <div class="col-md-2" *ngFor='let vote of votes.votes let i = index'>
+				  {{vote.option}} : {{vote.votes}}
+				</div>
+		  </div>	
 	  </div>
+ -->
+
+	  
+
+
 	  <div id="overlaySpinner" *ngIf="visible">
 		<div class="spinner"></div>
 		<br/><p>Loading...</p>
