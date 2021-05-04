@@ -76,11 +76,13 @@ export class AdminComponent implements OnInit {
     });
   }
   getSchools() {
+    var hideSchools = ['12', '15', '18', '20', '21', '22', '23', '24']
     const headers = {
       'Content-Type': 'application/json'
     };
     this.http.get<any>(environment.mbatServer + 'schools/', { headers }).subscribe(data => {
       console.log(data);
+      data = data.filter(school => hideSchools.indexOf(school['id']) === -1)
       this.schools = data;
       this.schools.sort(function(a, b) {
         // @ts-ignore

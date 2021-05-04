@@ -18,11 +18,13 @@ export class LeaderboardComponent implements OnInit {
     this.getSchools()
   }
   getSchools() {
+    var hideSchools = ['12', '15', '18', '20', '21', '22', '23', '24']
     const headers = {
       'Content-Type': 'application/json'
     };
     this.http.get<any>(environment.mbatServer + 'schools/', { headers }).subscribe(data => {
       console.log(data);
+      data = data.filter(school => hideSchools.indexOf(school['id']) === -1)
       data.forEach(school => {
         school['logo'] = school['name'] + '.png'
       })
@@ -30,5 +32,4 @@ export class LeaderboardComponent implements OnInit {
       this.schools.sort((a,b)=>b['points'] - a['points'])
     });
   }
-
 }
