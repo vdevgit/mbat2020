@@ -1,4 +1,4 @@
-Page Header Start -->
+<!-- Page Header Start -->
 <div class="page-header">      
     <div class="container"> 
         <div class="row">
@@ -20,7 +20,7 @@ Page Header Start -->
 	    <div class="col-lg-6 col-md-6 col-xs-12">
 
 	    	<!-- No Question to Vote -->
-	    	<div class="container-form">
+	    	<div class="container-form" *ngIf="noQuestion">
 	    		<div class="form-wrapper px-4 py-2">
 		      	<div class="row py-5">
 	        		<div class="col-12 py-5 my-5 text-center"><h4><span class="badge badge-warning">{{noQuestion}}</span></h4></div>	          	
@@ -30,7 +30,7 @@ Page Header Start -->
         <!-- No Question to Vote -->
 
         <!-- Question to Vote -->
-	      <div class="container-form"> 
+	      <div class="container-form" *ngIf="!noQuestion"> 
 	        <div class="form-wrapper px-4 py-2">
 	          <form role="form" method="post" id="votingForm" name="voting-form" data-toggle="validator">	          	
 
