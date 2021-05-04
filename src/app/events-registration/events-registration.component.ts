@@ -72,21 +72,23 @@ export class EventsRegistrationComponent implements OnInit {
       this.selectedEventsList = ''
       this.selectedEvents.forEach((eventObj)=>{
         var element = document.getElementById(eventObj.name + "Outter")
-        element.setAttribute('class', "blog-image image-checkbox-checked")
-        document.getElementById(eventObj.name)['checked'] = true
+        if (element) {
+          element.setAttribute('class', "blog-image image-checkbox-checked")
+          document.getElementById(eventObj.name)['checked'] = true
 
-        if (eventObj.platform) {
-          document.getElementsByName(eventObj.name)[this.platformNumber[eventObj.platform]]['checked'] = true;
-          this.selectedPlatform[eventObj.name] = eventObj.platform;
+          if (eventObj.platform) {
+            document.getElementsByName(eventObj.name)[this.platformNumber[eventObj.platform]]['checked'] = true;
+            this.selectedPlatform[eventObj.name] = eventObj.platform;
+          }
+
+          if (eventObj.teamName) {
+            document.getElementById(eventObj.name + 'Inputfield')['value'] = eventObj.teamName;
+            this.enteredTeamName[eventObj.name] = eventObj.teamName;
+          }
+
+          this.selectedEventsList = this.selectedEventsList ?
+            this.selectedEventsList.concat(', ' + this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
         }
-
-        if (eventObj.teamName) {
-          document.getElementById(eventObj.name + 'Inputfield')['value'] = eventObj.teamName;
-          this.enteredTeamName[eventObj.name] = eventObj.teamName;
-        }
-
-        this.selectedEventsList = this.selectedEventsList ?
-          this.selectedEventsList.concat(', ' + this.eventNames[eventObj.name]) : this.eventNames[eventObj.name]
       })
     }, 3000)
   }
