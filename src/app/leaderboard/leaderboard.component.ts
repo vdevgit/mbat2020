@@ -23,6 +23,9 @@ export class LeaderboardComponent implements OnInit {
     };
     this.http.get<any>(environment.mbatServer + 'schools/', { headers }).subscribe(data => {
       console.log(data);
+      data.forEach(school => {
+        school['logo'] = school['name'] + '.png'
+      })
       this.schools = data;
       this.schools.sort((a,b)=>b['points'] - a['points'])
     });

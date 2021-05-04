@@ -79,7 +79,7 @@
 
 					    		<div class="col-md-1">			  
 									  <div class="text-center">
-										  <input class="form-check-input" type="radio">									  
+										<input class="form-check-input" type="radio" (change)="onStateChange($event)" name="stateRadios" id="noQuestion" value="option1" [checked]="noQuestionActive">								  
 										  <div class="help-block with-errors"></div>
 									  </div>						  
 									</div>					

@@ -24,6 +24,7 @@ export class AdminComponent implements OnInit {
   groupByQuestion;
   votes;
   groupByQuestionAndOption=[];
+  noQuestionActive=false;
 
   ngOnInit(): void {
     if (this.auth.isUserAdmin()) {
@@ -70,6 +71,7 @@ export class AdminComponent implements OnInit {
         question.options = question.options.join(',')
         return question
       })
+      this.noQuestionActive = this.questions.filter(question => question['active']).length === 0
       this.getVotes()
     });
   }
@@ -224,7 +226,8 @@ export class AdminComponent implements OnInit {
     this.visible = true
     let tempQuestionId = event['target']['id'].replace('StateField','')
     // @ts-ignore
-    this.http.post(environment.mbatServer + 'questions/' + tempQuestionId + '/activate', {'status': true}, { headers }).subscribe(data => {
+    this.http.post(environment.mbatServer + 'questions/' + tempQuestionId + '/activate',
+      {'status': tempQuestionId !== 'noQuestion'}, { headers }).subscribe(data => {
       console.log(data);
       this.visible = false;
       this.succesText = 'State updated successfully!'
