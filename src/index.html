@@ -31,13 +31,18 @@
 <body>
   <app-root></app-root>
 
-  <script type="text/javascript">
-    /* curator-feed-default-feed-layout */
-    (function(){
-    var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-    i.src = "https://cdn.curator.io/published/0bb6d47e-ee45-4b35-a0c9-1be23b275988.js";
-    e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-    })();
-    </script>
+
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+<script type="text/javascript">
+  setTimeout(()=>{
+    var userFeed = new Instafeed({
+      get: 'user',
+      target: "instafeed-container",
+        resolution: 'low_resolution',
+      accessToken: 'IGQVJXaXMyLXJRUENKLWxwZAHZANT19hZA0NObzFUZA0ZAYMVZA1Y21hMWlRQ2Y5NGp5Q3JCcGlZAa0Uyb0RRc2g1NWFsbXRpM0dEWUEyaW1ZAaFpfU2JWaEl2UmFMMkNYUFdwSHNIQnFfNHY1Nk1KM0wySjFGQwZDZD'
+    });
+    userFeed.run();
+  }, 2000)
+</script>
 </body>
 </html>
