@@ -98,7 +98,7 @@ p.text-danger{font-weight: 400; font-family: 'Open Sans', sans-serif; margin: 0p
 
 .text-wrap-normal {white-space: normal !important;}
 
-#instafeed-container a img{ width: 20%;}
+#curator-feed-default-feed-layout a img{ width: 20%;}
 
 .descr h3.title {font-size: 16px !important;}
 .plusSymbol {position: absolute; padding:0 10px;line-height: 42px;
